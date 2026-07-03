@@ -1,0 +1,40 @@
+# ===========================================================================
+# PLIK KONFIGURACYJNY DO ZADANIA 3 (Simulated Annealing)
+# ===========================================================================
+
+# --- USTAWIENIA OGÓLNE ---
+# Ścieżka do pliku z instancja grafu (wszystkie testowane instancje 
+# powinny znajdować się w odpowiednich podkatalogach data/)
+GRAPH_PATH = data/tsplib/tsp/pcb442.tsp
+
+# Koszt optymalnej trasy (-1 jeśli nieznane) 
+# Wartości optymalne dla testowanych instancji: data/optimal_costs.txt
+OPTIMAL_TOUR_COST = 50778
+
+# Limit czasu w sekundach na dokladnie jedną próbę (zalecane: 900 = 15 minut)
+TIME_LIMIT_SECONDS = 900
+
+# Liczba powtórzeń testu dla danej instancji
+REPETITIONS = 1
+
+# Czy użyć algorytmu RNN do wyznaczenia początkowego UB? true/false
+USE_INITIAL_UB = true
+
+# Czy zapisać wynik testu do pliku CSV? true/false (results/)
+SAVE_TO_CSV = true
+
+# --- PARAMETRY ALGORYTMU SA ---
+# Początkowa temperatura
+START_TEMPERATURE = 221000
+
+# Współczynnik chłodzenia (alfa)
+COOLING_FACTOR = 0.95
+
+# Długość epoki
+EPOCH_LENGTH = 44200
+
+# Schemat chłodzenia, dostępne opcje: geometric, logarithmic
+COOLING_SCHEDULE = geometric
+
+# Metoda generowania sąsiedztwa, dostępne opcje: swap, insert, invert
+NEIGHBOR_METHOD = insert

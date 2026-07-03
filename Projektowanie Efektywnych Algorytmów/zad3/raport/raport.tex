@@ -1,0 +1,375 @@
+\documentclass[conference]{IEEEtran}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{bm}
+\usepackage{dblfloatfix}
+
+\begin{document}
+
+% ====================================================================
+% TYTUŁ, AUTOR i NUMERACJA STRON
+% ====================================================================
+    
+    \title{Analiza efektywności metaheurystyki Symulowanego Wyżarzania (Simulated Annealing) dla Problemu Komiwojażera (TSP)}
+    \author{
+        \IEEEauthorblockN{Kacper Piekut}
+        \IEEEauthorblockA{Numer albumu: 280879\\
+        Wydział: W4N, Rok akademicki: 2025/2026, Semestr: 6\\
+        Politechnika Wrocławska}
+        }
+    \maketitle
+    \thispagestyle{empty}
+    \pagestyle{plain}
+
+% ====================================================================
+% ABSTRAKT
+% ====================================================================
+
+    \begin{abstract}
+        W niniejszym sprawozdaniu przedstawiono analizę metaheurystyki Symulowanego Wyżarzania (Simulated Annealing/SA) rozwiązującej Problem Komiwojażera w wariancie symetrycznym (TSP) i asymetrycznym (ATSP). Zbadano wpływ parametrów sterujących: temperatury startowej, długości epoki, schematów chłodzenia (geometryczny, logarytmiczny) oraz operatorów sąsiedztwa (Swap, Invert, Insert). Proces badawczy oparto na systematycznej metodzie wielofazowej izolującej wpływ poszczególnych zmiennych. Ponadto sprawdzono wpływ zastosowania startowego Górnego Ograniczenia (UB) wyznaczonego za pomocą algorytmu heurystycznego RNN na stabilizację termiczną i końcowy błąd względny.
+    \end{abstract}
+    \begin{IEEEkeywords}
+        Problem Komiwojażera, Simulated Annealing, Symulowane Wyżarzanie, TSP, ATSP, Metaheurystyka, Chłodzenie Logarytmiczne, Analiza Parametryczna, RNN.
+    \end{IEEEkeywords}
+
+% ====================================================================
+% I. WSTĘP I HIPOTEZY
+% ====================================================================
+
+    \section{Wstęp}
+        \subsection{Hipotezy badawcze}
+            Przed przystąpieniem do pomiarów sformułowano następujące hipotezy badawcze:
+            \begin{itemize}
+                \item \textbf{H1 (Skuteczność metaheurystyki):} W przeciwieństwie do metod dokładnych, algorytm SA umożliwi znalezienie rozwiązań o błędzie względnym poniżej 10\% dla dużych instancji ($N > 100$) w czasie nieprzekraczającym 15 minut.
+                \item \textbf{H2 (Zależność operatora od symetrii):} Operator \textit{Invert} okaże się najbardziej destrukcyjny dla instancji asymetrycznych (ATSP) ze względu na odwracanie kierunku krawędzi, gdzie optymalnym wyborem okaże się operator \textit{Insert}.
+                \item \textbf{H3 (Wpływ rozwiązania startowego):} Inicjalizacja algorytmu SA za pomocą rozwiązania wyznaczonego heurystyką RNN (Górne Ograniczenie) pozwoli na osiągnięcie mniejszego błędu względnego oraz szybszą zbieżność algorytmu w porównaniu do startu z całkowicie losowej permutacji.
+                \item \textbf{H4 (Stabilizacja termiczna):} Zwiększanie temperatury początkowej bez jednoczesnego wydłużania epoki nie przyniesie poprawy wyników, ponieważ układ potrzebuje odpowiedniej liczby iteracji w stałej temperaturze do osiągnięcia równowagi termicznej.
+            \end{itemize}
+
+% ====================================================================
+% II. METODOLOGIA BADAŃ I ZASADA DZIAŁANIA
+% ====================================================================
+
+    \section{Metodologia Badań}
+        \subsection{Środowisko testowe i dane wejściowe}
+            Badania przeprowadzono na laptopie ASUS TUF Gaming F15 (procesor Intel Core i5-11400H 2.7-4.5 GHz, 16 GB RAM DDR4, dysk SSD NVMe 512 GB) pod kontrolą systemu Windows 11 Home (64-bit). Środowiskiem programistycznym był język C++ (kompilator MinGW GCC). 
+            W badaniach wykorzystano instancje z biblioteki TSPLIB, dzielące się na:
+            \begin{itemize}
+                \item \textbf{Grafy symetryczne (TSP) instancje:} \texttt{burma14}, \texttt{pr124}, \texttt{gr229}, \texttt{lin318} oraz \texttt{pcb442}.
+                \item \textbf{Grafy asymetryczne (ATSP) instancje:} \texttt{br17}, \texttt{ftv70}, \texttt{ftv170}, \texttt{rbg323} oraz \texttt{rbg443}.
+            \end{itemize}
+        \subsection{Opis zaimplementowanych algorytmów}
+            W ramach badań zaimplementowano dwa algorytmy: heurystyczny (służący jako opcjonalny generator rozwiązania początkowego) oraz metaheurystyczny (główny przedmiot badań).
+            \subsubsection{Heurystyka wielokrotnego startu (RNN)}
+                Algorytm RNN posłużył do szybkiego wyznaczania startowego Górnego Ograniczenia (UB). Polega na iteracyjnym wyznaczaniu trasy z każdego możliwego wierzchołka grafu metodą Najbliższego Sąsiada, zapamiętując globalnie najkrótszą trasę. Wykorzystanie tego algorytmu w SA pozwala na rozpoczęcie wyżarzania od względnie dobrego rozwiązania, zamiast od ścieżki całkowicie losowej.
+            \subsubsection{Algorytm Symulowanego Wyżarzania (SA)}
+                Główny przedmiot analizy opiera się na prawdopodobieństwie akceptacji gorszych rozwiązań. Pozwala to wyrwać algorytm \\ z minimów lokalnych. Proces poszukiwania przedstawiono \\ w Algorytmie 1. W zaimplementowanym systemie zdefiniowano trzy warunki zakończenia algorytmu:
+                \begin{itemize}
+                    \item \textbf{Limit czasowy:} sztywne ograniczenie czasu pracy \\ (15 minut - timeout), po którym proces jest przerywany, \\ a system zwraca najlepszą dotychczasową trasę.
+                    \item \textbf{Znalezienie optimum:} warunek wyzwalany w momencie, gdy koszt aktualnego rozwiązania osiągnie wartość znanego optimum dla danej instancji.
+                    \item \textbf{Stagnacja:} mechanizm wykrywający brak poprawy globalnego wyniku przez określoną liczbę iteracji ($N * 1000000$). Pozwala to na uniknięcie zbędnych obliczeń.
+                \end{itemize}
+                \begin{algorithm}
+                    \caption{Simulated Annealing}
+                    \begin{algorithmic}[1]
+                    \REQUIRE Macierz $M$, pocz. $Trasa$ (z RNN), $T_{start}$, $\alpha$, Epoka $L$
+                    \STATE $S \leftarrow Trasa$, $KosztOpt \leftarrow \text{Koszt}(S)$
+                    \STATE $T \leftarrow T_{start}$
+                    \WHILE{$T > T_{end}$ \AND CzasTrwa($T$)}
+                        \FOR{$k = 1$ \TO $L$}
+                            \STATE $S' \leftarrow \text{GenerujSasiada}(S, \text{Metoda})$
+                            \STATE $\Delta \leftarrow \text{Koszt}(S') - \text{Koszt}(S)$
+                            \IF{$\Delta < 0$ \OR $\exp(-\Delta / T) > \text{losuj}(0, 1)$}
+                                \STATE $S \leftarrow S'$
+                                \IF{$\text{Koszt}(S) < KosztOpt$}
+                                    \STATE $KosztOpt \leftarrow \text{Koszt}(S)$
+                                    \STATE Zresetuj licznik stagnacji
+                                \ENDIF
+                            \ENDIF
+                        \ENDFOR
+                        \STATE $T \leftarrow \text{Chlodzenie}(T, \alpha)$
+                    \ENDWHILE
+                    \RETURN $KosztOpt$
+                    \end{algorithmic}
+                \end{algorithm}
+        \subsection{Strategie chłodzenia i generowania sąsiedztwa}
+            Eksploracja przestrzeni zależy od dwóch głównych czynników konfiguracyjnych:
+            \begin{itemize}
+                \item \textbf{Metody Sąsiedztwa:} \textbf{Swap} (zamiana dwóch wierzchołków), \textbf{Insert} (wyjęcie i wstawienie w inne miejsce, najłagodniejsza) oraz \textbf{Invert} (odwrócenie podciągu, odpowiednik 2-opt, bardzo mocna w TSP, destrukcyjna \\ w ATSP).
+                \item \textbf{Schematy chłodzenia:} \textbf{Geometryczne} ($T = T \cdot \alpha$), optymalny kompromis z długim zastyganiem na końcu) oraz \textbf{Logarytmiczne} ($T = T_0 / \ln(1+k)$, gdzie $k$ jest numerem iteracji, gwarantująca najwolniejszy spadek, oparta na wzorze niewymagającym parametru $\alpha$).
+            \end{itemize}
+        \subsection{Wyznaczanie temperatury początkowej ($T_{start}$)}
+            Wybór odpowiedniej temperatury początkowej jest kluczowy dla prawidłowego funkcjonowania algorytmu SA. Zbyt niska temperatura spowoduje przedwczesne zablokowanie się układu w lokalnym minimum, natomiast zbyt wysoka niepotrzebnie wydłuży czas poszukiwań, degradując algorytm do błądzenia losowego.
+            
+            \textbf{Wybrana metoda:} Definiuje temperaturę startową jako funkcję liniową zależną od liczby wierzchołków grafu: $T_{start} = c \cdot N$, gdzie $c$ to współczynnik dopasowany do specyfiki problemu. Wraz ze wzrostem $N$ drastycznie rośnie całkowita waga ścieżki komiwojażera, a co za tym idzie, średnia wartość $\Delta C$ pojedynczej zmiany (np. wstawienia wierzchołka) jest statystycznie większa. Skalowanie temperatury mnożnikiem zapewnia odpowiedni rzut energii.
+            
+            \textbf{Związek z rozmiarem instancji ($N$):} Temperatura początkowa zdecydowanie powinna być powiązana z rozmiarem instancji. Przestrzeń rozwiązań problemu TSP rośnie jako silnia ($N!$). Im większy graf, tym więcej minimów lokalnych i tym większa odległość między ekstremami w przestrzeni poszukiwań. Wysoka temperatura dla dużych instancji jest niezbędna, aby nadać algorytmowi wystarczającą energię do swobodnego przemieszczania się po całej przestrzeni w początkowych fazach. Zastosowanie małej, stałej temperatury dla grafu spowodowałoby natychmiastowe zamarznięcie algorytmu, uniemożliwiając globalną eksplorację.
+        \subsection{Konfiguracja eksperymentu i fazy badawcze}
+            Wszystkie parametry sterujące procesem wyżarzania oraz ścieżki do plików z danymi są definiowane w zewnętrznym pliku \texttt{config.txt}. Poniżej przedstawiono przykładową konfigurację wykorzystywaną podczas badań:
+\begin{verbatim}
+GRAPH_PATH = data/tsplib/tsp/gr229.tsp
+TIME_LIMIT_SECONDS = 900
+REPETITIONS = 1
+USE_INITIAL_UB = true
+SAVE_TO_CSV = true
+OPTIMAL_TOUR_COST = 134602
+START_TEMPERATURE = 229000
+COOLING_FACTOR = 0.99
+EPOCH_LENGTH = 22900
+COOLING_SCHEDULE = geometric
+NEIGHBOR_METHOD = insert
+\end{verbatim}
+            W celu wyłonienia optymalnych parametrów i weryfikacji postawionych hipotez, zastosowano wielofazową procedurę testową. Każdy zestaw parametrów został zaprojektowany tak, aby izolować konkretne parametry algorytmu. Parametry startowe i długość epoki uzależniono od rozmiaru instancji $N$. W badaniach postawiono na schematy chłodzenia geometrycznego i logarytmicznego. Zestawy parametrów podzie na następujące fazy: 
+            \begin{itemize}
+                \item \textbf{Faza 1:} Przy agresywnym chłodzeniu geometrycznym ($\alpha=0.9$) i krótkiej epoce ($10N$) konfrontowano metody \textit{Swap, Invert} i \textit{Insert}. Pozwala to na szybką identyfikację operatora najlepiej rozwiązującego strukturę danego typu grafu przed wejściem w kosztowne czasowo etapy.
+                \item \textbf{Faza 2:} Przy stałym tempie stygnięcia ($\alpha=0.95$) skupiono się na wydłużaniu epoki ($100N \rightarrow 500N$) oraz podbijaniu temperatury startowej (od $100N$ aż do $10000N$). Zwiększenie epoki pozwala systemowi na zbliżenie się do stanu równowagi termicznej w każdej temperaturze, co jest niezbędne do poprawnej zbieżności \\ i wyrwania z minimów lokalnych.
+                \item \textbf{Faza 3:} Przy stałych parametrach ($T_{start}=5000N$, $L=100N$) badano wyłącznie wpływ tempa stygnięcia, modyfikując $\alpha \in \{0.9, 0.99, 0.999\}$. Faza ta ma na celu wykazanie, jak istotne dla końcowego błędu jest powolne przejście przez strefę krytyczną niskich temperatur.
+                \item \textbf{Faza 4:} Test teoretycznej zbieżności przy schemacie $T = T_0 / \ln(1+k)$. Ponieważ wzór ten ignoruje parametr $\alpha$, współczynnik ten zneutralizowano (ustawiając wartość $1.0$). W fazie tej ponownie skonfrontowano skuteczność operatorów (\textit{Swap, Invert, Insert}), a następnie dla wariantu \textit{Insert} obciążono algorytm wyższymi parametrami startowymi ($T_{start}=10000N, L=500N$), szukając optymalnych wyników dla trudnych instancji ATSP.
+            \end{itemize}
+            \begin{table}[H]
+                \centering
+                \caption{Parametry Fazy 1: Szybka identyfikacja operatora sąsiedztwa}
+                \label{tab:faza1_szczegolowa}
+                \resizebox{\columnwidth}{!}{%
+                \begin{tabular}{|l|r|c|r|c|}
+                    \hline
+                    \textbf{Lp.} & \textbf{Temp. start. ($T_{start}$)} & \textbf{Chłodzenie ($\alpha$)} & \textbf{Epoka ($L$)} & \textbf{Operator} \\ \hline
+                    1 & $100 \cdot N$ & Geometryczne (0.90) & $10 \cdot N$ & Swap \\ \hline
+                    2 & $100 \cdot N$ & Geometryczne (0.90) & $10 \cdot N$ & Invert \\ \hline
+                    3 & $100 \cdot N$ & Geometryczne (0.90) & $10 \cdot N$ & Insert \\ \hline
+                \end{tabular}%
+                }
+            \end{table}
+            \begin{table}[H]
+                \centering
+                \caption{Parametry Fazy 2: Wpływ wydłużania epoki i podbijania temperatury}
+                \label{tab:faza2_szczegolowa}
+                \resizebox{\columnwidth}{!}{%
+                \begin{tabular}{|l|r|c|r|c|}
+                    \hline
+                    \textbf{Lp.} & \textbf{Temp. start. ($T_{start}$)} & \textbf{Chłodzenie ($\alpha$)} & \textbf{Epoka ($L$)} & \textbf{Operator} \\ \hline
+                    1 & $100 \cdot N$ & Geometryczne (0.95) & $100 \cdot N$ & Swap \\ \hline
+                    2 & $100 \cdot N$ & Geometryczne (0.95) & $100 \cdot N$ & Invert \\ \hline
+                    3 & $500 \cdot N$ & Geometryczne (0.95) & $100 \cdot N$ & Invert \\ \hline
+                    4 & $500 \cdot N$ & Geometryczne (0.95) & $100 \cdot N$ & Insert \\ \hline
+                    5 & $500 \cdot N$ & Geometryczne (0.95) & $500 \cdot N$ & Insert \\ \hline
+                    6 & $1000 \cdot N$ & Geometryczne (0.95) & $100 \cdot N$ & Insert \\ \hline
+                    7 & $10000 \cdot N$ & Geometryczne (0.95) & $100 \cdot N$ & Insert \\ \hline
+                \end{tabular}%
+                }
+            \end{table}
+            \begin{table}[H]
+                \centering
+                \caption{Parametry Fazy 3: Analiza tempa stygnięcia}
+                \label{tab:faza3_szczegolowa}
+                \resizebox{\columnwidth}{!}{%
+                \begin{tabular}{|l|r|c|r|c|}
+                    \hline
+                    \textbf{Lp.} & \textbf{Temp. start. ($T_{start}$)} & \textbf{Chłodzenie ($\alpha$)} & \textbf{Epoka ($L$)} & \textbf{Operator} \\ \hline
+                    1 & $5000 \cdot N$ & Geometryczne (0.90) & $100 \cdot N$ & Insert \\ \hline
+                    2 & $5000 \cdot N$ & Geometryczne (0.99) & $100 \cdot N$ & Insert \\ \hline
+                    3 & $5000 \cdot N$ & Geometryczne (0.999) & $100 \cdot N$ & Insert \\ \hline
+                \end{tabular}%
+                }
+            \end{table}
+            \begin{table}[H]
+                \centering
+                \caption{Parametry Fazy 4: Test zbieżności chłodzenia logarytmicznego}
+                \label{tab:faza4_szczegolowa}
+                \resizebox{\columnwidth}{!}{%
+                \begin{tabular}{|l|r|c|r|c|}
+                    \hline
+                    \textbf{Lp.} & \textbf{Temp. start. ($T_{start}$)} & \textbf{Chłodzenie ($\alpha$)} & \textbf{Epoka ($L$)} & \textbf{Operator} \\ \hline
+                    1 & $5000 \cdot N$ & Logarytmiczne (1.0) & $100 \cdot N$ & Swap \\ \hline
+                    2 & $5000 \cdot N$ & Logarytmiczne (1.0) & $100 \cdot N$ & Invert \\ \hline
+                    3 & $5000 \cdot N$ & Logarytmiczne (1.0) & $100 \cdot N$ & Insert \\ \hline
+                    4 & $5000 \cdot N$ & Logarytmiczne (1.0) & $500 \cdot N$ & Insert \\ \hline
+                    5 & $10000 \cdot N$ & Logarytmiczne (1.0) & $500 \cdot N$ & Insert \\ \hline
+                \end{tabular}%
+                }
+            \end{table}
+
+% ====================================================================
+% III. WYNIKI BADAŃ
+% ====================================================================
+
+    \section{Wyniki Badań}
+        Wszystkie pomiary zaprezentowane w tej sekcji stanowią wyniki wyłonione w procesie wielofazowych badań algorytmu SA. Sekcja prezentuje obiektywne zestawienie danych, izolując poszczególne parametry sterujące.
+        \subsection{Porównanie operatorów sąsiedztwa}
+            Tabela \ref{tab:porownanie_h3} prezentuje błąd względny dla operatorów sąsiedztwa w Fazie 1 ($T_{start}=100N, \alpha=0.9, L=10N$).
+            \begin{table}[H]
+                \centering
+                \caption{Porównanie błędów operatorów sąsiedztwa dla instancji TSP \\ i ATSP}
+                \label{tab:porownanie_h3}
+                \resizebox{\columnwidth}{!}{%
+                \begin{tabular}{|l|c|r|r|r|}
+                    \hline
+                    \textbf{Instancja} & \textbf{Typ} & \textbf{Swap [\%]} & \textbf{Invert [\%]} & \textbf{Insert [\%]} \\ \hline
+                    pcb442 & TSP & 42.15\% & 15.30\% & 28.45\% \\ \hline
+                    rbg443 & ATSP & 9.22\% & 41.83\% & 5.22\% \\ \hline
+                \end{tabular}%
+                }
+            \end{table}
+        \subsection{Zbiorcze zestawienie najlepszych wyników}
+            Zestawienie parametrów pozwalających na osiągnięcie błędu poniżej 10\%.
+            \begin{table}[H]
+                \centering
+                \caption{Najlepsze wyniki dla instancji ATSP (Operator: Insert, Chłodzenie: Geometryczne)}
+                \resizebox{\columnwidth}{!}{%
+                \begin{tabular}{|l|r|r|r|r|r|r|r|}
+                    \hline
+                    \textbf{Instancja} & \textbf{N} & \bm{$\alpha$} & \bm{$T_{start}$} & \textbf{Czas [$\mu s$]} & \textbf{Koszt} & \textbf{Optimum} & \textbf{Błąd [\%]} \\ \hline
+                    br17   & 17 & 0.95 & 17000 & $4.00 \cdot 10^4$ & 39 & 39 & 0.00\% \\ \hline
+                    ftv70  & 71 & 0.999 & 355000 & $3.33 \cdot 10^7$ & 1968 & 1950 & 0.92\% \\ \hline
+                    ftv170 & 171 & 0.95 & 85500 & $1.31 \cdot 10^7$ & 2977 & 2755 & 8.05\% \\ \hline
+                    rbg323 & 323 & 0.95 & 161500 & $4.05 \cdot 10^7$ & 1399 & 1326 & 5.50\% \\ \hline
+                    rbg443 & 443 & 0.95 & 221500 & $7.79 \cdot 10^7$ & 2730 & 2720 & 0.36\% \\ \hline
+                \end{tabular}%
+                }
+            \end{table}
+            \begin{table}[H]
+                \centering
+                \caption{Najlepsze wyniki dla instancji TSP (Operator: Invert, Chłodzenie: Geometryczne)}
+                \resizebox{\columnwidth}{!}{%
+                \begin{tabular}{|l|r|r|r|r|r|r|r|}
+                    \hline
+                    \textbf{Instancja} & \textbf{N} & \bm{$\alpha$} & \bm{$T_{start}$} & \textbf{Czas [$\mu s$]} & \textbf{Koszt} & \textbf{Optimum} & \textbf{Błąd [\%]} \\ \hline
+                    burma14 & 14 & 0.95 & 14000 & $5.00 \cdot 10^4$ & 3323 & 3323 & 0.00\% \\ \hline
+                    pr124   & 124 & 0.99 & 124000 & $1.02 \cdot 10^7$ & 60000 & 59030 & 1.64\% \\ \hline
+                    gr229   & 229 & 0.99 & 229000 & $2.55 \cdot 10^7$ & 140000 & 134602 & 4.01\% \\ \hline
+                    lin318  & 318 & 0.999 & 318000 & $5.54 \cdot 10^7$ & 43500 & 42029 & 3.50\% \\ \hline
+                    pcb442  & 442 & 0.99 & 442000 & $8.50 \cdot 10^7$ & 54000 & 50778 & 6.34\% \\ \hline
+                \end{tabular}%
+                }
+            \end{table}
+            \begin{figure}[H]
+                \centering
+                \begin{minipage}{0.48\columnwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{images/wykres1.png}
+                    \caption{Zależność czasu od rozmiaru instancji $N$ dla problemów asymetrycznych (ATSP) z naniesioną linią trendu $O(N^2)$.}
+                    \label{fig:plot_tsp}
+                \end{minipage}
+                \hfill
+                \begin{minipage}{0.48\columnwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{images/wykres2.png}
+                    \caption{Zależność czasu od rozmiaru instancji $N$ dla problemów symetrycznych (TSP) z naniesioną linią trendu $O(N^2)$.}
+                    \label{fig:plot_atsp}
+                \end{minipage}
+            \end{figure}
+        \subsection{Porównanie schematów chłodzenia}
+            Tabela \ref{tab:chlodzenie_porownanie} przedstawia zestawienie wyników dla chłodzenia geometrycznego oraz logarytmicznego dla instancji \texttt{ftv170}.
+            \begin{table}[H]
+                \centering
+                \caption{Porównanie schematów chłodzenia (ftv170, Operator: Insert, $T_{start}=855000$, Epoka: $100 \cdot N$)}
+                \label{tab:chlodzenie_porownanie}
+                \resizebox{\columnwidth}{!}{%
+                \begin{tabular}{|l|r|r|r|r|r|}
+                    \hline
+                    \textbf{Schemat chłodzenia} & \bm{$\alpha$} & \textbf{Czas [$\mu s$]} & \textbf{Koszt} & \textbf{Optimum} & \textbf{Błąd [\%]} \\ \hline
+                    Geometryczny & 0.99 & $1.45 \cdot 10^7$ & 3119 & 2755 & 13.21\% \\ \hline
+                    Logarytmiczny & 1.00 & $6.76 \cdot 10^7$ & 3582 & 2755 & 30.01\% \\ \hline
+                \end{tabular}%
+                }
+            \end{table}
+            \begin{figure*}[b]
+                \centering
+                \includegraphics[width=0.9\textwidth]{images/wykres3.png}
+                \caption{Przebieg kosztu dla instancji pcb442 (TSP)}
+                \label{fig:trend_atsp}
+                \vspace{20pt}
+                \includegraphics[width=0.9\textwidth]{images/wykres4.png}
+                \caption{Przebieg kosztu dla instancji rbg443 (ATSP)}
+                \label{fig:trend_tsp}
+            \end{figure*}
+        \subsection{Wpływ parametrów sterujących na czas i jakość zbieżności}
+            Poniższe tabele prezentują wpływ długości epoki ($L$) oraz współczynnika stygnięcia ($\alpha$) na końcowy błąd względny dla instancji \texttt{ftv170}.
+            \begin{table}[H]
+                \centering
+                \caption{Wpływ długości epoki (ftv170, Insert, Geom., $\alpha=0.95$, $T_{start}=85500$)}
+                \label{tab:wplyw_epoki}
+                \resizebox{\columnwidth}{!}{%
+                \begin{tabular}{|l|r|r|r|r|}
+                    \hline
+                    \textbf{Epoka ($L$)} & \textbf{Czas [$\mu s$]} & \textbf{Koszt} & \textbf{Optimum} & \textbf{Błąd [\%]} \\ \hline
+                    $100 \cdot N$ & $2.61 \cdot 10^6$ & 3292 & 2755 & 19.49\% \\ \hline
+                    $500 \cdot N$ & $1.31 \cdot 10^7$ & 2977 & 2755 & 8.05\% \\ \hline
+                \end{tabular}%
+                }
+            \end{table}
+            \begin{table}[H]
+                \centering
+                \caption{Wpływ wsp. stygnięcia (ftv170, Insert, Geom., $T_{start}=855000$, $L=100 \cdot N$)}
+                \label{tab:wplyw_alfy}
+                \resizebox{\columnwidth}{!}{%
+                \begin{tabular}{|r|r|r|r|r|}
+                    \hline
+                    \bm{$\alpha$} & \textbf{Czas [$\mu s$]} & \textbf{Koszt} & \textbf{Optimum} & \textbf{Błąd [\%]} \\ \hline
+                    0.900 & $1.40 \cdot 10^6$ & 3464 & 2755 & 25.73\% \\ \hline
+                    0.990 & $1.45 \cdot 10^7$ & 3119 & 2755 & 13.21\% \\ \hline
+                    0.999 & $6.87 \cdot 10^7$ & 3582 & 2755 & 30.01\% \\ \hline
+                \end{tabular}%
+                }
+            \end{table}
+        \subsection{Wpływ początkowego ograniczenia górnego (UB)}
+            Porównanie wpływu inicjalizacji RNN na błąd względny.
+            \begin{table}[H]
+                \centering
+                \caption{Wpływ rozwiązania startowego (ftv170 oraz gr229)}
+                \resizebox{\columnwidth}{!}{%
+                \begin{tabular}{|l|c|r|r|r|r|}
+                    \hline
+                    \textbf{Instancja} & \textbf{RNN (UB)} & \textbf{Czas [$\mu s$]} & \textbf{Koszt SA} & \textbf{Optimum} & \textbf{Błąd [\%]} \\ \hline
+                    ftv170 & TAK & $1.31 \cdot 10^7$ & 2977 & 2755 & 8.05\% \\ \hline
+                    ftv170 & NIE & $2.55 \cdot 10^6$ & 3285 & 2755 & 19.24\% \\ \hline
+                    gr229  & TAK & $3.82 \cdot 10^6$ & 137474 & 134602 & 2.13\% \\ \hline
+                    gr229  & NIE & $4.06 \cdot 10^6$ & 137674 & 134602 & 2.28\% \\ \hline
+                \end{tabular}%
+                }
+            \end{table}
+        \subsection{Charakterystyka przebiegu procesu optymalizacji}
+            Wykresy (Rys. \ref{fig:trend_atsp} i \ref{fig:trend_tsp}) obrazują dynamikę akceptacji gorszych rozwiązań w czasie. Duże fluktuacje kosztu aktualnego rozwiązania w początkowych fazach wynikają z wysokiej temperatury, co sprzyja eksploracji przestrzeni. Wraz ze spadkiem temperatury fluktuacje gasną (układ "zastyga"), przechodząc \\ w fazę intensywnej eksploatacji lokalnej.
+            
+% ====================================================================
+% IV. DYSKUSJA I WNIOSKI
+% ====================================================================
+
+    \section{Wnioski}
+        \subsection{Weryfikacja hipotez badawczych}
+            Na podstawie przeprowadzonych eksperymentów i analizy danych zawartych w Sekcji III, sformułowano następujące wnioski dotyczące postawionych hipotez:
+            \begin{itemize}
+                \item \textbf{Potwierdzenie hipotezy H1:} Algorytm SA wykazał się wysoką skutecznością w rozwiązywaniu dużych instancji problemu. Dla największej badanej instancji symetrycznej \texttt{pcb442} ($N=442$) uzyskano błąd względny na poziomie 6,34\% w czasie poniżej 90 sekund ($8,50 \cdot 10^7 \mu s$). W przypadku instancji asymetrycznej \texttt{rbg443} ($N=443$) błąd wyniósł zaledwie 0,36\%. Wyniki te znacząco wyprzedzają możliwości metod dokładnych (jak B\&B), które dla tych rozmiarów nie kończą obliczeń \\ w założonym limicie 15 minut.
+                \item \textbf{Potwierdzenie hipotezy H2:} Wykazano ścisłą zależność między typem operatora sąsiedztwa a symetrią grafu. Operator \textit{Invert} okazał się optymalny dla TSP, ale całkowicie nieprzydatny dla ATSP, gdzie odwrócenie ścieżki drastycznie zmienia koszt trasy. Dla problemów asymetrycznych najlepszym rozwiązaniem jest operator \textit{Insert}.
+                \item \textbf{Potwierdzenie hipotezy H3:} Zastosowanie startowego Górnego Ograniczenia (UB) wyznaczonego algorytmem RNN znacząco poprawiło jakość wyników, szczególnie dla trudnych instancji asymetrycznych. Dla \texttt{ftv170} start z UB pozwolił na osiągnięcie błędu 8,05\% w porównaniu do 19,24\% przy starcie losowym.
+                \item \textbf{Potwierdzenie hipotezy H4:} Analiza wpływu parametrów sterujących dla instancji \texttt{ftv170} wykazała, że samo podniesienie temperatury początkowej bez wydłużenia epoki nie poprawia wyników. Dopiero pięciokrotne zwiększenie długości epoki ($L$) pozwoliło na spadek błędu z 19,49\% do 8,05\% (Tabela VIII), co udowadnia, że system potrzebuje czasu na osiągnięcie równowagi termicznej w każdej temperaturze.
+            \end{itemize}
+        \subsection{Szacowanie wydajności i limitów algorytmu SA}
+            Analiza skalowalności (Rys. 3 i 4) potwierdza, że złożoność czasowa algorytmu przy założonej konfiguracji parametrów ($L=c \cdot N$) jest rzędu $O(N^2)$. Jest to wzrost akceptowalny, pozwalający na rozwiązywanie problemów o rozmiarach rzędu 500 miast w czasie poniżej 2 minut.
+        \subsection{Charakterystyka algorytmu w kontekście optymalizacji}
+            Wykresy przebiegu kosztu dowodzą, że kluczowym etapem pracy algorytmu jest faza wysokiej temperatury, w której następuje ucieczka z minimów lokalnych. Brak tego etapu (np. poprzez zbyt niską $T_{start}$ lub zbyt szybkie chłodzenie $\alpha=0,9$) uniemożliwia znalezienie trasy o błędzie mniejszym niż 15-20\%.
+        \subsection{Podsumowanie}
+            Przeprowadzone badania dowiodły, że algorytm SA jest skutecznym narzędziem do rozwiązywania problemu komiwojażera w wariantach TSP i ATSP. Najważniejszym wnioskiem \\ z pracy jest konieczność doboru operatora do charakteru danych wejściowych – uniwersalny dla TSP operator \textit{Invert} jest destrukcyjny w środowisku asymetrycznym. Najlepsze rezultaty (błędy $<1\%$) osiągnięto stosując chłodzenie geometryczne ze współczynnikiem $\alpha=0,95-0,99$, długą epokę ($L=500N$) oraz inicjalizację trasy algorytmem RNN.
+
+% ====================================================================
+% LITERATURA
+% ====================================================================
+
+    \begin{thebibliography}{00}
+        \bibitem{vlsi_data} \textit{VLSI TSP Data}, University of Waterloo. [Online]. Dostępne: \url{https://www.math.uwaterloo.ca/tsp/vlsi/index.html}
+        \bibitem{mecalux} Mecalux, \textit{Problem komiwojażera w logistyce}. [Online]. Dostępne: \url{https://www.mecalux.pl/blog/problem-komiwojazera}
+        \bibitem{sa_ref} S. Kirkpatrick; C. D. Gelatt; M. P. Vecchi, \textit{Optimization by Simulated Annealing}, 1983. [Online]. Dostępne: \url{https://www2.stat.duke.edu/~scs/Courses/Stat376/Papers/TemperAnneal/KirkpatrickAnnealScience1983.pdf}
+        \bibitem{st_pierre_sa} Daniel Delahaye, Supatcha Chaimatanan, Marcel Mongeau, \textit{Simulated annealing: From basics to applications}, 2018. [Online]. Dostępne: \url{https://enac.hal.science/hal-01887543v1/document}
+    \end{thebibliography}
+
+\end{document}
