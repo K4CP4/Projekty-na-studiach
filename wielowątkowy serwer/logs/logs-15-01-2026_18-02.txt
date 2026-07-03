@@ -1,0 +1,2103 @@
+[DataService #10] Przetwarzam zadanie id=1000 priorytet=10 dane="data_task"
+[ReportService #46] Przetwarzam zadanie id=2000 priorytet=7 dane="report_task"
+[DataService] odczyt idx 0 -> -1
+[ReportService] odczyt idx 0 -> -1
+[ReportService #48] Przetwarzam zadanie id=2001 priorytet=2 dane="report_task"
+[DataService #13] Przetwarzam zadanie id=1001 priorytet=1 dane="data_task"
+[DataService] zapis idx 1 = 1
+[ReportService] zapis idx 1 = 2
+[DataService #15] Przetwarzam zadanie id=1002 priorytet=1 dane="data_task"
+[ReportService #0] Przetwarzam zadanie id=2002 priorytet=2 dane="report_task"
+[DataService] zapis idx 2 = 1
+[ReportService] odczyt idx 2 -> 1
+[DataService #10] Przetwarzam zadanie id=1003 priorytet=1 dane="data_task"
+[DataService] zapis idx 3 = 1
+[ReportService #46] Przetwarzam zadanie id=2003 priorytet=2 dane="report_task"
+[ReportService] zapis idx 3 = 2
+[DataService #19] Przetwarzam zadanie id=1004 priorytet=1 dane="data_task"
+[DataService] zapis idx 4 = 1
+[ReportService #2] Przetwarzam zadanie id=2004 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 4 -> 1
+[DataService #20] Przetwarzam zadanie id=1005 priorytet=10 dane="data_task"
+[DataService] zapis idx 5 = 10
+[ReportService #3] Przetwarzam zadanie id=2005 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 5 -> 10
+[DataService #21] Przetwarzam zadanie id=1006 priorytet=1 dane="data_task"
+[DataService] zapis idx 6 = 1
+[ReportService #4] Przetwarzam zadanie id=2006 priorytet=2 dane="report_task"
+[ReportService] zapis idx 6 = 2
+[DataService #17] Przetwarzam zadanie id=1007 priorytet=1 dane="data_task"
+[DataService] odczyt idx 7 -> -1
+[ReportService #5] Przetwarzam zadanie id=2007 priorytet=7 dane="report_task"
+[ReportService] zapis idx 7 = 7
+[DataService #22] Przetwarzam zadanie id=1008 priorytet=1 dane="data_task"
+[DataService] odczyt idx 8 -> -1
+[ReportService #6] Przetwarzam zadanie id=2008 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 8 -> -1
+[ReportService #7] Przetwarzam zadanie id=2009 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 9 -> -1
+[DataService #7] Przetwarzam zadanie id=1009 priorytet=1 dane="data_task"
+[DataService] odczyt idx 9 -> -1
+[ReportService #8] Przetwarzam zadanie id=2010 priorytet=2 dane="report_task"
+[ReportService] zapis idx 0 = 2
+[DataService #24] Przetwarzam zadanie id=1010 priorytet=10 dane="data_task"
+[DataService] zapis idx 0 = 10
+[DataService #7] Przetwarzam zadanie id=1011 priorytet=1 dane="data_task"
+[ReportService #9] Przetwarzam zadanie id=2011 priorytet=2 dane="report_task"
+[DataService] odczyt idx 1 -> 1
+[ReportService] zapis idx 1 = 2
+[ReportService #10] Przetwarzam zadanie id=2012 priorytet=2 dane="report_task"
+[ReportService] zapis idx 2 = 2
+[DataService #26] Przetwarzam zadanie id=1012 priorytet=1 dane="data_task"
+[DataService] zapis idx 2 = 1
+[DataService #27] Przetwarzam zadanie id=1013 priorytet=1 dane="data_task"
+[DataService] odczyt idx 3 -> 2
+[ReportService #11] Przetwarzam zadanie id=2013 priorytet=2 dane="report_task"
+[ReportService] zapis idx 3 = 2
+[DataService #23] Przetwarzam zadanie id=1014 priorytet=1 dane="data_task"
+[DataService] zapis idx 4 = 1
+[ReportService #12] Przetwarzam zadanie id=2014 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 4 -> 1
+[ReportService #13] Przetwarzam zadanie id=2015 priorytet=2 dane="report_task"
+[DataService #28] Przetwarzam zadanie id=1015 priorytet=10 dane="data_task"
+[ReportService] odczyt idx 5 -> 10
+[DataService] odczyt idx 5 -> 10
+[DataService #29] Przetwarzam zadanie id=1016 priorytet=1 dane="data_task"
+[DataService] zapis idx 6 = 1
+[ReportService #14] Przetwarzam zadanie id=2016 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 6 -> 1
+[ReportService #15] Przetwarzam zadanie id=2017 priorytet=2 dane="report_task"
+[ReportService] zapis idx 7 = 2
+[DataService #30] Przetwarzam zadanie id=1017 priorytet=1 dane="data_task"
+[DataService] odczyt idx 7 -> 2
+[DataService #3] Przetwarzam zadanie id=1018 priorytet=1 dane="data_task"
+[ReportService #14] Przetwarzam zadanie id=2018 priorytet=2 dane="report_task"
+[DataService] zapis idx 8 = 1
+[ReportService] zapis idx 8 = 2
+[ReportService #17] Przetwarzam zadanie id=2019 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 9 -> -1
+[DataService #31] Przetwarzam zadanie id=1019 priorytet=1 dane="data_task"
+[DataService] odczyt idx 9 -> -1
+[DataService #32] Przetwarzam zadanie id=1020 priorytet=10 dane="data_task"
+[DataService] odczyt idx 0 -> 10
+[ReportService #14] Przetwarzam zadanie id=2020 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 0 -> 10
+[DataService #31] Przetwarzam zadanie id=1021 priorytet=1 dane="data_task"
+[DataService] odczyt idx 1 -> 2
+[ReportService #19] Przetwarzam zadanie id=2021 priorytet=7 dane="report_task"
+[ReportService] zapis idx 1 = 7
+[ReportService #20] Przetwarzam zadanie id=2022 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 2 -> 1
+[DataService #34] Przetwarzam zadanie id=1022 priorytet=1 dane="data_task"
+[DataService] zapis idx 2 = 1
+[DataService #31] Przetwarzam zadanie id=1023 priorytet=1 dane="data_task"
+[ReportService #19] Przetwarzam zadanie id=2023 priorytet=2 dane="report_task"
+[DataService] zapis idx 3 = 1
+[ReportService] zapis idx 3 = 2
+[DataService #36] Przetwarzam zadanie id=1024 priorytet=1 dane="data_task"
+[DataService] odczyt idx 4 -> 1
+[ReportService #22] Przetwarzam zadanie id=2024 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 4 -> 1
+[ReportService #23] Przetwarzam zadanie id=2025 priorytet=2 dane="report_task"
+[DataService #37] Przetwarzam zadanie id=1025 priorytet=10 dane="data_task"
+[ReportService] zapis idx 5 = 2
+[DataService] odczyt idx 5 -> 2
+[ReportService #24] Przetwarzam zadanie id=2026 priorytet=2 dane="report_task"
+[DataService #36] Przetwarzam zadanie id=1026 priorytet=1 dane="data_task"
+[ReportService] odczyt idx 6 -> 1
+[DataService] odczyt idx 6 -> 1
+[DataService #0] Przetwarzam zadanie id=1027 priorytet=1 dane="data_task"
+[DataService] zapis idx 7 = 1
+[ReportService #25] Przetwarzam zadanie id=2027 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 7 -> 1
+[ReportService #26] Przetwarzam zadanie id=2028 priorytet=7 dane="report_task"
+[ReportService] zapis idx 8 = 7
+[DataService #36] Przetwarzam zadanie id=1028 priorytet=1 dane="data_task"
+[DataService] zapis idx 8 = 1
+[DataService #39] Przetwarzam zadanie id=1029 priorytet=1 dane="data_task"
+[ReportService #27] Przetwarzam zadanie id=2029 priorytet=2 dane="report_task"
+[DataService] zapis idx 9 = 1
+[ReportService] zapis idx 9 = 2
+[DataService #40] Przetwarzam zadanie id=1030 priorytet=10 dane="data_task"
+[ReportService #28] Przetwarzam zadanie id=2030 priorytet=2 dane="report_task"
+[DataService] zapis idx 0 = 10
+[ReportService] zapis idx 0 = 2
+[DataService #41] Przetwarzam zadanie id=1031 priorytet=1 dane="data_task"
+[DataService] zapis idx 1 = 1
+[ReportService #29] Przetwarzam zadanie id=2031 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 1 -> 1
+[DataService #42] Przetwarzam zadanie id=1032 priorytet=1 dane="data_task"
+[DataService] odczyt idx 2 -> 1
+[ReportService #30] Przetwarzam zadanie id=2032 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 2 -> 1
+[DataService #38] Przetwarzam zadanie id=1033 priorytet=1 dane="data_task"
+[DataService] zapis idx 3 = 1
+[ReportService #31] Przetwarzam zadanie id=2033 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 3 -> 1
+[ReportService #32] Przetwarzam zadanie id=2034 priorytet=2 dane="report_task"
+[ReportService] zapis idx 4 = 2
+[DataService #1] Przetwarzam zadanie id=1034 priorytet=1 dane="data_task"
+[DataService] odczyt idx 4 -> 2
+[DataService #4] Przetwarzam zadanie id=1035 priorytet=10 dane="data_task"
+[DataService] zapis idx 5 = 10
+[ReportService #33] Przetwarzam zadanie id=2035 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 5 -> 10
+[DataService #44] Przetwarzam zadanie id=1036 priorytet=1 dane="data_task"
+[DataService] odczyt idx 6 -> 1
+[ReportService #34] Przetwarzam zadanie id=2036 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 6 -> 1
+[DataService #1] Przetwarzam zadanie id=1037 priorytet=1 dane="data_task"
+[DataService] odczyt idx 7 -> 1
+[ReportService #35] Przetwarzam zadanie id=2037 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 7 -> 1
+[DataService #43] Przetwarzam zadanie id=1038 priorytet=1 dane="data_task"
+[ReportService #36] Przetwarzam zadanie id=2038 priorytet=2 dane="report_task"
+[DataService] odczyt idx 8 -> 1
+[ReportService] zapis idx 8 = 2
+[ReportService #37] Przetwarzam zadanie id=2039 priorytet=2 dane="report_task"
+[DataService #46] Przetwarzam zadanie id=1039 priorytet=1 dane="data_task"
+[ReportService] zapis idx 9 = 2
+[DataService] zapis idx 9 = 1
+[DataService #43] Przetwarzam zadanie id=1040 priorytet=10 dane="data_task"
+[DataService] zapis idx 0 = 10
+[ReportService #38] Przetwarzam zadanie id=2040 priorytet=2 dane="report_task"
+[ReportService] zapis idx 0 = 2
+[ReportService #39] Przetwarzam zadanie id=2041 priorytet=2 dane="report_task"
+[ReportService] zapis idx 1 = 2
+[DataService #46] Przetwarzam zadanie id=1041 priorytet=1 dane="data_task"
+[DataService] zapis idx 1 = 1
+[ReportService #40] Przetwarzam zadanie id=2042 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 2 -> 1
+[DataService #48] Przetwarzam zadanie id=1042 priorytet=1 dane="data_task"
+[DataService] zapis idx 2 = 1
+[DataService #9] Przetwarzam zadanie id=1043 priorytet=1 dane="data_task"
+[ReportService #41] Przetwarzam zadanie id=2043 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 3 -> 1
+[DataService] zapis idx 3 = 1
+[DataService #49] Przetwarzam zadanie id=1044 priorytet=1 dane="data_task"
+[DataService] zapis idx 4 = 1
+[ReportService #42] Przetwarzam zadanie id=2044 priorytet=2 dane="report_task"
+[ReportService] zapis idx 4 = 2
+[DataService #5] Przetwarzam zadanie id=1045 priorytet=10 dane="data_task"
+[ReportService #43] Przetwarzam zadanie id=2045 priorytet=2 dane="report_task"
+[ReportService] zapis idx 5 = 2
+[DataService] odczyt idx 5 -> 10
+[ReportService #42] Przetwarzam zadanie id=2046 priorytet=2 dane="report_task"
+[DataService #14] Przetwarzam zadanie id=1046 priorytet=1 dane="data_task"
+[ReportService] odczyt idx 6 -> 1
+[DataService] zapis idx 6 = 1
+[DataService #12] Przetwarzam zadanie id=1047 priorytet=1 dane="data_task"
+[ReportService #45] Przetwarzam zadanie id=2047 priorytet=2 dane="report_task"
+[DataService] zapis idx 7 = 1
+[ReportService] odczyt idx 7 -> 1
+[DataService #16] Przetwarzam zadanie id=1048 priorytet=1 dane="data_task"
+[DataService] odczyt idx 8 -> 2
+[ReportService #47] Przetwarzam zadanie id=2048 priorytet=2 dane="report_task"
+[ReportService] zapis idx 8 = 2
+[DataService #12] Przetwarzam zadanie id=1049 priorytet=1 dane="data_task"
+[DataService] odczyt idx 9 -> 1
+[ReportService #49] Przetwarzam zadanie id=2049 priorytet=7 dane="report_task"
+[ReportService] zapis idx 9 = 7
+[DataService #6] Przetwarzam zadanie id=1050 priorytet=10 dane="data_task"
+[DataService] zapis idx 0 = 10
+[ReportService #48] Przetwarzam zadanie id=2050 priorytet=2 dane="report_task"
+[ReportService] zapis idx 0 = 2
+[DataService #13] Przetwarzam zadanie id=1051 priorytet=1 dane="data_task"
+[ReportService #1] Przetwarzam zadanie id=2051 priorytet=2 dane="report_task"
+[ReportService] zapis idx 1 = 2
+[DataService] zapis idx 1 = 1
+[ReportService #0] Przetwarzam zadanie id=2052 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 2 -> 1
+[DataService #15] Przetwarzam zadanie id=1052 priorytet=1 dane="data_task"
+[DataService] odczyt idx 2 -> 1
+[ReportService #46] Przetwarzam zadanie id=2053 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 3 -> 1
+[DataService #10] Przetwarzam zadanie id=1053 priorytet=1 dane="data_task"
+[DataService] zapis idx 3 = 1
+[DataService #19] Przetwarzam zadanie id=1054 priorytet=1 dane="data_task"
+[DataService] odczyt idx 4 -> 2
+[ReportService #2] Przetwarzam zadanie id=2054 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 4 -> 2
+[DataService #10] Przetwarzam zadanie id=1055 priorytet=10 dane="data_task"
+[ReportService #3] Przetwarzam zadanie id=2055 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 5 -> 2
+[DataService] odczyt idx 5 -> 2
+[ReportService #4] Przetwarzam zadanie id=2056 priorytet=7 dane="report_task"
+[DataService #21] Przetwarzam zadanie id=1056 priorytet=1 dane="data_task"
+[DataService] odczyt idx 6 -> 1
+[ReportService] zapis idx 6 = 7
+[ReportService #5] Przetwarzam zadanie id=2057 priorytet=2 dane="report_task"
+[ReportService] zapis idx 7 = 2
+[DataService #17] Przetwarzam zadanie id=1057 priorytet=1 dane="data_task"
+[DataService] odczyt idx 7 -> 2
+[DataService #21] Przetwarzam zadanie id=1058 priorytet=1 dane="data_task"
+[DataService] odczyt idx 8 -> 2
+[ReportService #6] Przetwarzam zadanie id=2058 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 8 -> 2
+[ReportService #7] Przetwarzam zadanie id=2059 priorytet=2 dane="report_task"
+[ReportService] zapis idx 9 = 2
+[DataService #25] Przetwarzam zadanie id=1059 priorytet=1 dane="data_task"
+[DataService] zapis idx 9 = 1
+[ReportService #8] Przetwarzam zadanie id=2060 priorytet=2 dane="report_task"
+[DataService #24] Przetwarzam zadanie id=1060 priorytet=10 dane="data_task"
+[ReportService] zapis idx 0 = 2
+[DataService] odczyt idx 0 -> 2
+[ReportService #9] Przetwarzam zadanie id=2061 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 1 -> 2
+[DataService #7] Przetwarzam zadanie id=1061 priorytet=1 dane="data_task"
+[DataService] odczyt idx 1 -> 2
+[ReportService #10] Przetwarzam zadanie id=2062 priorytet=2 dane="report_task"
+[ReportService] zapis idx 2 = 2
+[DataService #26] Przetwarzam zadanie id=1062 priorytet=1 dane="data_task"
+[DataService] odczyt idx 2 -> 2
+[ReportService #11] Przetwarzam zadanie id=2063 priorytet=7 dane="report_task"
+[DataService #27] Przetwarzam zadanie id=1063 priorytet=1 dane="data_task"
+[ReportService] odczyt idx 3 -> 1
+[DataService] odczyt idx 3 -> 1
+[DataService #26] Przetwarzam zadanie id=1064 priorytet=1 dane="data_task"
+[DataService] zapis idx 4 = 1
+[ReportService #12] Przetwarzam zadanie id=2064 priorytet=2 dane="report_task"
+[ReportService] zapis idx 4 = 2
+[DataService #28] Przetwarzam zadanie id=1065 priorytet=10 dane="data_task"
+[ReportService #13] Przetwarzam zadanie id=2065 priorytet=2 dane="report_task"
+[DataService] zapis idx 5 = 10
+[ReportService] zapis idx 5 = 2
+[ReportService #16] Przetwarzam zadanie id=2066 priorytet=2 dane="report_task"
+[ReportService] zapis idx 6 = 2
+[DataService #29] Przetwarzam zadanie id=1066 priorytet=1 dane="data_task"
+[DataService] odczyt idx 6 -> 2
+[DataService #30] Przetwarzam zadanie id=1067 priorytet=1 dane="data_task"
+[DataService] odczyt idx 7 -> 2
+[ReportService #15] Przetwarzam zadanie id=2067 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 7 -> 2
+[DataService #3] Przetwarzam zadanie id=1068 priorytet=1 dane="data_task"
+[DataService] zapis idx 8 = 1
+[ReportService #13] Przetwarzam zadanie id=2068 priorytet=2 dane="report_task"
+[ReportService] zapis idx 8 = 2
+[DataService #33] Przetwarzam zadanie id=1069 priorytet=1 dane="data_task"
+[DataService] zapis idx 9 = 1
+[ReportService #17] Przetwarzam zadanie id=2069 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 9 -> 1
+[ReportService #14] Przetwarzam zadanie id=2070 priorytet=7 dane="report_task"
+[DataService #32] Przetwarzam zadanie id=1070 priorytet=10 dane="data_task"
+[ReportService] zapis idx 0 = 7
+[DataService] zapis idx 0 = 10
+[DataService #3] Przetwarzam zadanie id=1071 priorytet=1 dane="data_task"
+[DataService] odczyt idx 1 -> 2
+[ReportService #21] Przetwarzam zadanie id=2071 priorytet=2 dane="report_task"
+[ReportService] zapis idx 1 = 2
+[DataService #34] Przetwarzam zadanie id=1072 priorytet=1 dane="data_task"
+[DataService] zapis idx 2 = 1
+[ReportService #17] Przetwarzam zadanie id=2072 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 2 -> 1
+[DataService #3] Przetwarzam zadanie id=1073 priorytet=1 dane="data_task"
+[DataService] zapis idx 3 = 1
+[ReportService #21] Przetwarzam zadanie id=2073 priorytet=2 dane="report_task"
+[ReportService] zapis idx 3 = 2
+[DataService #2] Przetwarzam zadanie id=1074 priorytet=1 dane="data_task"
+[ReportService #22] Przetwarzam zadanie id=2074 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 4 -> 2
+[DataService] odczyt idx 4 -> 2
+[DataService #37] Przetwarzam zadanie id=1075 priorytet=10 dane="data_task"
+[DataService] zapis idx 5 = 10
+[ReportService #23] Przetwarzam zadanie id=2075 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 5 -> 10
+[ReportService #24] Przetwarzam zadanie id=2076 priorytet=2 dane="report_task"
+[DataService #8] Przetwarzam zadanie id=1076 priorytet=1 dane="data_task"
+[ReportService] odczyt idx 6 -> 2
+[DataService] zapis idx 6 = 1
+[DataService #0] Przetwarzam zadanie id=1077 priorytet=1 dane="data_task"
+[DataService] zapis idx 7 = 1
+[ReportService #25] Przetwarzam zadanie id=2077 priorytet=7 dane="report_task"
+[ReportService] zapis idx 7 = 7
+[DataService #36] Przetwarzam zadanie id=1078 priorytet=1 dane="data_task"
+[DataService] odczyt idx 8 -> 2
+[ReportService #26] Przetwarzam zadanie id=2078 priorytet=2 dane="report_task"
+[ReportService] zapis idx 8 = 2
+[DataService #39] Przetwarzam zadanie id=1079 priorytet=1 dane="data_task"
+[ReportService #27] Przetwarzam zadanie id=2079 priorytet=2 dane="report_task"
+[DataService] odczyt idx 9 -> 1
+[ReportService] zapis idx 9 = 2
+[DataService #40] Przetwarzam zadanie id=1080 priorytet=10 dane="data_task"
+[DataService] odczyt idx 0 -> 10
+[ReportService #28] Przetwarzam zadanie id=2080 priorytet=2 dane="report_task"
+[ReportService] zapis idx 0 = 2
+[DataService #41] Przetwarzam zadanie id=1081 priorytet=1 dane="data_task"
+[DataService] odczyt idx 1 -> 2
+[ReportService #29] Przetwarzam zadanie id=2081 priorytet=2 dane="report_task"
+[ReportService] zapis idx 1 = 2
+[ReportService #30] Przetwarzam zadanie id=2082 priorytet=2 dane="report_task"
+[ReportService] zapis idx 2 = 2
+[DataService #42] Przetwarzam zadanie id=1082 priorytet=1 dane="data_task"
+[DataService] zapis idx 2 = 1
+[DataService #4] Przetwarzam zadanie id=1083 priorytet=1 dane="data_task"
+[DataService] odczyt idx 3 -> 2
+[ReportService #31] Przetwarzam zadanie id=2083 priorytet=2 dane="report_task"
+[ReportService] zapis idx 3 = 2
+[ReportService #30] Przetwarzam zadanie id=2084 priorytet=7 dane="report_task"
+[DataService #42] Przetwarzam zadanie id=1084 priorytet=1 dane="data_task"
+[ReportService] odczyt idx 4 -> 2
+[DataService] odczyt idx 4 -> 2
+[ReportService #32] Przetwarzam zadanie id=2085 priorytet=2 dane="report_task"
+[ReportService] zapis idx 5 = 2
+[DataService #11] Przetwarzam zadanie id=1085 priorytet=10 dane="data_task"
+[DataService] zapis idx 5 = 10
+[DataService #44] Przetwarzam zadanie id=1086 priorytet=1 dane="data_task"
+[ReportService #34] Przetwarzam zadanie id=2086 priorytet=2 dane="report_task"
+[DataService] odczyt idx 6 -> 1
+[ReportService] odczyt idx 6 -> 1
+[ReportService #32] Przetwarzam zadanie id=2087 priorytet=2 dane="report_task"
+[DataService #11] Przetwarzam zadanie id=1087 priorytet=1 dane="data_task"
+[ReportService] odczyt idx 7 -> 7
+[DataService] odczyt idx 7 -> 7
+[DataService #45] Przetwarzam zadanie id=1088 priorytet=1 dane="data_task"
+[ReportService #36] Przetwarzam zadanie id=2088 priorytet=2 dane="report_task"
+[DataService] zapis idx 8 = 1
+[ReportService] zapis idx 8 = 2
+[ReportService #37] Przetwarzam zadanie id=2089 priorytet=2 dane="report_task"
+[DataService #47] Przetwarzam zadanie id=1089 priorytet=1 dane="data_task"
+[ReportService] zapis idx 9 = 2
+[DataService] odczyt idx 9 -> 2
+[DataService #43] Przetwarzam zadanie id=1090 priorytet=10 dane="data_task"
+[ReportService #38] Przetwarzam zadanie id=2090 priorytet=2 dane="report_task"
+[DataService] odczyt idx 0 -> 2
+[ReportService] odczyt idx 0 -> 2
+[DataService #47] Przetwarzam zadanie id=1091 priorytet=1 dane="data_task"
+[DataService] odczyt idx 1 -> 2
+[ReportService #39] Przetwarzam zadanie id=2091 priorytet=7 dane="report_task"
+[ReportService] zapis idx 1 = 7
+[DataService #48] Przetwarzam zadanie id=1092 priorytet=1 dane="data_task"
+[DataService] odczyt idx 2 -> 1
+[ReportService #40] Przetwarzam zadanie id=2092 priorytet=2 dane="report_task"
+[ReportService] zapis idx 2 = 2
+[ReportService #41] Przetwarzam zadanie id=2093 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 3 -> 2
+[DataService #9] Przetwarzam zadanie id=1093 priorytet=1 dane="data_task"
+[DataService] zapis idx 3 = 1
+[DataService #48] Przetwarzam zadanie id=1094 priorytet=1 dane="data_task"
+[DataService] odczyt idx 4 -> 2
+[ReportService #44] Przetwarzam zadanie id=2094 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 4 -> 2
+[ReportService #43] Przetwarzam zadanie id=2095 priorytet=2 dane="report_task"
+[ReportService] zapis idx 5 = 2
+[DataService #5] Przetwarzam zadanie id=1095 priorytet=10 dane="data_task"
+[DataService] odczyt idx 5 -> 2
+[DataService #14] Przetwarzam zadanie id=1096 priorytet=1 dane="data_task"
+[ReportService #42] Przetwarzam zadanie id=2096 priorytet=2 dane="report_task"
+[DataService] odczyt idx 6 -> 1
+[ReportService] odczyt idx 6 -> 1
+[DataService #5] Przetwarzam zadanie id=1097 priorytet=1 dane="data_task"
+[DataService] zapis idx 7 = 1
+[ReportService #45] Przetwarzam zadanie id=2097 priorytet=2 dane="report_task"
+[ReportService] zapis idx 7 = 2
+[DataService #16] Przetwarzam zadanie id=1098 priorytet=1 dane="data_task"
+[DataService] zapis idx 8 = 1
+[ReportService #47] Przetwarzam zadanie id=2098 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 8 -> 1
+[DataService #12] Przetwarzam zadanie id=1099 priorytet=1 dane="data_task"
+[DataService] zapis idx 9 = 1
+[ReportService #49] Przetwarzam zadanie id=2099 priorytet=2 dane="report_task"
+[ReportService] zapis idx 9 = 2
+[TEST] Do kolejki DataService wchodzi zadanie HIGH: id=9999 priorytet=1000 dane=TEST_HIGH
+[ReportService #48] Przetwarzam zadanie id=2100 priorytet=2 dane="report_task"
+[DataService #6] Przetwarzam zadanie id=9999 priorytet=1000 dane="TEST_HIGH"
+[ReportService] odczyt idx 0 -> 2
+[DataService] zapis idx 9 = 1000
+[DataService #13] Przetwarzam zadanie id=1100 priorytet=10 dane="data_task"
+[DataService] zapis idx 0 = 10
+[DataService #15] Przetwarzam zadanie id=1101 priorytet=1 dane="data_task"
+[ReportService #1] Przetwarzam zadanie id=2101 priorytet=2 dane="report_task"
+[DataService] odczyt idx 1 -> 7
+[ReportService] odczyt idx 1 -> 7
+[DataService #20] Przetwarzam zadanie id=1102 priorytet=1 dane="data_task"
+[DataService] odczyt idx 2 -> 2
+[ReportService #0] Przetwarzam zadanie id=2102 priorytet=2 dane="report_task"
+[ReportService] zapis idx 2 = 2
+[DataService #19] Przetwarzam zadanie id=1103 priorytet=1 dane="data_task"
+[DataService] odczyt idx 3 -> 1
+[ReportService #46] Przetwarzam zadanie id=2103 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 3 -> 1
+[DataService #10] Przetwarzam zadanie id=1104 priorytet=1 dane="data_task"
+[DataService] odczyt idx 4 -> 2
+[ReportService #2] Przetwarzam zadanie id=2104 priorytet=2 dane="report_task"
+[ReportService] zapis idx 4 = 2
+[DataService #22] Przetwarzam zadanie id=1105 priorytet=10 dane="data_task"
+[DataService] zapis idx 5 = 10
+[ReportService #3] Przetwarzam zadanie id=2105 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 5 -> 10
+[DataService #17] Przetwarzam zadanie id=1106 priorytet=1 dane="data_task"
+[DataService] zapis idx 6 = 1
+[ReportService #4] Przetwarzam zadanie id=2106 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 6 -> 1
+[DataService #21] Przetwarzam zadanie id=1107 priorytet=1 dane="data_task"
+[DataService] zapis idx 7 = 1
+[ReportService #5] Przetwarzam zadanie id=2107 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 7 -> 1
+[DataService #25] Przetwarzam zadanie id=1108 priorytet=1 dane="data_task"
+[ReportService #6] Przetwarzam zadanie id=2108 priorytet=2 dane="report_task"
+[DataService] odczyt idx 8 -> 1
+[ReportService] zapis idx 8 = 2
+[DataService #24] Przetwarzam zadanie id=1109 priorytet=1 dane="data_task"
+[DataService] zapis idx 9 = 1
+[ReportService #7] Przetwarzam zadanie id=2109 priorytet=2 dane="report_task"
+[ReportService] zapis idx 9 = 2
+[ReportService #8] Przetwarzam zadanie id=2110 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 0 -> 10
+[DataService #7] Przetwarzam zadanie id=1110 priorytet=10 dane="data_task"
+[DataService] odczyt idx 0 -> 10
+[DataService #23] Przetwarzam zadanie id=1111 priorytet=1 dane="data_task"
+[DataService] zapis idx 1 = 1
+[ReportService #9] Przetwarzam zadanie id=2111 priorytet=2 dane="report_task"
+[ReportService] zapis idx 1 = 2
+[DataService #27] Przetwarzam zadanie id=1112 priorytet=1 dane="data_task"
+[DataService] zapis idx 2 = 1
+[ReportService #10] Przetwarzam zadanie id=2112 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 2 -> 1
+[DataService #26] Przetwarzam zadanie id=1113 priorytet=1 dane="data_task"
+[ReportService #11] Przetwarzam zadanie id=2113 priorytet=2 dane="report_task"
+[DataService] zapis idx 3 = 1
+[ReportService] zapis idx 3 = 2
+[DataService #28] Przetwarzam zadanie id=1114 priorytet=1 dane="data_task"
+[DataService] odczyt idx 4 -> 2
+[ReportService #12] Przetwarzam zadanie id=2114 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 4 -> 2
+[DataService #29] Przetwarzam zadanie id=1115 priorytet=10 dane="data_task"
+[DataService] odczyt idx 5 -> 10
+[ReportService #16] Przetwarzam zadanie id=2115 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 5 -> 10
+[DataService #30] Przetwarzam zadanie id=1116 priorytet=1 dane="data_task"
+[DataService] zapis idx 6 = 1
+[ReportService #18] Przetwarzam zadanie id=2116 priorytet=2 dane="report_task"
+[ReportService] zapis idx 6 = 2
+[DataService #35] Przetwarzam zadanie id=1117 priorytet=1 dane="data_task"
+[ReportService #15] Przetwarzam zadanie id=2117 priorytet=2 dane="report_task"
+[DataService] odczyt idx 7 -> 1
+[ReportService] zapis idx 7 = 2
+[ReportService #13] Przetwarzam zadanie id=2118 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 8 -> 2
+[DataService #33] Przetwarzam zadanie id=1118 priorytet=1 dane="data_task"
+[DataService] zapis idx 8 = 1
+[ReportService #14] Przetwarzam zadanie id=2119 priorytet=7 dane="report_task"
+[DataService #32] Przetwarzam zadanie id=1119 priorytet=1 dane="data_task"
+[ReportService] zapis idx 9 = 7
+[DataService] zapis idx 9 = 1
+[DataService #31] Przetwarzam zadanie id=1120 priorytet=10 dane="data_task"
+[DataService] zapis idx 0 = 10
+[ReportService #20] Przetwarzam zadanie id=2120 priorytet=2 dane="report_task"
+[ReportService] zapis idx 0 = 2
+[DataService #34] Przetwarzam zadanie id=1121 priorytet=1 dane="data_task"
+[DataService] odczyt idx 1 -> 2
+[ReportService #19] Przetwarzam zadanie id=2121 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 1 -> 2
+[DataService #3] Przetwarzam zadanie id=1122 priorytet=1 dane="data_task"
+[ReportService #17] Przetwarzam zadanie id=2122 priorytet=2 dane="report_task"
+[DataService] zapis idx 2 = 1
+[ReportService] zapis idx 2 = 2
+[ReportService #21] Przetwarzam zadanie id=2123 priorytet=2 dane="report_task"
+[DataService #2] Przetwarzam zadanie id=1123 priorytet=1 dane="data_task"
+[ReportService] odczyt idx 3 -> 2
+[DataService] zapis idx 3 = 1
+[DataService #37] Przetwarzam zadanie id=1124 priorytet=1 dane="data_task"
+[DataService] zapis idx 4 = 1
+[ReportService #22] Przetwarzam zadanie id=2124 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 4 -> 1
+[DataService #3] Przetwarzam zadanie id=1125 priorytet=10 dane="data_task"
+[DataService] odczyt idx 5 -> 10
+[ReportService #23] Przetwarzam zadanie id=2125 priorytet=2 dane="report_task"
+[ReportService] zapis idx 5 = 2
+[DataService #0] Przetwarzam zadanie id=1126 priorytet=1 dane="data_task"
+[ReportService #24] Przetwarzam zadanie id=2126 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 6 -> 2
+[DataService] odczyt idx 6 -> 2
+[DataService #36] Przetwarzam zadanie id=1127 priorytet=1 dane="data_task"
+[DataService] zapis idx 7 = 1
+[ReportService #25] Przetwarzam zadanie id=2127 priorytet=2 dane="report_task"
+[ReportService] zapis idx 7 = 2
+[ReportService #26] Przetwarzam zadanie id=2128 priorytet=2 dane="report_task"
+[DataService #39] Przetwarzam zadanie id=1128 priorytet=1 dane="data_task"
+[DataService] zapis idx 8 = 1
+[ReportService] zapis idx 8 = 2
+[DataService #36] Przetwarzam zadanie id=1129 priorytet=1 dane="data_task"
+[DataService] zapis idx 9 = 1
+[ReportService #27] Przetwarzam zadanie id=2129 priorytet=2 dane="report_task"
+[ReportService] zapis idx 9 = 2
+[DataService #41] Przetwarzam zadanie id=1130 priorytet=10 dane="data_task"
+[DataService] zapis idx 0 = 10
+[ReportService #28] Przetwarzam zadanie id=2130 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 0 -> 10
+[DataService #38] Przetwarzam zadanie id=1131 priorytet=1 dane="data_task"
+[DataService] odczyt idx 1 -> 2
+[ReportService #29] Przetwarzam zadanie id=2131 priorytet=2 dane="report_task"
+[ReportService] zapis idx 1 = 2
+[DataService #4] Przetwarzam zadanie id=1132 priorytet=1 dane="data_task"
+[DataService] zapis idx 2 = 1
+[ReportService #33] Przetwarzam zadanie id=2132 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 2 -> 1
+[DataService #38] Przetwarzam zadanie id=1133 priorytet=1 dane="data_task"
+[DataService] odczyt idx 3 -> 1
+[ReportService #31] Przetwarzam zadanie id=2133 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 3 -> 1
+[DataService #4] Przetwarzam zadanie id=1134 priorytet=1 dane="data_task"
+[DataService] odczyt idx 4 -> 1
+[ReportService #30] Przetwarzam zadanie id=2134 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 4 -> 1
+[DataService #44] Przetwarzam zadanie id=1135 priorytet=10 dane="data_task"
+[ReportService #35] Przetwarzam zadanie id=2135 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 5 -> 2
+[DataService] odczyt idx 5 -> 2
+[DataService #11] Przetwarzam zadanie id=1136 priorytet=1 dane="data_task"
+[DataService] zapis idx 6 = 1
+[ReportService #34] Przetwarzam zadanie id=2136 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 6 -> 1
+[ReportService #32] Przetwarzam zadanie id=2137 priorytet=2 dane="report_task"
+[DataService #45] Przetwarzam zadanie id=1137 priorytet=1 dane="data_task"
+[ReportService] odczyt idx 7 -> 2
+[DataService] zapis idx 7 = 1
+[DataService #46] Przetwarzam zadanie id=1138 priorytet=1 dane="data_task"
+[DataService] odczyt idx 8 -> 2
+[ReportService #36] Przetwarzam zadanie id=2138 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 8 -> 2
+[DataService #43] Przetwarzam zadanie id=1139 priorytet=1 dane="data_task"
+[ReportService #37] Przetwarzam zadanie id=2139 priorytet=2 dane="report_task"
+[DataService] odczyt idx 9 -> 2
+[ReportService] odczyt idx 9 -> 2
+[ReportService #38] Przetwarzam zadanie id=2140 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 0 -> 10
+[DataService #47] Przetwarzam zadanie id=1140 priorytet=10 dane="data_task"
+[DataService] zapis idx 0 = 10
+[DataService #49] Przetwarzam zadanie id=1141 priorytet=1 dane="data_task"
+[DataService] odczyt idx 1 -> 2
+[ReportService #39] Przetwarzam zadanie id=2141 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 1 -> 2
+[DataService #9] Przetwarzam zadanie id=1142 priorytet=1 dane="data_task"
+[DataService] zapis idx 2 = 1
+[ReportService #37] Przetwarzam zadanie id=2142 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 2 -> 1
+[DataService #48] Przetwarzam zadanie id=1143 priorytet=1 dane="data_task"
+[ReportService #41] Przetwarzam zadanie id=2143 priorytet=2 dane="report_task"
+[DataService] zapis idx 3 = 1
+[ReportService] zapis idx 3 = 2
+[ReportService #39] Przetwarzam zadanie id=2144 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 4 -> 1
+[DataService #18] Przetwarzam zadanie id=1144 priorytet=1 dane="data_task"
+[DataService] zapis idx 4 = 1
+[ReportService #43] Przetwarzam zadanie id=2145 priorytet=2 dane="report_task"
+[DataService #14] Przetwarzam zadanie id=1145 priorytet=10 dane="data_task"
+[ReportService] zapis idx 5 = 2
+[DataService] odczyt idx 5 -> 2
+[DataService #5] Przetwarzam zadanie id=1146 priorytet=1 dane="data_task"
+[DataService] odczyt idx 6 -> 1
+[ReportService #42] Przetwarzam zadanie id=2146 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 6 -> 1
+[DataService #14] Przetwarzam zadanie id=1147 priorytet=1 dane="data_task"
+[DataService] zapis idx 7 = 1
+[ReportService #45] Przetwarzam zadanie id=2147 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 7 -> 1
+[DataService #12] Przetwarzam zadanie id=1148 priorytet=1 dane="data_task"
+[DataService] zapis idx 8 = 1
+[ReportService #47] Przetwarzam zadanie id=2148 priorytet=2 dane="report_task"
+[ReportService] zapis idx 8 = 2
+[DataService #13] Przetwarzam zadanie id=1149 priorytet=1 dane="data_task"
+[DataService] zapis idx 9 = 1
+[ReportService #49] Przetwarzam zadanie id=2149 priorytet=2 dane="report_task"
+[ReportService] zapis idx 9 = 2
+[DataService #12] Przetwarzam zadanie id=1150 priorytet=10 dane="data_task"
+[DataService] zapis idx 0 = 10
+[ReportService #48] Przetwarzam zadanie id=2150 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 0 -> 10
+[DataService #15] Przetwarzam zadanie id=1151 priorytet=1 dane="data_task"
+[DataService] zapis idx 1 = 1
+[ReportService #1] Przetwarzam zadanie id=2151 priorytet=2 dane="report_task"
+[ReportService] zapis idx 1 = 2
+[ReportService #0] Przetwarzam zadanie id=2152 priorytet=2 dane="report_task"
+[ReportService] zapis idx 2 = 2
+[DataService #20] Przetwarzam zadanie id=1152 priorytet=1 dane="data_task"
+[DataService] zapis idx 2 = 1
+[DataService #19] Przetwarzam zadanie id=1153 priorytet=1 dane="data_task"
+[DataService] zapis idx 3 = 1
+[ReportService #46] Przetwarzam zadanie id=2153 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 3 -> 1
+[ReportService #2] Przetwarzam zadanie id=2154 priorytet=7 dane="report_task"
+[DataService #10] Przetwarzam zadanie id=1154 priorytet=1 dane="data_task"
+[ReportService] odczyt idx 4 -> 1
+[DataService] zapis idx 4 = 1
+[DataService #17] Przetwarzam zadanie id=1155 priorytet=10 dane="data_task"
+[ReportService #3] Przetwarzam zadanie id=2155 priorytet=2 dane="report_task"
+[DataService] odczyt idx 5 -> 2
+[ReportService] odczyt idx 5 -> 2
+[ReportService #4] Przetwarzam zadanie id=2156 priorytet=2 dane="report_task"
+[DataService #22] Przetwarzam zadanie id=1156 priorytet=1 dane="data_task"
+[ReportService] zapis idx 6 = 2
+[DataService] zapis idx 6 = 1
+[DataService #21] Przetwarzam zadanie id=1157 priorytet=1 dane="data_task"
+[DataService] odczyt idx 7 -> 1
+[ReportService #5] Przetwarzam zadanie id=2157 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 7 -> 1
+[ReportService #6] Przetwarzam zadanie id=2158 priorytet=2 dane="report_task"
+[DataService #25] Przetwarzam zadanie id=1158 priorytet=1 dane="data_task"
+[ReportService] zapis idx 8 = 2
+[DataService] zapis idx 8 = 1
+[ReportService #7] Przetwarzam zadanie id=2159 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 9 -> 2
+[DataService #24] Przetwarzam zadanie id=1159 priorytet=1 dane="data_task"
+[DataService] zapis idx 9 = 1
+[DataService #7] Przetwarzam zadanie id=1160 priorytet=10 dane="data_task"
+[ReportService #8] Przetwarzam zadanie id=2160 priorytet=2 dane="report_task"
+[DataService] odczyt idx 0 -> 10
+[ReportService] zapis idx 0 = 2
+[ReportService #11] Przetwarzam zadanie id=2161 priorytet=7 dane="report_task"
+[ReportService] zapis idx 1 = 7
+[DataService #26] Przetwarzam zadanie id=1161 priorytet=1 dane="data_task"
+[DataService] odczyt idx 1 -> 7
+[DataService #27] Przetwarzam zadanie id=1162 priorytet=1 dane="data_task"
+[DataService] odczyt idx 2 -> 1
+[ReportService #10] Przetwarzam zadanie id=2162 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 2 -> 1
+[DataService #23] Przetwarzam zadanie id=1163 priorytet=1 dane="data_task"
+[ReportService #9] Przetwarzam zadanie id=2163 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 3 -> 1
+[DataService] odczyt idx 3 -> 1
+[DataService #28] Przetwarzam zadanie id=1164 priorytet=1 dane="data_task"
+[DataService] zapis idx 4 = 1
+[ReportService #12] Przetwarzam zadanie id=2164 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 4 -> 1
+[ReportService #16] Przetwarzam zadanie id=2165 priorytet=2 dane="report_task"
+[DataService #23] Przetwarzam zadanie id=1165 priorytet=10 dane="data_task"
+[DataService] odczyt idx 5 -> 2
+[ReportService] zapis idx 5 = 2
+[ReportService #12] Przetwarzam zadanie id=2166 priorytet=2 dane="report_task"
+[ReportService] zapis idx 6 = 2
+[DataService #28] Przetwarzam zadanie id=1166 priorytet=1 dane="data_task"
+[DataService] zapis idx 6 = 1
+[DataService #35] Przetwarzam zadanie id=1167 priorytet=1 dane="data_task"
+[ReportService #15] Przetwarzam zadanie id=2167 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 7 -> 1
+[DataService] odczyt idx 7 -> 1
+[DataService #33] Przetwarzam zadanie id=1168 priorytet=1 dane="data_task"
+[ReportService #13] Przetwarzam zadanie id=2168 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 8 -> 1
+[DataService] zapis idx 8 = 1
+[ReportService #14] Przetwarzam zadanie id=2169 priorytet=2 dane="report_task"
+[ReportService] zapis idx 9 = 2
+[DataService #35] Przetwarzam zadanie id=1169 priorytet=1 dane="data_task"
+[DataService] zapis idx 9 = 1
+[ReportService #20] Przetwarzam zadanie id=2170 priorytet=2 dane="report_task"
+[ReportService] zapis idx 0 = 2
+[DataService #31] Przetwarzam zadanie id=1170 priorytet=10 dane="data_task"
+[DataService] zapis idx 0 = 10
+[ReportService #19] Przetwarzam zadanie id=2171 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 1 -> 7
+[DataService #34] Przetwarzam zadanie id=1171 priorytet=1 dane="data_task"
+[DataService] zapis idx 1 = 1
+[DataService #8] Przetwarzam zadanie id=1172 priorytet=1 dane="data_task"
+[DataService] zapis idx 2 = 1
+[ReportService #20] Przetwarzam zadanie id=2172 priorytet=2 dane="report_task"
+[ReportService] zapis idx 2 = 2
+[DataService #2] Przetwarzam zadanie id=1173 priorytet=1 dane="data_task"
+[DataService] odczyt idx 3 -> 1
+[ReportService #21] Przetwarzam zadanie id=2173 priorytet=2 dane="report_task"
+[ReportService] zapis idx 3 = 2
+[DataService #37] Przetwarzam zadanie id=1174 priorytet=1 dane="data_task"
+[DataService] zapis idx 4 = 1
+[ReportService #22] Przetwarzam zadanie id=2174 priorytet=2 dane="report_task"
+[ReportService] zapis idx 4 = 2
+[DataService #3] Przetwarzam zadanie id=1175 priorytet=10 dane="data_task"
+[DataService] zapis idx 5 = 10
+[ReportService #23] Przetwarzam zadanie id=2175 priorytet=7 dane="report_task"
+[ReportService] zapis idx 5 = 7
+[DataService #0] Przetwarzam zadanie id=1176 priorytet=1 dane="data_task"
+[DataService] zapis idx 6 = 1
+[ReportService #24] Przetwarzam zadanie id=2176 priorytet=2 dane="report_task"
+[ReportService] zapis idx 6 = 2
+[DataService #3] Przetwarzam zadanie id=1177 priorytet=1 dane="data_task"
+[DataService] odczyt idx 7 -> 1
+[ReportService #25] Przetwarzam zadanie id=2177 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 7 -> 1
+[ReportService #26] Przetwarzam zadanie id=2178 priorytet=2 dane="report_task"
+[ReportService] zapis idx 8 = 2
+[DataService #0] Przetwarzam zadanie id=1178 priorytet=1 dane="data_task"
+[DataService] odczyt idx 8 -> 2
+[DataService #36] Przetwarzam zadanie id=1179 priorytet=1 dane="data_task"
+[ReportService #27] Przetwarzam zadanie id=2179 priorytet=2 dane="report_task"
+[DataService] odczyt idx 9 -> 1
+[ReportService] zapis idx 9 = 2
+[DataService #41] Przetwarzam zadanie id=1180 priorytet=10 dane="data_task"
+[ReportService #28] Przetwarzam zadanie id=2180 priorytet=2 dane="report_task"
+[DataService] zapis idx 0 = 10
+[ReportService] zapis idx 0 = 2
+[ReportService #29] Przetwarzam zadanie id=2181 priorytet=2 dane="report_task"
+[ReportService] zapis idx 1 = 2
+[DataService #42] Przetwarzam zadanie id=1181 priorytet=1 dane="data_task"
+[DataService] zapis idx 1 = 1
+[ReportService #33] Przetwarzam zadanie id=2182 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 2 -> 2
+[DataService #1] Przetwarzam zadanie id=1182 priorytet=1 dane="data_task"
+[DataService] odczyt idx 2 -> 2
+[ReportService #31] Przetwarzam zadanie id=2183 priorytet=2 dane="report_task"
+[ReportService] zapis idx 3 = 2
+[DataService #38] Przetwarzam zadanie id=1183 priorytet=1 dane="data_task"
+[DataService] odczyt idx 3 -> 2
+[DataService #4] Przetwarzam zadanie id=1184 priorytet=1 dane="data_task"
+[ReportService #30] Przetwarzam zadanie id=2184 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 4 -> 1
+[DataService] zapis idx 4 = 1
+[DataService #44] Przetwarzam zadanie id=1185 priorytet=10 dane="data_task"
+[ReportService #35] Przetwarzam zadanie id=2185 priorytet=2 dane="report_task"
+[DataService] zapis idx 5 = 10
+[ReportService] zapis idx 5 = 2
+[ReportService #34] Przetwarzam zadanie id=2186 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 6 -> 2
+[DataService #11] Przetwarzam zadanie id=1186 priorytet=1 dane="data_task"
+[DataService] zapis idx 6 = 1
+[ReportService #32] Przetwarzam zadanie id=2187 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 7 -> 1
+[DataService #45] Przetwarzam zadanie id=1187 priorytet=1 dane="data_task"
+[DataService] zapis idx 7 = 1
+[DataService #46] Przetwarzam zadanie id=1188 priorytet=1 dane="data_task"
+[ReportService #36] Przetwarzam zadanie id=2188 priorytet=2 dane="report_task"
+[DataService] odczyt idx 8 -> 2
+[ReportService] zapis idx 8 = 2
+[ReportService #40] Przetwarzam zadanie id=2189 priorytet=7 dane="report_task"
+[DataService #43] Przetwarzam zadanie id=1189 priorytet=1 dane="data_task"
+[DataService] odczyt idx 9 -> 7
+[ReportService] zapis idx 9 = 7
+[DataService #46] Przetwarzam zadanie id=1190 priorytet=10 dane="data_task"
+[DataService] odczyt idx 0 -> 2
+[ReportService #38] Przetwarzam zadanie id=2190 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 0 -> 2
+[DataService #49] Przetwarzam zadanie id=1191 priorytet=1 dane="data_task"
+[ReportService #40] Przetwarzam zadanie id=2191 priorytet=2 dane="report_task"
+[DataService] odczyt idx 1 -> 1
+[ReportService] odczyt idx 1 -> 1
+[DataService #9] Przetwarzam zadanie id=1192 priorytet=1 dane="data_task"
+[DataService] zapis idx 2 = 1
+[ReportService #37] Przetwarzam zadanie id=2192 priorytet=2 dane="report_task"
+[ReportService] zapis idx 2 = 2
+[DataService #48] Przetwarzam zadanie id=1193 priorytet=1 dane="data_task"
+[ReportService #41] Przetwarzam zadanie id=2193 priorytet=2 dane="report_task"
+[DataService] zapis idx 3 = 1
+[ReportService] odczyt idx 3 -> 1
+[DataService #18] Przetwarzam zadanie id=1194 priorytet=1 dane="data_task"
+[ReportService #43] Przetwarzam zadanie id=2194 priorytet=2 dane="report_task"
+[DataService] zapis idx 4 = 1
+[ReportService] zapis idx 4 = 2
+[DataService #16] Przetwarzam zadanie id=1195 priorytet=10 dane="data_task"
+[ReportService #39] Przetwarzam zadanie id=2195 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 5 -> 2
+[DataService] odczyt idx 5 -> 2
+[DataService #5] Przetwarzam zadanie id=1196 priorytet=1 dane="data_task"
+[ReportService #42] Przetwarzam zadanie id=2196 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 6 -> 1
+[DataService] odczyt idx 6 -> 1
+[ReportService #45] Przetwarzam zadanie id=2197 priorytet=2 dane="report_task"
+[DataService #14] Przetwarzam zadanie id=1197 priorytet=1 dane="data_task"
+[DataService] zapis idx 7 = 1
+[ReportService] odczyt idx 7 -> 1
+[DataService #6] Przetwarzam zadanie id=1198 priorytet=1 dane="data_task"
+[DataService] odczyt idx 8 -> 2
+[ReportService #47] Przetwarzam zadanie id=2198 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 8 -> 2
+[DataService #13] Przetwarzam zadanie id=1199 priorytet=1 dane="data_task"
+[ReportService #49] Przetwarzam zadanie id=2199 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 9 -> 7
+[DataService] odczyt idx 9 -> 7
+[DataService #12] Przetwarzam zadanie id=1200 priorytet=10 dane="data_task"
+[ReportService #48] Przetwarzam zadanie id=2200 priorytet=2 dane="report_task"
+[DataService] odczyt idx 0 -> 2
+[ReportService] zapis idx 0 = 2
+[ReportService #49] Przetwarzam zadanie id=2201 priorytet=2 dane="report_task"
+[ReportService] zapis idx 1 = 2
+[DataService #15] Przetwarzam zadanie id=1201 priorytet=1 dane="data_task"
+[DataService] zapis idx 1 = 1
+[DataService #20] Przetwarzam zadanie id=1202 priorytet=1 dane="data_task"
+[DataService] odczyt idx 2 -> 2
+[ReportService #0] Przetwarzam zadanie id=2202 priorytet=2 dane="report_task"
+[ReportService] zapis idx 2 = 2
+[ReportService #46] Przetwarzam zadanie id=2203 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 3 -> 1
+[DataService #19] Przetwarzam zadanie id=1203 priorytet=1 dane="data_task"
+[DataService] zapis idx 3 = 1
+[ReportService #2] Przetwarzam zadanie id=2204 priorytet=2 dane="report_task"
+[ReportService] zapis idx 4 = 2
+[DataService #10] Przetwarzam zadanie id=1204 priorytet=1 dane="data_task"
+[DataService] zapis idx 4 = 1
+[ReportService #3] Przetwarzam zadanie id=2205 priorytet=2 dane="report_task"
+[DataService #17] Przetwarzam zadanie id=1205 priorytet=10 dane="data_task"
+[ReportService] zapis idx 5 = 2
+[DataService] odczyt idx 5 -> 2
+[DataService #20] Przetwarzam zadanie id=1206 priorytet=1 dane="data_task"
+[DataService] zapis idx 6 = 1
+[ReportService #4] Przetwarzam zadanie id=2206 priorytet=2 dane="report_task"
+[ReportService] zapis idx 6 = 2
+[DataService #21] Przetwarzam zadanie id=1207 priorytet=1 dane="data_task"
+[DataService] odczyt idx 7 -> 1
+[ReportService #5] Przetwarzam zadanie id=2207 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 7 -> 1
+[DataService #25] Przetwarzam zadanie id=1208 priorytet=1 dane="data_task"
+[DataService] zapis idx 8 = 1
+[ReportService #6] Przetwarzam zadanie id=2208 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 8 -> 1
+[DataService #24] Przetwarzam zadanie id=1209 priorytet=1 dane="data_task"
+[DataService] zapis idx 9 = 1
+[ReportService #7] Przetwarzam zadanie id=2209 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 9 -> 1
+[DataService #7] Przetwarzam zadanie id=1210 priorytet=10 dane="data_task"
+[DataService] odczyt idx 0 -> 2
+[ReportService #8] Przetwarzam zadanie id=2210 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 0 -> 2
+[DataService #26] Przetwarzam zadanie id=1211 priorytet=1 dane="data_task"
+[DataService] zapis idx 1 = 1
+[ReportService #11] Przetwarzam zadanie id=2211 priorytet=2 dane="report_task"
+[ReportService] zapis idx 1 = 2
+[DataService #27] Przetwarzam zadanie id=1212 priorytet=1 dane="data_task"
+[DataService] zapis idx 2 = 1
+[ReportService #10] Przetwarzam zadanie id=2212 priorytet=2 dane="report_task"
+[ReportService] zapis idx 2 = 2
+[DataService #26] Przetwarzam zadanie id=1213 priorytet=1 dane="data_task"
+[DataService] zapis idx 3 = 1
+[ReportService #9] Przetwarzam zadanie id=2213 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 3 -> 1
+[ReportService #18] Przetwarzam zadanie id=2214 priorytet=2 dane="report_task"
+[DataService #30] Przetwarzam zadanie id=1214 priorytet=1 dane="data_task"
+[ReportService] zapis idx 4 = 2
+[DataService] zapis idx 4 = 1
+[DataService #23] Przetwarzam zadanie id=1215 priorytet=10 dane="data_task"
+[DataService] zapis idx 5 = 10
+[ReportService #16] Przetwarzam zadanie id=2215 priorytet=2 dane="report_task"
+[ReportService] zapis idx 5 = 2
+[DataService #28] Przetwarzam zadanie id=1216 priorytet=1 dane="data_task"
+[DataService] zapis idx 6 = 1
+[ReportService #12] Przetwarzam zadanie id=2216 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 6 -> 1
+[DataService #32] Przetwarzam zadanie id=1217 priorytet=1 dane="data_task"
+[ReportService #15] Przetwarzam zadanie id=2217 priorytet=7 dane="report_task"
+[DataService] odczyt idx 7 -> 1
+[ReportService] zapis idx 7 = 7
+[DataService #33] Przetwarzam zadanie id=1218 priorytet=1 dane="data_task"
+[DataService] zapis idx 8 = 1
+[ReportService #13] Przetwarzam zadanie id=2218 priorytet=2 dane="report_task"
+[ReportService] zapis idx 8 = 2
+[DataService #32] Przetwarzam zadanie id=1219 priorytet=1 dane="data_task"
+[DataService] odczyt idx 9 -> 1
+[ReportService #14] Przetwarzam zadanie id=2219 priorytet=2 dane="report_task"
+[ReportService] zapis idx 9 = 2
+[DataService #33] Przetwarzam zadanie id=1220 priorytet=10 dane="data_task"
+[DataService] zapis idx 0 = 10
+[ReportService #17] Przetwarzam zadanie id=2220 priorytet=2 dane="report_task"
+[ReportService] zapis idx 0 = 2
+[ReportService #19] Przetwarzam zadanie id=2221 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 1 -> 2
+[DataService #34] Przetwarzam zadanie id=1221 priorytet=1 dane="data_task"
+[DataService] odczyt idx 1 -> 2
+[ReportService #20] Przetwarzam zadanie id=2222 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 2 -> 2
+[DataService #33] Przetwarzam zadanie id=1222 priorytet=1 dane="data_task"
+[DataService] odczyt idx 2 -> 2
+[DataService #34] Przetwarzam zadanie id=1223 priorytet=1 dane="data_task"
+[DataService] zapis idx 3 = 1
+[ReportService #19] Przetwarzam zadanie id=2223 priorytet=2 dane="report_task"
+[ReportService] zapis idx 3 = 2
+[ReportService #22] Przetwarzam zadanie id=2224 priorytet=7 dane="report_task"
+[DataService #37] Przetwarzam zadanie id=1224 priorytet=1 dane="data_task"
+[ReportService] zapis idx 4 = 7
+[DataService] odczyt idx 4 -> 7
+[DataService #40] Przetwarzam zadanie id=1225 priorytet=10 dane="data_task"
+[DataService] odczyt idx 5 -> 2
+[ReportService #23] Przetwarzam zadanie id=2225 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 5 -> 2
+[DataService #37] Przetwarzam zadanie id=1226 priorytet=1 dane="data_task"
+[ReportService #24] Przetwarzam zadanie id=2226 priorytet=2 dane="report_task"
+[DataService] odczyt idx 6 -> 1
+[ReportService] odczyt idx 6 -> 1
+[ReportService #25] Przetwarzam zadanie id=2227 priorytet=2 dane="report_task"
+[DataService #3] Przetwarzam zadanie id=1227 priorytet=1 dane="data_task"
+[ReportService] zapis idx 7 = 2
+[DataService] zapis idx 7 = 1
+[DataService #0] Przetwarzam zadanie id=1228 priorytet=1 dane="data_task"
+[DataService] zapis idx 8 = 1
+[ReportService #26] Przetwarzam zadanie id=2228 priorytet=2 dane="report_task"
+[ReportService] zapis idx 8 = 2
+[DataService #3] Przetwarzam zadanie id=1229 priorytet=1 dane="data_task"
+[DataService] odczyt idx 9 -> 2
+[ReportService #27] Przetwarzam zadanie id=2229 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 9 -> 2
+[DataService #41] Przetwarzam zadanie id=1230 priorytet=10 dane="data_task"
+[DataService] zapis idx 0 = 10
+[ReportService #28] Przetwarzam zadanie id=2230 priorytet=2 dane="report_task"
+[ReportService] zapis idx 0 = 2
+[DataService #42] Przetwarzam zadanie id=1231 priorytet=1 dane="data_task"
+[DataService] odczyt idx 1 -> 2
+[ReportService #29] Przetwarzam zadanie id=2231 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 1 -> 2
+[DataService #41] Przetwarzam zadanie id=1232 priorytet=1 dane="data_task"
+[DataService] zapis idx 2 = 1
+[ReportService #28] Przetwarzam zadanie id=2232 priorytet=2 dane="report_task"
+[ReportService] zapis idx 2 = 2
+[DataService #38] Przetwarzam zadanie id=1233 priorytet=1 dane="data_task"
+[DataService] zapis idx 3 = 1
+[ReportService #31] Przetwarzam zadanie id=2233 priorytet=2 dane="report_task"
+[ReportService] zapis idx 3 = 2
+[ReportService #30] Przetwarzam zadanie id=2234 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 4 -> 7
+[DataService #4] Przetwarzam zadanie id=1234 priorytet=1 dane="data_task"
+[DataService] zapis idx 4 = 1
+[ReportService #35] Przetwarzam zadanie id=2235 priorytet=2 dane="report_task"
+[DataService #44] Przetwarzam zadanie id=1235 priorytet=10 dane="data_task"
+[ReportService] odczyt idx 5 -> 2
+[DataService] zapis idx 5 = 10
+[DataService #11] Przetwarzam zadanie id=1236 priorytet=1 dane="data_task"
+[DataService] odczyt idx 6 -> 1
+[ReportService #34] Przetwarzam zadanie id=2236 priorytet=2 dane="report_task"
+[ReportService] zapis idx 6 = 2
+[DataService #45] Przetwarzam zadanie id=1237 priorytet=1 dane="data_task"
+[ReportService #32] Przetwarzam zadanie id=2237 priorytet=2 dane="report_task"
+[DataService] odczyt idx 7 -> 1
+[ReportService] odczyt idx 7 -> 1
+[DataService #47] Przetwarzam zadanie id=1238 priorytet=1 dane="data_task"
+[DataService] odczyt idx 8 -> 2
+[ReportService #36] Przetwarzam zadanie id=2238 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 8 -> 2
+[DataService #43] Przetwarzam zadanie id=1239 priorytet=1 dane="data_task"
+[DataService] odczyt idx 9 -> 2
+[ReportService #44] Przetwarzam zadanie id=2239 priorytet=2 dane="report_task"
+[ReportService] zapis idx 9 = 2
+[DataService #46] Przetwarzam zadanie id=1240 priorytet=10 dane="data_task"
+[DataService] zapis idx 0 = 10
+[ReportService #36] Przetwarzam zadanie id=2240 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 0 -> 10
+[ReportService #40] Przetwarzam zadanie id=2241 priorytet=2 dane="report_task"
+[DataService #49] Przetwarzam zadanie id=1241 priorytet=1 dane="data_task"
+[ReportService] odczyt idx 1 -> 2
+[DataService] zapis idx 1 = 1
+[ReportService #37] Przetwarzam zadanie id=2242 priorytet=2 dane="report_task"
+[ReportService] zapis idx 2 = 2
+[DataService #9] Przetwarzam zadanie id=1242 priorytet=1 dane="data_task"
+[DataService] odczyt idx 2 -> 2
+[DataService #48] Przetwarzam zadanie id=1243 priorytet=1 dane="data_task"
+[ReportService #41] Przetwarzam zadanie id=2243 priorytet=2 dane="report_task"
+[DataService] odczyt idx 3 -> 2
+[ReportService] zapis idx 3 = 2
+[DataService #18] Przetwarzam zadanie id=1244 priorytet=1 dane="data_task"
+[DataService] zapis idx 4 = 1
+[ReportService #43] Przetwarzam zadanie id=2244 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 4 -> 1
+[ReportService #39] Przetwarzam zadanie id=2245 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 5 -> 10
+[DataService #16] Przetwarzam zadanie id=1245 priorytet=10 dane="data_task"
+[DataService] zapis idx 5 = 10
+[ReportService #42] Przetwarzam zadanie id=2246 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 6 -> 2
+[DataService #5] Przetwarzam zadanie id=1246 priorytet=1 dane="data_task"
+[DataService] zapis idx 6 = 1
+[ReportService #45] Przetwarzam zadanie id=2247 priorytet=2 dane="report_task"
+[DataService #14] Przetwarzam zadanie id=1247 priorytet=1 dane="data_task"
+[ReportService] zapis idx 7 = 2
+[DataService] odczyt idx 7 -> 2
+[ReportService #47] Przetwarzam zadanie id=2248 priorytet=2 dane="report_task"
+[ReportService] zapis idx 8 = 2
+[DataService #6] Przetwarzam zadanie id=1248 priorytet=1 dane="data_task"
+[DataService] odczyt idx 8 -> 2
+[ReportService #1] Przetwarzam zadanie id=2249 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 9 -> 2
+[DataService #14] Przetwarzam zadanie id=1249 priorytet=1 dane="data_task"
+[DataService] zapis idx 9 = 1
+[DataService #12] Przetwarzam zadanie id=1250 priorytet=10 dane="data_task"
+[ReportService #48] Przetwarzam zadanie id=2250 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 0 -> 10
+[DataService] odczyt idx 0 -> 10
+[ReportService #49] Przetwarzam zadanie id=2251 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 1 -> 1
+[DataService #14] Przetwarzam zadanie id=1251 priorytet=1 dane="data_task"
+[DataService] zapis idx 1 = 1
+[DataService #22] Przetwarzam zadanie id=1252 priorytet=1 dane="data_task"
+[DataService] odczyt idx 2 -> 2
+[ReportService #0] Przetwarzam zadanie id=2252 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 2 -> 2
+[DataService #14] Przetwarzam zadanie id=1253 priorytet=1 dane="data_task"
+[DataService] zapis idx 3 = 1
+[ReportService #49] Przetwarzam zadanie id=2253 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 3 -> 1
+[ReportService #2] Przetwarzam zadanie id=2254 priorytet=2 dane="report_task"
+[DataService #10] Przetwarzam zadanie id=1254 priorytet=1 dane="data_task"
+[ReportService] odczyt idx 4 -> 1
+[DataService] odczyt idx 4 -> 1
+[DataService #17] Przetwarzam zadanie id=1255 priorytet=10 dane="data_task"
+[ReportService #4] Przetwarzam zadanie id=2255 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 5 -> 10
+[DataService] zapis idx 5 = 10
+[DataService #10] Przetwarzam zadanie id=1256 priorytet=1 dane="data_task"
+[DataService] zapis idx 6 = 1
+[ReportService #5] Przetwarzam zadanie id=2256 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 6 -> 1
+[DataService #21] Przetwarzam zadanie id=1257 priorytet=1 dane="data_task"
+[DataService] odczyt idx 7 -> 2
+[ReportService #3] Przetwarzam zadanie id=2257 priorytet=2 dane="report_task"
+[ReportService] zapis idx 7 = 2
+[ReportService #6] Przetwarzam zadanie id=2258 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 8 -> 2
+[DataService #25] Przetwarzam zadanie id=1258 priorytet=1 dane="data_task"
+[DataService] zapis idx 8 = 1
+[DataService #21] Przetwarzam zadanie id=1259 priorytet=1 dane="data_task"
+[DataService] zapis idx 9 = 1
+[ReportService #7] Przetwarzam zadanie id=2259 priorytet=7 dane="report_task"
+[ReportService] zapis idx 9 = 7
+[DataService #7] Przetwarzam zadanie id=1260 priorytet=10 dane="data_task"
+[ReportService #8] Przetwarzam zadanie id=2260 priorytet=2 dane="report_task"
+[ReportService] zapis idx 0 = 2
+[DataService] zapis idx 0 = 10
+[DataService #29] Przetwarzam zadanie id=1261 priorytet=1 dane="data_task"
+[DataService] zapis idx 1 = 1
+[ReportService #7] Przetwarzam zadanie id=2261 priorytet=2 dane="report_task"
+[ReportService] zapis idx 1 = 2
+[DataService #27] Przetwarzam zadanie id=1262 priorytet=1 dane="data_task"
+[DataService] odczyt idx 2 -> 2
+[ReportService #10] Przetwarzam zadanie id=2262 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 2 -> 2
+[DataService #26] Przetwarzam zadanie id=1263 priorytet=1 dane="data_task"
+[DataService] zapis idx 3 = 1
+[ReportService #9] Przetwarzam zadanie id=2263 priorytet=2 dane="report_task"
+[ReportService] zapis idx 3 = 2
+[DataService #30] Przetwarzam zadanie id=1264 priorytet=1 dane="data_task"
+[ReportService #18] Przetwarzam zadanie id=2264 priorytet=2 dane="report_task"
+[DataService] zapis idx 4 = 1
+[ReportService] zapis idx 4 = 2
+[DataService #23] Przetwarzam zadanie id=1265 priorytet=10 dane="data_task"
+[DataService] zapis idx 5 = 10
+[ReportService #16] Przetwarzam zadanie id=2265 priorytet=2 dane="report_task"
+[ReportService] zapis idx 5 = 2
+[ReportService #12] Przetwarzam zadanie id=2266 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 6 -> 1
+[DataService #28] Przetwarzam zadanie id=1266 priorytet=1 dane="data_task"
+[DataService] zapis idx 6 = 1
+[DataService #23] Przetwarzam zadanie id=1267 priorytet=1 dane="data_task"
+[DataService] odczyt idx 7 -> 2
+[ReportService #15] Przetwarzam zadanie id=2267 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 7 -> 2
+[DataService #31] Przetwarzam zadanie id=1268 priorytet=1 dane="data_task"
+[ReportService #13] Przetwarzam zadanie id=2268 priorytet=2 dane="report_task"
+[DataService] zapis idx 8 = 1
+[ReportService] odczyt idx 8 -> 1
+[DataService #32] Przetwarzam zadanie id=1269 priorytet=1 dane="data_task"
+[DataService] zapis idx 9 = 1
+[ReportService #15] Przetwarzam zadanie id=2269 priorytet=2 dane="report_task"
+[ReportService] zapis idx 9 = 2
+[ReportService #17] Przetwarzam zadanie id=2270 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 0 -> 2
+[DataService #8] Przetwarzam zadanie id=1270 priorytet=10 dane="data_task"
+[DataService] odczyt idx 0 -> 2
+[DataService #2] Przetwarzam zadanie id=1271 priorytet=1 dane="data_task"
+[ReportService #21] Przetwarzam zadanie id=2271 priorytet=2 dane="report_task"
+[DataService] zapis idx 1 = 1
+[ReportService] zapis idx 1 = 2
+[DataService #33] Przetwarzam zadanie id=1272 priorytet=1 dane="data_task"
+[ReportService #20] Przetwarzam zadanie id=2272 priorytet=2 dane="report_task"
+[DataService] odczyt idx 2 -> 2
+[ReportService] zapis idx 2 = 2
+[ReportService #19] Przetwarzam zadanie id=2273 priorytet=7 dane="report_task"
+[ReportService] zapis idx 3 = 7
+[DataService #34] Przetwarzam zadanie id=1273 priorytet=1 dane="data_task"
+[DataService] zapis idx 3 = 1
+[DataService #39] Przetwarzam zadanie id=1274 priorytet=1 dane="data_task"
+[DataService] odczyt idx 4 -> 2
+[ReportService #20] Przetwarzam zadanie id=2274 priorytet=2 dane="report_task"
+[ReportService] zapis idx 4 = 2
+[DataService #40] Przetwarzam zadanie id=1275 priorytet=10 dane="data_task"
+[DataService] zapis idx 5 = 10
+[ReportService #23] Przetwarzam zadanie id=2275 priorytet=2 dane="report_task"
+[ReportService] zapis idx 5 = 2
+[DataService #37] Przetwarzam zadanie id=1276 priorytet=1 dane="data_task"
+[DataService] zapis idx 6 = 1
+[ReportService #24] Przetwarzam zadanie id=2276 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 6 -> 1
+[ReportService #25] Przetwarzam zadanie id=2277 priorytet=2 dane="report_task"
+[DataService #36] Przetwarzam zadanie id=1277 priorytet=1 dane="data_task"
+[ReportService] odczyt idx 7 -> 2
+[DataService] zapis idx 7 = 1
+[DataService #0] Przetwarzam zadanie id=1278 priorytet=1 dane="data_task"
+[ReportService #26] Przetwarzam zadanie id=2278 priorytet=2 dane="report_task"
+[ReportService] zapis idx 8 = 2
+[DataService] odczyt idx 8 -> 1
+[DataService #3] Przetwarzam zadanie id=1279 priorytet=1 dane="data_task"
+[ReportService #27] Przetwarzam zadanie id=2279 priorytet=2 dane="report_task"
+[DataService] odczyt idx 9 -> 2
+[ReportService] zapis idx 9 = 2
+[DataService #1] Przetwarzam zadanie id=1280 priorytet=10 dane="data_task"
+[DataService] zapis idx 0 = 10
+[ReportService #33] Przetwarzam zadanie id=2280 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 0 -> 10
+[DataService #42] Przetwarzam zadanie id=1281 priorytet=1 dane="data_task"
+[DataService] zapis idx 1 = 1
+[ReportService #29] Przetwarzam zadanie id=2281 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 1 -> 1
+[DataService #1] Przetwarzam zadanie id=1282 priorytet=1 dane="data_task"
+[DataService] zapis idx 2 = 1
+[ReportService #28] Przetwarzam zadanie id=2282 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 2 -> 1
+[DataService #38] Przetwarzam zadanie id=1283 priorytet=1 dane="data_task"
+[ReportService #31] Przetwarzam zadanie id=2283 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 3 -> 1
+[DataService] odczyt idx 3 -> 1
+[DataService #4] Przetwarzam zadanie id=1284 priorytet=1 dane="data_task"
+[DataService] odczyt idx 4 -> 2
+[ReportService #30] Przetwarzam zadanie id=2284 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 4 -> 2
+[ReportService #31] Przetwarzam zadanie id=2285 priorytet=2 dane="report_task"
+[DataService #44] Przetwarzam zadanie id=1285 priorytet=10 dane="data_task"
+[ReportService] odczyt idx 5 -> 2
+[DataService] odczyt idx 5 -> 2
+[DataService #11] Przetwarzam zadanie id=1286 priorytet=1 dane="data_task"
+[DataService] zapis idx 6 = 1
+[ReportService #34] Przetwarzam zadanie id=2286 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 6 -> 1
+[DataService #45] Przetwarzam zadanie id=1287 priorytet=1 dane="data_task"
+[DataService] zapis idx 7 = 1
+[ReportService #32] Przetwarzam zadanie id=2287 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 7 -> 1
+[DataService #47] Przetwarzam zadanie id=1288 priorytet=1 dane="data_task"
+[DataService] odczyt idx 8 -> 2
+[ReportService #34] Przetwarzam zadanie id=2288 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 8 -> 2
+[DataService #43] Przetwarzam zadanie id=1289 priorytet=1 dane="data_task"
+[ReportService #32] Przetwarzam zadanie id=2289 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 9 -> 2
+[DataService] odczyt idx 9 -> 2
+[ReportService #36] Przetwarzam zadanie id=2290 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 0 -> 10
+[DataService #46] Przetwarzam zadanie id=1290 priorytet=10 dane="data_task"
+[DataService] odczyt idx 0 -> 10
+[DataService #49] Przetwarzam zadanie id=1291 priorytet=1 dane="data_task"
+[DataService] zapis idx 1 = 1
+[ReportService #40] Przetwarzam zadanie id=2291 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 1 -> 1
+[DataService #9] Przetwarzam zadanie id=1292 priorytet=1 dane="data_task"
+[ReportService #37] Przetwarzam zadanie id=2292 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 2 -> 1
+[DataService] zapis idx 2 = 1
+[DataService #48] Przetwarzam zadanie id=1293 priorytet=1 dane="data_task"
+[ReportService #41] Przetwarzam zadanie id=2293 priorytet=2 dane="report_task"
+[DataService] zapis idx 3 = 1
+[ReportService] odczyt idx 3 -> 1
+[DataService #18] Przetwarzam zadanie id=1294 priorytet=1 dane="data_task"
+[DataService] odczyt idx 4 -> 2
+[ReportService #43] Przetwarzam zadanie id=2294 priorytet=7 dane="report_task"
+[ReportService] zapis idx 4 = 7
+[DataService #16] Przetwarzam zadanie id=1295 priorytet=10 dane="data_task"
+[DataService] zapis idx 5 = 10
+[ReportService #39] Przetwarzam zadanie id=2295 priorytet=2 dane="report_task"
+[ReportService] zapis idx 5 = 2
+[DataService #5] Przetwarzam zadanie id=1296 priorytet=1 dane="data_task"
+[DataService] odczyt idx 6 -> 1
+[ReportService #42] Przetwarzam zadanie id=2296 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 6 -> 1
+[DataService #13] Przetwarzam zadanie id=1297 priorytet=1 dane="data_task"
+[ReportService #45] Przetwarzam zadanie id=2297 priorytet=2 dane="report_task"
+[DataService] odczyt idx 7 -> 1
+[ReportService] zapis idx 7 = 2
+[DataService #6] Przetwarzam zadanie id=1298 priorytet=1 dane="data_task"
+[DataService] zapis idx 8 = 1
+[ReportService #47] Przetwarzam zadanie id=2298 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 8 -> 1
+[DataService #15] Przetwarzam zadanie id=1299 priorytet=1 dane="data_task"
+[ReportService #1] Przetwarzam zadanie id=2299 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 9 -> 2
+[DataService] odczyt idx 9 -> 2
+[DataService #12] Przetwarzam zadanie id=1300 priorytet=10 dane="data_task"
+[DataService] odczyt idx 0 -> 10
+[ReportService #48] Przetwarzam zadanie id=2300 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 0 -> 10
+[DataService #19] Przetwarzam zadanie id=1301 priorytet=1 dane="data_task"
+[ReportService #46] Przetwarzam zadanie id=2301 priorytet=7 dane="report_task"
+[DataService] zapis idx 1 = 1
+[ReportService] odczyt idx 1 -> 1
+[ReportService #0] Przetwarzam zadanie id=2302 priorytet=2 dane="report_task"
+[DataService #22] Przetwarzam zadanie id=1302 priorytet=1 dane="data_task"
+[ReportService] zapis idx 2 = 2
+[DataService] odczyt idx 2 -> 2
+[ReportService #46] Przetwarzam zadanie id=2303 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 3 -> 1
+[DataService #19] Przetwarzam zadanie id=1303 priorytet=1 dane="data_task"
+[DataService] zapis idx 3 = 1
+[DataService #20] Przetwarzam zadanie id=1304 priorytet=1 dane="data_task"
+[ReportService #2] Przetwarzam zadanie id=2304 priorytet=2 dane="report_task"
+[DataService] zapis idx 4 = 1
+[ReportService] zapis idx 4 = 2
+[DataService #17] Przetwarzam zadanie id=1305 priorytet=10 dane="data_task"
+[DataService] zapis idx 5 = 10
+[ReportService #4] Przetwarzam zadanie id=2305 priorytet=2 dane="report_task"
+[ReportService] zapis idx 5 = 2
+[DataService #10] Przetwarzam zadanie id=1306 priorytet=1 dane="data_task"
+[ReportService #5] Przetwarzam zadanie id=2306 priorytet=2 dane="report_task"
+[DataService] zapis idx 6 = 1
+[ReportService] odczyt idx 6 -> 1
+[DataService #24] Przetwarzam zadanie id=1307 priorytet=1 dane="data_task"
+[DataService] odczyt idx 7 -> 2
+[ReportService #3] Przetwarzam zadanie id=2307 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 7 -> 2
+[ReportService #6] Przetwarzam zadanie id=2308 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 8 -> 1
+[DataService #25] Przetwarzam zadanie id=1308 priorytet=1 dane="data_task"
+[DataService] odczyt idx 8 -> 1
+[DataService #24] Przetwarzam zadanie id=1309 priorytet=1 dane="data_task"
+[DataService] odczyt idx 9 -> 2
+[ReportService #11] Przetwarzam zadanie id=2309 priorytet=2 dane="report_task"
+[ReportService] zapis idx 9 = 2
+[ReportService #6] Przetwarzam zadanie id=2310 priorytet=2 dane="report_task"
+[ReportService] zapis idx 0 = 2
+[DataService #25] Przetwarzam zadanie id=1310 priorytet=10 dane="data_task"
+[DataService] odczyt idx 0 -> 2
+[DataService #29] Przetwarzam zadanie id=1311 priorytet=1 dane="data_task"
+[DataService] zapis idx 1 = 1
+[ReportService #7] Przetwarzam zadanie id=2311 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 1 -> 1
+[DataService #27] Przetwarzam zadanie id=1312 priorytet=1 dane="data_task"
+[DataService] zapis idx 2 = 1
+[ReportService #10] Przetwarzam zadanie id=2312 priorytet=2 dane="report_task"
+[ReportService] zapis idx 2 = 2
+[DataService #26] Przetwarzam zadanie id=1313 priorytet=1 dane="data_task"
+[DataService] zapis idx 3 = 1
+[ReportService #9] Przetwarzam zadanie id=2313 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 3 -> 1
+[DataService #30] Przetwarzam zadanie id=1314 priorytet=1 dane="data_task"
+[ReportService #18] Przetwarzam zadanie id=2314 priorytet=2 dane="report_task"
+[DataService] zapis idx 4 = 1
+[ReportService] zapis idx 4 = 2
+[ReportService #16] Przetwarzam zadanie id=2315 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 5 -> 2
+[DataService #35] Przetwarzam zadanie id=1315 priorytet=10 dane="data_task"
+[DataService] odczyt idx 5 -> 2
+[ReportService #12] Przetwarzam zadanie id=2316 priorytet=2 dane="report_task"
+[DataService #28] Przetwarzam zadanie id=1316 priorytet=1 dane="data_task"
+[ReportService] odczyt idx 6 -> 1
+[DataService] odczyt idx 6 -> 1
+[ReportService #14] Przetwarzam zadanie id=2317 priorytet=2 dane="report_task"
+[DataService #23] Przetwarzam zadanie id=1317 priorytet=1 dane="data_task"
+[ReportService] zapis idx 7 = 2
+[DataService] odczyt idx 7 -> 2
+[ReportService #13] Przetwarzam zadanie id=2318 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 8 -> 1
+[DataService #31] Przetwarzam zadanie id=1318 priorytet=1 dane="data_task"
+[DataService] zapis idx 8 = 1
+[DataService #32] Przetwarzam zadanie id=1319 priorytet=1 dane="data_task"
+[DataService] zapis idx 9 = 1
+[ReportService #15] Przetwarzam zadanie id=2319 priorytet=2 dane="report_task"
+[ReportService] zapis idx 9 = 2
+[DataService #31] Przetwarzam zadanie id=1320 priorytet=10 dane="data_task"
+[DataService] zapis idx 0 = 10
+[ReportService #17] Przetwarzam zadanie id=2320 priorytet=2 dane="report_task"
+[ReportService] zapis idx 0 = 2
+[DataService #2] Przetwarzam zadanie id=1321 priorytet=1 dane="data_task"
+[ReportService #21] Przetwarzam zadanie id=2321 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 1 -> 1
+[DataService] odczyt idx 1 -> 1
+[ReportService #22] Przetwarzam zadanie id=2322 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 2 -> 2
+[DataService #33] Przetwarzam zadanie id=1322 priorytet=1 dane="data_task"
+[DataService] zapis idx 2 = 1
+[DataService #34] Przetwarzam zadanie id=1323 priorytet=1 dane="data_task"
+[DataService] odczyt idx 3 -> 1
+[ReportService #19] Przetwarzam zadanie id=2323 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 3 -> 1
+[DataService #39] Przetwarzam zadanie id=1324 priorytet=1 dane="data_task"
+[ReportService #20] Przetwarzam zadanie id=2324 priorytet=2 dane="report_task"
+[DataService] odczyt idx 4 -> 2
+[ReportService] zapis idx 4 = 2
+[DataService #40] Przetwarzam zadanie id=1325 priorytet=10 dane="data_task"
+[DataService] odczyt idx 5 -> 2
+[ReportService #23] Przetwarzam zadanie id=2325 priorytet=2 dane="report_task"
+[ReportService] zapis idx 5 = 2
+[DataService #39] Przetwarzam zadanie id=1326 priorytet=1 dane="data_task"
+[DataService] zapis idx 6 = 1
+[ReportService #24] Przetwarzam zadanie id=2326 priorytet=2 dane="report_task"
+[ReportService] zapis idx 6 = 2
+[DataService #40] Przetwarzam zadanie id=1327 priorytet=1 dane="data_task"
+[DataService] zapis idx 7 = 1
+[ReportService #23] Przetwarzam zadanie id=2327 priorytet=2 dane="report_task"
+[ReportService] zapis idx 7 = 2
+[DataService #39] Przetwarzam zadanie id=1328 priorytet=1 dane="data_task"
+[ReportService #26] Przetwarzam zadanie id=2328 priorytet=2 dane="report_task"
+[DataService] zapis idx 8 = 1
+[ReportService] odczyt idx 8 -> 1
+[DataService #3] Przetwarzam zadanie id=1329 priorytet=1 dane="data_task"
+[ReportService #27] Przetwarzam zadanie id=2329 priorytet=7 dane="report_task"
+[ReportService] zapis idx 9 = 7
+[DataService] zapis idx 9 = 1
+[DataService #41] Przetwarzam zadanie id=1330 priorytet=10 dane="data_task"
+[DataService] zapis idx 0 = 10
+[ReportService #33] Przetwarzam zadanie id=2330 priorytet=2 dane="report_task"
+[ReportService] zapis idx 0 = 2
+[ReportService #29] Przetwarzam zadanie id=2331 priorytet=2 dane="report_task"
+[DataService #42] Przetwarzam zadanie id=1331 priorytet=1 dane="data_task"
+[ReportService] odczyt idx 1 -> 1
+[DataService] odczyt idx 1 -> 1
+[ReportService #33] Przetwarzam zadanie id=2332 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 2 -> 1
+[DataService #1] Przetwarzam zadanie id=1332 priorytet=1 dane="data_task"
+[DataService] zapis idx 2 = 1
+[DataService #38] Przetwarzam zadanie id=1333 priorytet=1 dane="data_task"
+[DataService] zapis idx 3 = 1
+[ReportService #35] Przetwarzam zadanie id=2333 priorytet=2 dane="report_task"
+[ReportService] zapis idx 3 = 2
+[DataService #4] Przetwarzam zadanie id=1334 priorytet=1 dane="data_task"
+[ReportService #30] Przetwarzam zadanie id=2334 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 4 -> 1
+[DataService] zapis idx 4 = 1
+[DataService #44] Przetwarzam zadanie id=1335 priorytet=10 dane="data_task"
+[DataService] zapis idx 5 = 10
+[ReportService #31] Przetwarzam zadanie id=2335 priorytet=2 dane="report_task"
+[ReportService] zapis idx 5 = 2
+[DataService #11] Przetwarzam zadanie id=1336 priorytet=1 dane="data_task"
+[DataService] odczyt idx 6 -> 2
+[ReportService #38] Przetwarzam zadanie id=2336 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 6 -> 2
+[DataService #45] Przetwarzam zadanie id=1337 priorytet=1 dane="data_task"
+[DataService] odczyt idx 7 -> 2
+[ReportService #44] Przetwarzam zadanie id=2337 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 7 -> 2
+[DataService #47] Przetwarzam zadanie id=1338 priorytet=1 dane="data_task"
+[ReportService #34] Przetwarzam zadanie id=2338 priorytet=2 dane="report_task"
+[DataService] zapis idx 8 = 1
+[ReportService] odczyt idx 8 -> 1
+[DataService #43] Przetwarzam zadanie id=1339 priorytet=1 dane="data_task"
+[DataService] zapis idx 9 = 1
+[ReportService #44] Przetwarzam zadanie id=2339 priorytet=2 dane="report_task"
+[ReportService] zapis idx 9 = 2
+[DataService #46] Przetwarzam zadanie id=1340 priorytet=10 dane="data_task"
+[DataService] odczyt idx 0 -> 2
+[ReportService #36] Przetwarzam zadanie id=2340 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 0 -> 2
+[ReportService #40] Przetwarzam zadanie id=2341 priorytet=2 dane="report_task"
+[DataService #49] Przetwarzam zadanie id=1341 priorytet=1 dane="data_task"
+[DataService] odczyt idx 1 -> 1
+[ReportService] odczyt idx 1 -> 1
+[ReportService #37] Przetwarzam zadanie id=2342 priorytet=2 dane="report_task"
+[ReportService] zapis idx 2 = 2
+[DataService #9] Przetwarzam zadanie id=1342 priorytet=1 dane="data_task"
+[DataService] zapis idx 2 = 1
+[ReportService #41] Przetwarzam zadanie id=2343 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 3 -> 2
+[DataService #48] Przetwarzam zadanie id=1343 priorytet=1 dane="data_task"
+[DataService] odczyt idx 3 -> 2
+[ReportService #43] Przetwarzam zadanie id=2344 priorytet=2 dane="report_task"
+[DataService #18] Przetwarzam zadanie id=1344 priorytet=1 dane="data_task"
+[ReportService] odczyt idx 4 -> 1
+[DataService] zapis idx 4 = 1
+[ReportService #39] Przetwarzam zadanie id=2345 priorytet=2 dane="report_task"
+[DataService #16] Przetwarzam zadanie id=1345 priorytet=10 dane="data_task"
+[ReportService] zapis idx 5 = 2
+[DataService] zapis idx 5 = 10
+[DataService #5] Przetwarzam zadanie id=1346 priorytet=1 dane="data_task"
+[DataService] odczyt idx 6 -> 2
+[ReportService #43] Przetwarzam zadanie id=2346 priorytet=2 dane="report_task"
+[ReportService] zapis idx 6 = 2
+[DataService #13] Przetwarzam zadanie id=1347 priorytet=1 dane="data_task"
+[DataService] zapis idx 7 = 1
+[ReportService #45] Przetwarzam zadanie id=2347 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 7 -> 1
+[DataService #6] Przetwarzam zadanie id=1348 priorytet=1 dane="data_task"
+[ReportService #47] Przetwarzam zadanie id=2348 priorytet=2 dane="report_task"
+[DataService] odczyt idx 8 -> 1
+[ReportService] zapis idx 8 = 2
+[DataService #15] Przetwarzam zadanie id=1349 priorytet=1 dane="data_task"
+[ReportService #1] Przetwarzam zadanie id=2349 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 9 -> 2
+[DataService] odczyt idx 9 -> 2
+[DataService #12] Przetwarzam zadanie id=1350 priorytet=10 dane="data_task"
+[ReportService #48] Przetwarzam zadanie id=2350 priorytet=7 dane="report_task"
+[DataService] odczyt idx 0 -> 2
+[ReportService] zapis idx 0 = 7
+[DataService #14] Przetwarzam zadanie id=1351 priorytet=1 dane="data_task"
+[DataService] zapis idx 1 = 1
+[ReportService #49] Przetwarzam zadanie id=2351 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 1 -> 1
+[DataService #22] Przetwarzam zadanie id=1352 priorytet=1 dane="data_task"
+[DataService] zapis idx 2 = 1
+[ReportService #0] Przetwarzam zadanie id=2352 priorytet=2 dane="report_task"
+[ReportService] zapis idx 2 = 2
+[ReportService #46] Przetwarzam zadanie id=2353 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 3 -> 2
+[DataService #14] Przetwarzam zadanie id=1353 priorytet=1 dane="data_task"
+[DataService] odczyt idx 3 -> 2
+[DataService #20] Przetwarzam zadanie id=1354 priorytet=1 dane="data_task"
+[ReportService #2] Przetwarzam zadanie id=2354 priorytet=2 dane="report_task"
+[DataService] odczyt idx 4 -> 1
+[ReportService] odczyt idx 4 -> 1
+[ReportService #4] Przetwarzam zadanie id=2355 priorytet=2 dane="report_task"
+[DataService #17] Przetwarzam zadanie id=1355 priorytet=10 dane="data_task"
+[ReportService] odczyt idx 5 -> 10
+[DataService] odczyt idx 5 -> 10
+[DataService #10] Przetwarzam zadanie id=1356 priorytet=1 dane="data_task"
+[ReportService #5] Przetwarzam zadanie id=2356 priorytet=2 dane="report_task"
+[DataService] odczyt idx 6 -> 2
+[ReportService] zapis idx 6 = 2
+[DataService #21] Przetwarzam zadanie id=1357 priorytet=1 dane="data_task"
+[ReportService #3] Przetwarzam zadanie id=2357 priorytet=7 dane="report_task"
+[DataService] odczyt idx 7 -> 1
+[ReportService] odczyt idx 7 -> 1
+[DataService #7] Przetwarzam zadanie id=1358 priorytet=1 dane="data_task"
+[DataService] zapis idx 8 = 1
+[ReportService #5] Przetwarzam zadanie id=2358 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 8 -> 1
+[ReportService #11] Przetwarzam zadanie id=2359 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 9 -> 2
+[DataService #24] Przetwarzam zadanie id=1359 priorytet=1 dane="data_task"
+[DataService] zapis idx 9 = 1
+[DataService #25] Przetwarzam zadanie id=1360 priorytet=10 dane="data_task"
+[DataService] zapis idx 0 = 10
+[ReportService #6] Przetwarzam zadanie id=2360 priorytet=2 dane="report_task"
+[ReportService] zapis idx 0 = 2
+[ReportService #7] Przetwarzam zadanie id=2361 priorytet=2 dane="report_task"
+[ReportService] zapis idx 1 = 2
+[DataService #29] Przetwarzam zadanie id=1361 priorytet=1 dane="data_task"
+[DataService] odczyt idx 1 -> 2
+[DataService #27] Przetwarzam zadanie id=1362 priorytet=1 dane="data_task"
+[ReportService #10] Przetwarzam zadanie id=2362 priorytet=2 dane="report_task"
+[DataService] zapis idx 2 = 1
+[ReportService] zapis idx 2 = 2
+[ReportService #9] Przetwarzam zadanie id=2363 priorytet=2 dane="report_task"
+[ReportService] zapis idx 3 = 2
+[DataService #26] Przetwarzam zadanie id=1363 priorytet=1 dane="data_task"
+[DataService] odczyt idx 3 -> 2
+[ReportService #18] Przetwarzam zadanie id=2364 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 4 -> 1
+[DataService #27] Przetwarzam zadanie id=1364 priorytet=1 dane="data_task"
+[DataService] zapis idx 4 = 1
+[ReportService #16] Przetwarzam zadanie id=2365 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 5 -> 10
+[DataService #35] Przetwarzam zadanie id=1365 priorytet=10 dane="data_task"
+[DataService] zapis idx 5 = 10
+[ReportService #12] Przetwarzam zadanie id=2366 priorytet=2 dane="report_task"
+[ReportService] zapis idx 6 = 2
+[DataService #28] Przetwarzam zadanie id=1366 priorytet=1 dane="data_task"
+[DataService] zapis idx 6 = 1
+[DataService #35] Przetwarzam zadanie id=1367 priorytet=1 dane="data_task"
+[DataService] zapis idx 7 = 1
+[ReportService #14] Przetwarzam zadanie id=2367 priorytet=2 dane="report_task"
+[ReportService] zapis idx 7 = 2
+[DataService #8] Przetwarzam zadanie id=1368 priorytet=1 dane="data_task"
+[ReportService #13] Przetwarzam zadanie id=2368 priorytet=2 dane="report_task"
+[DataService] zapis idx 8 = 1
+[ReportService] odczyt idx 8 -> 1
+[DataService #32] Przetwarzam zadanie id=1369 priorytet=1 dane="data_task"
+[DataService] odczyt idx 9 -> 1
+[ReportService #15] Przetwarzam zadanie id=2369 priorytet=2 dane="report_task"
+[ReportService] zapis idx 9 = 2
+[DataService #8] Przetwarzam zadanie id=1370 priorytet=10 dane="data_task"
+[DataService] odczyt idx 0 -> 2
+[ReportService #17] Przetwarzam zadanie id=2370 priorytet=2 dane="report_task"
+[ReportService] zapis idx 0 = 2
+[DataService #2] Przetwarzam zadanie id=1371 priorytet=1 dane="data_task"
+[DataService] zapis idx 1 = 1
+[ReportService #21] Przetwarzam zadanie id=2371 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 1 -> 1
+[ReportService #22] Przetwarzam zadanie id=2372 priorytet=2 dane="report_task"
+[ReportService] zapis idx 2 = 2
+[DataService #33] Przetwarzam zadanie id=1372 priorytet=1 dane="data_task"
+[DataService] zapis idx 2 = 1
+[ReportService #19] Przetwarzam zadanie id=2373 priorytet=2 dane="report_task"
+[ReportService] zapis idx 3 = 2
+[DataService #34] Przetwarzam zadanie id=1373 priorytet=1 dane="data_task"
+[DataService] zapis idx 3 = 1
+[DataService #37] Przetwarzam zadanie id=1374 priorytet=1 dane="data_task"
+[ReportService #20] Przetwarzam zadanie id=2374 priorytet=2 dane="report_task"
+[DataService] zapis idx 4 = 1
+[ReportService] odczyt idx 4 -> 1
+[ReportService #25] Przetwarzam zadanie id=2375 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 5 -> 10
+[DataService #36] Przetwarzam zadanie id=1375 priorytet=10 dane="data_task"
+[DataService] zapis idx 5 = 10
+[DataService #0] Przetwarzam zadanie id=1376 priorytet=1 dane="data_task"
+[ReportService #24] Przetwarzam zadanie id=2376 priorytet=2 dane="report_task"
+[DataService] zapis idx 6 = 1
+[ReportService] zapis idx 6 = 2
+[ReportService #23] Przetwarzam zadanie id=2377 priorytet=2 dane="report_task"
+[DataService #40] Przetwarzam zadanie id=1377 priorytet=1 dane="data_task"
+[ReportService] odczyt idx 7 -> 2
+[DataService] odczyt idx 7 -> 2
+[ReportService #26] Przetwarzam zadanie id=2378 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 8 -> 1
+[DataService #39] Przetwarzam zadanie id=1378 priorytet=1 dane="data_task"
+[DataService] odczyt idx 8 -> 1
+[ReportService #27] Przetwarzam zadanie id=2379 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 9 -> 2
+[DataService #3] Przetwarzam zadanie id=1379 priorytet=1 dane="data_task"
+[DataService] zapis idx 9 = 1
+[DataService #41] Przetwarzam zadanie id=1380 priorytet=10 dane="data_task"
+[ReportService #28] Przetwarzam zadanie id=2380 priorytet=2 dane="report_task"
+[DataService] zapis idx 0 = 10
+[ReportService] odczyt idx 0 -> 10
+[ReportService #29] Przetwarzam zadanie id=2381 priorytet=2 dane="report_task"
+[ReportService] zapis idx 1 = 2
+[DataService #42] Przetwarzam zadanie id=1381 priorytet=1 dane="data_task"
+[DataService] odczyt idx 1 -> 2
+[ReportService #33] Przetwarzam zadanie id=2382 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 2 -> 1
+[DataService #1] Przetwarzam zadanie id=1382 priorytet=1 dane="data_task"
+[DataService] zapis idx 2 = 1
+[DataService #38] Przetwarzam zadanie id=1383 priorytet=1 dane="data_task"
+[ReportService #35] Przetwarzam zadanie id=2383 priorytet=2 dane="report_task"
+[DataService] odczyt idx 3 -> 1
+[ReportService] zapis idx 3 = 2
+[DataService #4] Przetwarzam zadanie id=1384 priorytet=1 dane="data_task"
+[ReportService #30] Przetwarzam zadanie id=2384 priorytet=2 dane="report_task"
+[ReportService] zapis idx 4 = 2
+[DataService] odczyt idx 4 -> 1
+[DataService #38] Przetwarzam zadanie id=1385 priorytet=10 dane="data_task"
+[DataService] zapis idx 5 = 10
+[ReportService #31] Przetwarzam zadanie id=2385 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 5 -> 10
+[DataService #11] Przetwarzam zadanie id=1386 priorytet=1 dane="data_task"
+[ReportService #38] Przetwarzam zadanie id=2386 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 6 -> 2
+[DataService] odczyt idx 6 -> 2
+[DataService #45] Przetwarzam zadanie id=1387 priorytet=1 dane="data_task"
+[DataService] zapis idx 7 = 1
+[ReportService #32] Przetwarzam zadanie id=2387 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 7 -> 1
+[DataService #47] Przetwarzam zadanie id=1388 priorytet=1 dane="data_task"
+[DataService] zapis idx 8 = 1
+[ReportService #34] Przetwarzam zadanie id=2388 priorytet=2 dane="report_task"
+[ReportService] zapis idx 8 = 2
+[DataService #45] Przetwarzam zadanie id=1389 priorytet=1 dane="data_task"
+[DataService] odczyt idx 9 -> 1
+[ReportService #44] Przetwarzam zadanie id=2389 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 9 -> 1
+[DataService #46] Przetwarzam zadanie id=1390 priorytet=10 dane="data_task"
+[ReportService #36] Przetwarzam zadanie id=2390 priorytet=2 dane="report_task"
+[DataService] odczyt idx 0 -> 10
+[ReportService] zapis idx 0 = 2
+[ReportService #40] Przetwarzam zadanie id=2391 priorytet=2 dane="report_task"
+[DataService #49] Przetwarzam zadanie id=1391 priorytet=1 dane="data_task"
+[ReportService] zapis idx 1 = 2
+[DataService] odczyt idx 1 -> 2
+[ReportService #37] Przetwarzam zadanie id=2392 priorytet=7 dane="report_task"
+[DataService #9] Przetwarzam zadanie id=1392 priorytet=1 dane="data_task"
+[ReportService] odczyt idx 2 -> 1
+[DataService] zapis idx 2 = 1
+[ReportService #41] Przetwarzam zadanie id=2393 priorytet=2 dane="report_task"
+[DataService #48] Przetwarzam zadanie id=1393 priorytet=1 dane="data_task"
+[ReportService] odczyt idx 3 -> 2
+[DataService] odczyt idx 3 -> 2
+[DataService #9] Przetwarzam zadanie id=1394 priorytet=1 dane="data_task"
+[ReportService #42] Przetwarzam zadanie id=2394 priorytet=2 dane="report_task"
+[ReportService] zapis idx 4 = 2
+[DataService] odczyt idx 4 -> 2
+[DataService #16] Przetwarzam zadanie id=1395 priorytet=10 dane="data_task"
+[ReportService #39] Przetwarzam zadanie id=2395 priorytet=2 dane="report_task"
+[DataService] odczyt idx 5 -> 10
+[ReportService] zapis idx 5 = 2
+[ReportService #43] Przetwarzam zadanie id=2396 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 6 -> 2
+[DataService #5] Przetwarzam zadanie id=1396 priorytet=1 dane="data_task"
+[DataService] zapis idx 6 = 1
+[ReportService #45] Przetwarzam zadanie id=2397 priorytet=2 dane="report_task"
+[ReportService] zapis idx 7 = 2
+[DataService #16] Przetwarzam zadanie id=1397 priorytet=1 dane="data_task"
+[DataService] odczyt idx 7 -> 2
+[DataService #6] Przetwarzam zadanie id=1398 priorytet=1 dane="data_task"
+[ReportService #47] Przetwarzam zadanie id=2398 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 8 -> 1
+[DataService] zapis idx 8 = 1
+[ReportService #1] Przetwarzam zadanie id=2399 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 9 -> 1
+[DataService #15] Przetwarzam zadanie id=1399 priorytet=1 dane="data_task"
+[DataService] odczyt idx 9 -> 1
+[DataService #12] Przetwarzam zadanie id=1400 priorytet=10 dane="data_task"
+[ReportService #48] Przetwarzam zadanie id=2400 priorytet=2 dane="report_task"
+[DataService] zapis idx 0 = 10
+[ReportService] zapis idx 0 = 2
+[DataService #19] Przetwarzam zadanie id=1401 priorytet=1 dane="data_task"
+[DataService] zapis idx 1 = 1
+[ReportService #49] Przetwarzam zadanie id=2401 priorytet=2 dane="report_task"
+[ReportService] zapis idx 1 = 2
+[DataService #22] Przetwarzam zadanie id=1402 priorytet=1 dane="data_task"
+[DataService] odczyt idx 2 -> 1
+[ReportService #0] Przetwarzam zadanie id=2402 priorytet=2 dane="report_task"
+[ReportService] zapis idx 2 = 2
+[ReportService #46] Przetwarzam zadanie id=2403 priorytet=2 dane="report_task"
+[ReportService] zapis idx 3 = 2
+[DataService #14] Przetwarzam zadanie id=1403 priorytet=1 dane="data_task"
+[DataService] zapis idx 3 = 1
+[DataService #22] Przetwarzam zadanie id=1404 priorytet=1 dane="data_task"
+[ReportService #0] Przetwarzam zadanie id=2404 priorytet=2 dane="report_task"
+[DataService] zapis idx 4 = 1
+[ReportService] zapis idx 4 = 2
+[ReportService #4] Przetwarzam zadanie id=2405 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 5 -> 2
+[DataService #17] Przetwarzam zadanie id=1405 priorytet=10 dane="data_task"
+[DataService] zapis idx 5 = 10
+[ReportService #8] Przetwarzam zadanie id=2406 priorytet=7 dane="report_task"
+[DataService #10] Przetwarzam zadanie id=1406 priorytet=1 dane="data_task"
+[ReportService] odczyt idx 6 -> 1
+[DataService] zapis idx 6 = 1
+[ReportService #3] Przetwarzam zadanie id=2407 priorytet=2 dane="report_task"
+[DataService #21] Przetwarzam zadanie id=1407 priorytet=1 dane="data_task"
+[ReportService] odczyt idx 7 -> 2
+[DataService] zapis idx 7 = 1
+[ReportService #5] Przetwarzam zadanie id=2408 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 8 -> 1
+[DataService #7] Przetwarzam zadanie id=1408 priorytet=1 dane="data_task"
+[DataService] zapis idx 8 = 1
+[DataService #24] Przetwarzam zadanie id=1409 priorytet=1 dane="data_task"
+[ReportService #11] Przetwarzam zadanie id=2409 priorytet=2 dane="report_task"
+[DataService] odczyt idx 9 -> 1
+[ReportService] zapis idx 9 = 2
+[ReportService #6] Przetwarzam zadanie id=2410 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 0 -> 2
+[DataService #25] Przetwarzam zadanie id=1410 priorytet=10 dane="data_task"
+[DataService] odczyt idx 0 -> 2
+[DataService #29] Przetwarzam zadanie id=1411 priorytet=1 dane="data_task"
+[DataService] odczyt idx 1 -> 2
+[ReportService #7] Przetwarzam zadanie id=2411 priorytet=2 dane="report_task"
+[ReportService] zapis idx 1 = 2
+[DataService #30] Przetwarzam zadanie id=1412 priorytet=1 dane="data_task"
+[DataService] odczyt idx 2 -> 2
+[ReportService #10] Przetwarzam zadanie id=2412 priorytet=2 dane="report_task"
+[ReportService] zapis idx 2 = 2
+[ReportService #9] Przetwarzam zadanie id=2413 priorytet=7 dane="report_task"
+[DataService #26] Przetwarzam zadanie id=1413 priorytet=1 dane="data_task"
+[ReportService] zapis idx 3 = 7
+[DataService] zapis idx 3 = 1
+[ReportService #18] Przetwarzam zadanie id=2414 priorytet=2 dane="report_task"
+[ReportService] zapis idx 4 = 2
+[DataService #27] Przetwarzam zadanie id=1414 priorytet=1 dane="data_task"
+[DataService] odczyt idx 4 -> 2
+[DataService #23] Przetwarzam zadanie id=1415 priorytet=10 dane="data_task"
+[DataService] zapis idx 5 = 10
+[ReportService #16] Przetwarzam zadanie id=2415 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 5 -> 10
+[ReportService #12] Przetwarzam zadanie id=2416 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 6 -> 1
+[DataService #28] Przetwarzam zadanie id=1416 priorytet=1 dane="data_task"
+[DataService] zapis idx 6 = 1
+[DataService #23] Przetwarzam zadanie id=1417 priorytet=1 dane="data_task"
+[DataService] odczyt idx 7 -> 1
+[ReportService #14] Przetwarzam zadanie id=2417 priorytet=2 dane="report_task"
+[ReportService] zapis idx 7 = 2
+[DataService #31] Przetwarzam zadanie id=1418 priorytet=1 dane="data_task"
+[ReportService #13] Przetwarzam zadanie id=2418 priorytet=2 dane="report_task"
+[DataService] zapis idx 8 = 1
+[ReportService] odczyt idx 8 -> 1
+[DataService #32] Przetwarzam zadanie id=1419 priorytet=1 dane="data_task"
+[ReportService #15] Przetwarzam zadanie id=2419 priorytet=2 dane="report_task"
+[DataService] zapis idx 9 = 1
+[ReportService] odczyt idx 9 -> 1
+[ReportService #17] Przetwarzam zadanie id=2420 priorytet=7 dane="report_task"
+[ReportService] zapis idx 0 = 7
+[DataService #8] Przetwarzam zadanie id=1420 priorytet=10 dane="data_task"
+[DataService] odczyt idx 0 -> 7
+[ReportService #21] Przetwarzam zadanie id=2421 priorytet=2 dane="report_task"
+[ReportService] zapis idx 1 = 2
+[DataService #2] Przetwarzam zadanie id=1421 priorytet=1 dane="data_task"
+[DataService] odczyt idx 1 -> 2
+[ReportService #22] Przetwarzam zadanie id=2422 priorytet=2 dane="report_task"
+[DataService #33] Przetwarzam zadanie id=1422 priorytet=1 dane="data_task"
+[ReportService] odczyt idx 2 -> 2
+[DataService] odczyt idx 2 -> 2
+[DataService #34] Przetwarzam zadanie id=1423 priorytet=1 dane="data_task"
+[DataService] zapis idx 3 = 1
+[ReportService #19] Przetwarzam zadanie id=2423 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 3 -> 1
+[DataService #37] Przetwarzam zadanie id=1424 priorytet=1 dane="data_task"
+[ReportService #20] Przetwarzam zadanie id=2424 priorytet=2 dane="report_task"
+[DataService] zapis idx 4 = 1
+[ReportService] zapis idx 4 = 2
+[DataService #34] Przetwarzam zadanie id=1425 priorytet=10 dane="data_task"
+[ReportService #25] Przetwarzam zadanie id=2425 priorytet=2 dane="report_task"
+[DataService] odczyt idx 5 -> 10
+[ReportService] zapis idx 5 = 2
+[ReportService #24] Przetwarzam zadanie id=2426 priorytet=2 dane="report_task"
+[ReportService] zapis idx 6 = 2
+[DataService #0] Przetwarzam zadanie id=1426 priorytet=1 dane="data_task"
+[DataService] zapis idx 6 = 1
+[ReportService #23] Przetwarzam zadanie id=2427 priorytet=7 dane="report_task"
+[ReportService] zapis idx 7 = 7
+[DataService #40] Przetwarzam zadanie id=1427 priorytet=1 dane="data_task"
+[DataService] odczyt idx 7 -> 7
+[DataService #39] Przetwarzam zadanie id=1428 priorytet=1 dane="data_task"
+[ReportService #26] Przetwarzam zadanie id=2428 priorytet=2 dane="report_task"
+[DataService] odczyt idx 8 -> 1
+[ReportService] odczyt idx 8 -> 1
+[ReportService #27] Przetwarzam zadanie id=2429 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 9 -> 1
+[DataService #3] Przetwarzam zadanie id=1429 priorytet=1 dane="data_task"
+[DataService] odczyt idx 9 -> 1
+[ReportService #28] Przetwarzam zadanie id=2430 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 0 -> 7
+[DataService #41] Przetwarzam zadanie id=1430 priorytet=10 dane="data_task"
+[DataService] zapis idx 0 = 10
+[ReportService #29] Przetwarzam zadanie id=2431 priorytet=2 dane="report_task"
+[DataService #42] Przetwarzam zadanie id=1431 priorytet=1 dane="data_task"
+[ReportService] odczyt idx 1 -> 2
+[DataService] zapis idx 1 = 1
+[DataService #1] Przetwarzam zadanie id=1432 priorytet=1 dane="data_task"
+[ReportService #33] Przetwarzam zadanie id=2432 priorytet=2 dane="report_task"
+[DataService] odczyt idx 2 -> 2
+[ReportService] zapis idx 2 = 2
+[ReportService #35] Przetwarzam zadanie id=2433 priorytet=2 dane="report_task"
+[ReportService] zapis idx 3 = 2
+[DataService #44] Przetwarzam zadanie id=1433 priorytet=1 dane="data_task"
+[DataService] zapis idx 3 = 1
+[ReportService #30] Przetwarzam zadanie id=2434 priorytet=7 dane="report_task"
+[ReportService] zapis idx 4 = 7
+[DataService #4] Przetwarzam zadanie id=1434 priorytet=1 dane="data_task"
+[DataService] odczyt idx 4 -> 7
+[ReportService #31] Przetwarzam zadanie id=2435 priorytet=2 dane="report_task"
+[DataService #38] Przetwarzam zadanie id=1435 priorytet=10 dane="data_task"
+[DataService] odczyt idx 5 -> 2
+[ReportService] zapis idx 5 = 2
+[DataService #11] Przetwarzam zadanie id=1436 priorytet=1 dane="data_task"
+[ReportService #38] Przetwarzam zadanie id=2436 priorytet=2 dane="report_task"
+[DataService] zapis idx 6 = 1
+[ReportService] odczyt idx 6 -> 1
+[DataService #38] Przetwarzam zadanie id=1437 priorytet=1 dane="data_task"
+[DataService] odczyt idx 7 -> 7
+[ReportService #32] Przetwarzam zadanie id=2437 priorytet=2 dane="report_task"
+[ReportService] zapis idx 7 = 2
+[ReportService #34] Przetwarzam zadanie id=2438 priorytet=2 dane="report_task"
+[DataService #47] Przetwarzam zadanie id=1438 priorytet=1 dane="data_task"
+[ReportService] zapis idx 8 = 2
+[DataService] zapis idx 8 = 1
+[ReportService #44] Przetwarzam zadanie id=2439 priorytet=2 dane="report_task"
+[DataService #45] Przetwarzam zadanie id=1439 priorytet=1 dane="data_task"
+[ReportService] odczyt idx 9 -> 1
+[DataService] zapis idx 9 = 1
+[DataService #46] Przetwarzam zadanie id=1440 priorytet=10 dane="data_task"
+[ReportService #36] Przetwarzam zadanie id=2440 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 0 -> 10
+[DataService] odczyt idx 0 -> 10
+[ReportService #40] Przetwarzam zadanie id=2441 priorytet=7 dane="report_task"
+[DataService #45] Przetwarzam zadanie id=1441 priorytet=1 dane="data_task"
+[ReportService] odczyt idx 1 -> 1
+[DataService] odczyt idx 1 -> 1
+[DataService #46] Przetwarzam zadanie id=1442 priorytet=1 dane="data_task"
+[DataService] zapis idx 2 = 1
+[ReportService #37] Przetwarzam zadanie id=2442 priorytet=2 dane="report_task"
+[ReportService] zapis idx 2 = 2
+[ReportService #41] Przetwarzam zadanie id=2443 priorytet=2 dane="report_task"
+[DataService #48] Przetwarzam zadanie id=1443 priorytet=1 dane="data_task"
+[ReportService] odczyt idx 3 -> 1
+[DataService] odczyt idx 3 -> 1
+[DataService #9] Przetwarzam zadanie id=1444 priorytet=1 dane="data_task"
+[ReportService #42] Przetwarzam zadanie id=2444 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 4 -> 1
+[DataService] zapis idx 4 = 1
+[DataService #13] Przetwarzam zadanie id=1445 priorytet=10 dane="data_task"
+[DataService] zapis idx 5 = 10
+[ReportService #39] Przetwarzam zadanie id=2445 priorytet=2 dane="report_task"
+[ReportService] zapis idx 5 = 2
+[DataService #5] Przetwarzam zadanie id=1446 priorytet=1 dane="data_task"
+[ReportService #43] Przetwarzam zadanie id=2446 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 6 -> 1
+[DataService] odczyt idx 6 -> 1
+[DataService #16] Przetwarzam zadanie id=1447 priorytet=1 dane="data_task"
+[ReportService #45] Przetwarzam zadanie id=2447 priorytet=2 dane="report_task"
+[DataService] odczyt idx 7 -> 2
+[ReportService] odczyt idx 7 -> 2
+[DataService #6] Przetwarzam zadanie id=1448 priorytet=1 dane="data_task"
+[ReportService #47] Przetwarzam zadanie id=2448 priorytet=7 dane="report_task"
+[DataService] zapis idx 8 = 1
+[ReportService] zapis idx 8 = 7
+[ReportService #1] Przetwarzam zadanie id=2449 priorytet=2 dane="report_task"
+[DataService #15] Przetwarzam zadanie id=1449 priorytet=1 dane="data_task"
+[ReportService] odczyt idx 9 -> 1
+[DataService] zapis idx 9 = 1
+[DataService #12] Przetwarzam zadanie id=1450 priorytet=10 dane="data_task"
+[ReportService #48] Przetwarzam zadanie id=2450 priorytet=2 dane="report_task"
+[DataService] zapis idx 0 = 10
+[ReportService] odczyt idx 0 -> 10
+[DataService #19] Przetwarzam zadanie id=1451 priorytet=1 dane="data_task"
+[DataService] zapis idx 1 = 1
+[ReportService #49] Przetwarzam zadanie id=2451 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 1 -> 1
+[DataService #20] Przetwarzam zadanie id=1452 priorytet=1 dane="data_task"
+[DataService] zapis idx 2 = 1
+[ReportService #2] Przetwarzam zadanie id=2452 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 2 -> 1
+[DataService #14] Przetwarzam zadanie id=1453 priorytet=1 dane="data_task"
+[DataService] odczyt idx 3 -> 1
+[ReportService #46] Przetwarzam zadanie id=2453 priorytet=2 dane="report_task"
+[ReportService] zapis idx 3 = 2
+[DataService #22] Przetwarzam zadanie id=1454 priorytet=1 dane="data_task"
+[DataService] zapis idx 4 = 1
+[ReportService #0] Przetwarzam zadanie id=2454 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 4 -> 1
+[ReportService #4] Przetwarzam zadanie id=2455 priorytet=7 dane="report_task"
+[DataService #14] Przetwarzam zadanie id=1455 priorytet=10 dane="data_task"
+[ReportService] zapis idx 5 = 7
+[DataService] zapis idx 5 = 10
+[ReportService #8] Przetwarzam zadanie id=2456 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 6 -> 1
+[DataService #10] Przetwarzam zadanie id=1456 priorytet=1 dane="data_task"
+[DataService] odczyt idx 6 -> 1
+[DataService #21] Przetwarzam zadanie id=1457 priorytet=1 dane="data_task"
+[DataService] odczyt idx 7 -> 2
+[ReportService #3] Przetwarzam zadanie id=2457 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 7 -> 2
+[DataService #7] Przetwarzam zadanie id=1458 priorytet=1 dane="data_task"
+[DataService] odczyt idx 8 -> 7
+[ReportService #5] Przetwarzam zadanie id=2458 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 8 -> 7
+[ReportService #11] Przetwarzam zadanie id=2459 priorytet=2 dane="report_task"
+[ReportService] zapis idx 9 = 2
+[DataService #24] Przetwarzam zadanie id=1459 priorytet=1 dane="data_task"
+[DataService] odczyt idx 9 -> 2
+[ReportService #6] Przetwarzam zadanie id=2460 priorytet=2 dane="report_task"
+[DataService #25] Przetwarzam zadanie id=1460 priorytet=10 dane="data_task"
+[ReportService] odczyt idx 0 -> 10
+[DataService] zapis idx 0 = 10
+[DataService #29] Przetwarzam zadanie id=1461 priorytet=1 dane="data_task"
+[DataService] zapis idx 1 = 1
+[ReportService #7] Przetwarzam zadanie id=2461 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 1 -> 1
+[DataService #30] Przetwarzam zadanie id=1462 priorytet=1 dane="data_task"
+[ReportService #10] Przetwarzam zadanie id=2462 priorytet=7 dane="report_task"
+[DataService] zapis idx 2 = 1
+[ReportService] zapis idx 2 = 7
+[ReportService #9] Przetwarzam zadanie id=2463 priorytet=2 dane="report_task"
+[DataService #26] Przetwarzam zadanie id=1463 priorytet=1 dane="data_task"
+[ReportService] odczyt idx 3 -> 2
+[DataService] odczyt idx 3 -> 2
+[DataService #27] Przetwarzam zadanie id=1464 priorytet=1 dane="data_task"
+[DataService] zapis idx 4 = 1
+[ReportService #18] Przetwarzam zadanie id=2464 priorytet=2 dane="report_task"
+[ReportService] zapis idx 4 = 2
+[ReportService #16] Przetwarzam zadanie id=2465 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 5 -> 10
+[DataService #35] Przetwarzam zadanie id=1465 priorytet=10 dane="data_task"
+[DataService] odczyt idx 5 -> 10
+[ReportService #12] Przetwarzam zadanie id=2466 priorytet=2 dane="report_task"
+[DataService #28] Przetwarzam zadanie id=1466 priorytet=1 dane="data_task"
+[ReportService] zapis idx 6 = 2
+[DataService] odczyt idx 6 -> 2
+[ReportService #14] Przetwarzam zadanie id=2467 priorytet=2 dane="report_task"
+[DataService #23] Przetwarzam zadanie id=1467 priorytet=1 dane="data_task"
+[ReportService] odczyt idx 7 -> 2
+[DataService] zapis idx 7 = 1
+[ReportService #13] Przetwarzam zadanie id=2468 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 8 -> 7
+[DataService #31] Przetwarzam zadanie id=1468 priorytet=1 dane="data_task"
+[DataService] odczyt idx 8 -> 7
+[DataService #23] Przetwarzam zadanie id=1469 priorytet=1 dane="data_task"
+[DataService] zapis idx 9 = 1
+[ReportService #15] Przetwarzam zadanie id=2469 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 9 -> 1
+[DataService #8] Przetwarzam zadanie id=1470 priorytet=10 dane="data_task"
+[ReportService #17] Przetwarzam zadanie id=2470 priorytet=2 dane="report_task"
+[DataService] zapis idx 0 = 10
+[ReportService] zapis idx 0 = 2
+[DataService #2] Przetwarzam zadanie id=1471 priorytet=1 dane="data_task"
+[ReportService #21] Przetwarzam zadanie id=2471 priorytet=2 dane="report_task"
+[DataService] zapis idx 1 = 1
+[ReportService] zapis idx 1 = 2
+[DataService #33] Przetwarzam zadanie id=1472 priorytet=1 dane="data_task"
+[ReportService #22] Przetwarzam zadanie id=2472 priorytet=2 dane="report_task"
+[DataService] zapis idx 2 = 1
+[ReportService] odczyt idx 2 -> 1
+[ReportService #21] Przetwarzam zadanie id=2473 priorytet=2 dane="report_task"
+[DataService #36] Przetwarzam zadanie id=1473 priorytet=1 dane="data_task"
+[ReportService] zapis idx 3 = 2
+[DataService] odczyt idx 3 -> 2
+[DataService #37] Przetwarzam zadanie id=1474 priorytet=1 dane="data_task"
+[DataService] odczyt idx 4 -> 2
+[ReportService #20] Przetwarzam zadanie id=2474 priorytet=2 dane="report_task"
+[ReportService] zapis idx 4 = 2
+[DataService #36] Przetwarzam zadanie id=1475 priorytet=10 dane="data_task"
+[DataService] zapis idx 5 = 10
+[ReportService #25] Przetwarzam zadanie id=2475 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 5 -> 10
+[DataService #0] Przetwarzam zadanie id=1476 priorytet=1 dane="data_task"
+[DataService] odczyt idx 6 -> 2
+[ReportService #24] Przetwarzam zadanie id=2476 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 6 -> 2
+[ReportService #23] Przetwarzam zadanie id=2477 priorytet=2 dane="report_task"
+[ReportService] zapis idx 7 = 2
+[DataService #40] Przetwarzam zadanie id=1477 priorytet=1 dane="data_task"
+[DataService] zapis idx 7 = 1
+[DataService #39] Przetwarzam zadanie id=1478 priorytet=1 dane="data_task"
+[ReportService #26] Przetwarzam zadanie id=2478 priorytet=2 dane="report_task"
+[DataService] zapis idx 8 = 1
+[ReportService] odczyt idx 8 -> 1
+[DataService #3] Przetwarzam zadanie id=1479 priorytet=1 dane="data_task"
+[DataService] odczyt idx 9 -> 1
+[ReportService #27] Przetwarzam zadanie id=2479 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 9 -> 1
+[DataService #41] Przetwarzam zadanie id=1480 priorytet=10 dane="data_task"
+[DataService] odczyt idx 0 -> 2
+[ReportService #28] Przetwarzam zadanie id=2480 priorytet=2 dane="report_task"
+[ReportService] zapis idx 0 = 2
+[ReportService #29] Przetwarzam zadanie id=2481 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 1 -> 2
+[DataService #42] Przetwarzam zadanie id=1481 priorytet=1 dane="data_task"
+[DataService] zapis idx 1 = 1
+[ReportService #33] Przetwarzam zadanie id=2482 priorytet=2 dane="report_task"
+[ReportService] zapis idx 2 = 2
+[DataService #1] Przetwarzam zadanie id=1482 priorytet=1 dane="data_task"
+[DataService] odczyt idx 2 -> 2
+[ReportService #35] Przetwarzam zadanie id=2483 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 3 -> 2
+[DataService #44] Przetwarzam zadanie id=1483 priorytet=1 dane="data_task"
+[DataService] zapis idx 3 = 1
+[DataService #4] Przetwarzam zadanie id=1484 priorytet=1 dane="data_task"
+[DataService] zapis idx 4 = 1
+[ReportService #30] Przetwarzam zadanie id=2484 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 4 -> 1
+[ReportService #31] Przetwarzam zadanie id=2485 priorytet=2 dane="report_task"
+[DataService #43] Przetwarzam zadanie id=1485 priorytet=10 dane="data_task"
+[ReportService] zapis idx 5 = 2
+[DataService] zapis idx 5 = 10
+[DataService #4] Przetwarzam zadanie id=1486 priorytet=1 dane="data_task"
+[DataService] odczyt idx 6 -> 2
+[ReportService #38] Przetwarzam zadanie id=2486 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 6 -> 2
+[DataService #38] Przetwarzam zadanie id=1487 priorytet=1 dane="data_task"
+[DataService] zapis idx 7 = 1
+[ReportService #32] Przetwarzam zadanie id=2487 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 7 -> 1
+[DataService #47] Przetwarzam zadanie id=1488 priorytet=1 dane="data_task"
+[DataService] zapis idx 8 = 1
+[ReportService #34] Przetwarzam zadanie id=2488 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 8 -> 1
+[ReportService #32] Przetwarzam zadanie id=2489 priorytet=2 dane="report_task"
+[DataService #38] Przetwarzam zadanie id=1489 priorytet=1 dane="data_task"
+[ReportService] odczyt idx 9 -> 1
+[DataService] zapis idx 9 = 1
+[ReportService #36] Przetwarzam zadanie id=2490 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 0 -> 2
+[DataService #18] Przetwarzam zadanie id=1490 priorytet=10 dane="data_task"
+[DataService] zapis idx 0 = 10
+[ReportService #40] Przetwarzam zadanie id=2491 priorytet=2 dane="report_task"
+[DataService #45] Przetwarzam zadanie id=1491 priorytet=1 dane="data_task"
+[DataService] zapis idx 1 = 1
+[ReportService] zapis idx 1 = 2
+[ReportService #37] Przetwarzam zadanie id=2492 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 2 -> 2
+[DataService #46] Przetwarzam zadanie id=1492 priorytet=1 dane="data_task"
+[DataService] odczyt idx 2 -> 2
+[DataService #48] Przetwarzam zadanie id=1493 priorytet=1 dane="data_task"
+[ReportService #41] Przetwarzam zadanie id=2493 priorytet=2 dane="report_task"
+[DataService] zapis idx 3 = 1
+[ReportService] zapis idx 3 = 2
+[ReportService #42] Przetwarzam zadanie id=2494 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 4 -> 1
+[DataService #9] Przetwarzam zadanie id=1494 priorytet=1 dane="data_task"
+[DataService] zapis idx 4 = 1
+[ReportService #39] Przetwarzam zadanie id=2495 priorytet=2 dane="report_task"
+[DataService #13] Przetwarzam zadanie id=1495 priorytet=10 dane="data_task"
+[ReportService] zapis idx 5 = 2
+[DataService] odczyt idx 5 -> 2
+[DataService #5] Przetwarzam zadanie id=1496 priorytet=1 dane="data_task"
+[DataService] odczyt idx 6 -> 2
+[ReportService #43] Przetwarzam zadanie id=2496 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 6 -> 2
+[DataService #16] Przetwarzam zadanie id=1497 priorytet=1 dane="data_task"
+[DataService] zapis idx 7 = 1
+[ReportService #45] Przetwarzam zadanie id=2497 priorytet=7 dane="report_task"
+[ReportService] odczyt idx 7 -> 1
+[DataService #6] Przetwarzam zadanie id=1498 priorytet=1 dane="data_task"
+[ReportService #47] Przetwarzam zadanie id=2498 priorytet=2 dane="report_task"
+[ReportService] zapis idx 8 = 2
+[DataService] odczyt idx 8 -> 1
+[DataService #15] Przetwarzam zadanie id=1499 priorytet=1 dane="data_task"
+[DataService] zapis idx 9 = 1
+[ReportService #1] Przetwarzam zadanie id=2499 priorytet=2 dane="report_task"
+[ReportService] odczyt idx 9 -> 1
+[DataService #9] koncze prace
+[DataService #38] koncze prace
+[DataService #28] koncze prace
+[DataService #43] koncze prace
+[DataService #22] koncze prace
+[DataService #1] koncze prace
+[DataService #21] koncze prace
+[DataService #4] koncze prace
+[DataService #37] koncze prace
+[DataService #34] koncze prace
+[DataService #45] koncze prace
+[DataService #8] koncze prace
+[DataService #31] koncze prace
+[DataService #33] koncze prace
+[DataService #10] koncze prace
+[DataService #27] koncze prace
+[DataService #13] koncze prace
+[DataService #32] koncze prace
+[DataService #6] koncze prace
+[DataService #25] koncze prace
+[DataService #7] koncze prace
+[DataService #20] koncze prace
+[DataService #18] koncze prace
+[DataService #44] koncze prace
+[DataService #2] koncze prace
+[DataService #26] koncze prace
+[DataService #46] koncze prace
+[DataService #16] koncze prace
+[DataService #14] koncze prace
+[DataService #19] koncze prace
+[DataService #48] koncze prace
+[DataService #11] koncze prace
+[DataService #42] koncze prace
+[DataService #15] koncze prace
+[DataService #0] koncze prace
+[DataService #36] koncze prace
+[DataService #23] koncze prace
+[DataService #35] koncze prace
+[DataService #29] koncze prace
+[DataService #30] koncze prace
+[DataService #24] koncze prace
+[DataService #17] koncze prace
+[DataService #12] koncze prace
+[DataService #47] koncze prace
+[DataService #41] koncze prace
+[DataService #5] koncze prace
+[DataService #3] koncze prace
+[DataService #39] koncze prace
+[DataService #40] koncze prace
+[DataService #49] koncze prace
+[ReportService #33] koncze prace
+[ReportService #44] koncze prace
+[ReportService #31] koncze prace
+[ReportService #27] koncze prace
+[ReportService #21] koncze prace
+[ReportService #26] koncze prace
+[ReportService #22] koncze prace
+[ReportService #25] koncze prace
+[ReportService #15] koncze prace
+[ReportService #20] koncze prace
+[ReportService #16] koncze prace
+[ReportService #19] koncze prace
+[ReportService #13] koncze prace
+[ReportService #9] koncze prace
+[ReportService #10] koncze prace
+[ReportService #14] koncze prace
+[ReportService #7] koncze prace
+[ReportService #39] koncze prace
+[ReportService #1] koncze prace
+[ReportService #37] koncze prace
+[ReportService #46] koncze prace
+[ReportService #8] koncze prace
+[ReportService #2] koncze prace
+[ReportService #34] koncze prace
+[ReportService #38] koncze prace
+[ReportService #28] koncze prace
+[ReportService #30] koncze prace
+[ReportService #43] koncze prace
+[ReportService #3] koncze prace
+[ReportService #49] koncze prace
+[ReportService #45] koncze prace
+[ReportService #40] koncze prace
+[ReportService #29] koncze prace
+[ReportService #4] koncze prace
+[ReportService #23] koncze prace
+[ReportService #35] koncze prace
+[ReportService #47] koncze prace
+[ReportService #24] koncze prace
+[ReportService #17] koncze prace
+[ReportService #12] koncze prace
+[ReportService #6] koncze prace
+[ReportService #18] koncze prace
+[ReportService #5] koncze prace
+[ReportService #0] koncze prace
+[ReportService #11] koncze prace
+[ReportService #48] koncze prace
+[ReportService #36] koncze prace
+[ReportService #42] koncze prace
+[ReportService #41] koncze prace
+[ReportService #32] koncze prace
