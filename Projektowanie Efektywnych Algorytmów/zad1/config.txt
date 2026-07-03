@@ -1,0 +1,61 @@
+# ======================================================================================
+# PLIK KONFIGURACYJNY - PROJEKTOWANIE EFEKTYWNYCH ALGORYTMÓW - ZADANIE 1
+# ======================================================================================
+# OPIS UŻYTKOWANIA I FORMATU:
+# Program wczytuje ten plik automatycznie przy uruchomieniu.
+# 
+# FORMAT:
+# 1. Linie zaczynające się od znaku '#' są ignorowane (komentarze).
+# 2. Puste linie są ignorowane.
+# 3. Parametry podawane są w formacie: KLUCZ = WARTOŚĆ
+# 4. Spacje wokół znaku '=' są dozwolone i ignorowane przez parser programu.
+# 5. Ścieżki do plików powinny być relatywne (względem pliku .exe) lub absolutne.
+#
+# UWAGA: Obsługiwane typy wag (EDGE_WEIGHT_TYPE) w plikach .tsp to EXPLICIT oraz EUC_2D.
+# Inne typy wag nie są obsługiwane przez program.
+# ======================================================================================
+
+# --- WYBÓR ALGORYTMU ---
+# Określa, który algorytm z ma zostać uruchomiony dla podanych danych.
+# Dopuszczalne wartości: RAND, NN, RNN, BRUTE_FORCE, ALL, HEURISTICS, GREEDY, NONE
+ALGORITHM = HEURISTICS
+
+# --- USTAWIENIA GENERATORA GRAFÓW ---
+# GENERATE_NEW: true = wygeneruj nowy graf, false = wczytaj istniejący z GRAPH_PATH
+GENERATE_NEW = false
+
+# Rozmiar generowanego grafu (liczba wierzchołków).
+GRAPH_SIZE = 10
+
+# Typ generowanego grafu: 
+# 0 = symetryczny (nieskierowany),
+# 1 = asymetryczny (skierowany).
+GRAPH_TYPE = 0
+
+# --- USTAWIENIA GRAFU ---
+# Ścieżka do pliku, w którym zostanie zapisany nowy graf (data/generated/)
+# lub z którego zostanie wczytany (jeśli GENERATE_NEW = false).
+# Wszystkie testowane grafy znajdują się w katalogu data.
+GRAPH_PATH = data/vlsi/pia3056.tsp
+
+# Koszt optymalnej trasy (do przerywania algorytmów, -1 jeśli nieznane).
+# Wartości optymalne dla wszystkich testowanych grafów znajdują się w pliku: data/optimal_costs.txt
+OPTIMAL_COST = 8258
+
+# --- USTAWIENIA BADAŃ ---
+# Limit czasu w sekundach na wykonanie algorytmu dla danej instancji.
+# Zalecane: 1800s (30 min).
+TIME_LIMIT_SECONDS = 60
+
+# Liczba powtórzeń algorytmu dla tej samej instancji.
+REPETITIONS = 1
+
+# Wierzchołek, z którego algorytmy zaczynają poszukiwania (domyślnie: 0).
+START_NODE = 0
+
+# --- USTAWIENIA EKSPORTU ---
+# true = zapisuje wyniki do plików .csv (results/), false = tylko wypisuje w terminalu.
+# Wyniki są zapisywane do pliku: all_results.csv. Jeśli plik nie istnieje to jest tworzony nowy, 
+# w przeciwnym wypadku wyniki są dopisywane. Historia zbieżności jest zapisywana do pliku pod nazwą 
+# odpowiadającą nazwie algorytmu. UWAGA: Żeby wyniki zostały zapisane do plików to katalog results muszi istnieć.
+SAVE_TO_CSV = true
