@@ -1,0 +1,15 @@
+burma14.tsp = 3323
+gr24.tsp = 1272
+gr48.tsp = 5046
+st70.tsp = 675
+kroA100.tsp = 21282
+pr124.tsp = 59030
+si175.tsp = 21407
+gr229.tsp = 134602
+lin318.tsp = 42029
+pcb442.tsp = 50778
+rat783.tsp = 8806
+pr1002.tsp = 259045
+rl1304.tsp = 252948
+rl1889.tsp = 316536
+u2319.tsp = 234256

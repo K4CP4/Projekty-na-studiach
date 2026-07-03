@@ -1,0 +1,397 @@
+\documentclass[conference]{IEEEtran}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{bm}
+\usepackage{dblfloatfix}
+
+\begin{document}
+
+% ====================================================================
+% TYTUŁ, AUTOR i NUMERACJA STRON
+% ====================================================================
+    
+    \title{Analiza efektywności Algorytmu Genetycznego (Genetic Algorithm) w rozwiązywaniu Problemu Komiwojażera (TSP)}
+    \author{
+        \IEEEauthorblockN{Kacper Piekut}
+        \IEEEauthorblockA{Numer albumu: 280879\\
+        Wydział: W4N, Rok akademicki: 2025/2026, Semestr: 6\\
+        Politechnika Wrocławska}
+        }
+    \maketitle
+    \thispagestyle{empty}
+    \pagestyle{plain}
+
+% ====================================================================
+% ABSTRAKT
+% ====================================================================
+
+    \begin{abstract}
+    W niniejszym sprawozdaniu przedstawiono analizę populacyjnego algorytmu metaheurystycznego - Algorytmu Genetycznego (GA) - dedykowanego do rozwiązywania problemu komiwojażera w wersji symetrycznej (TSP). Zbadano wpływ kluczowych parametrów: rozmiaru populacji, prawdopodobieństwa mutacji, liczby pokoleń, metod mutacji (Swap, Insert, Invert) oraz operatora krzyżowania Order Crossover (OX). Proces badawczy oparto na izolacji zmiennych konfiguracyjnych w celu określenia ich wpływu na czas obliczeń oraz błąd względny uzyskiwanych tras.
+    \end{abstract}
+    
+    \begin{IEEEkeywords}
+    Problem Komiwojażera, TSP, Algorytm Genetyczny, GA, Krzyżowanie OX, Mutacja, Repetitive Nearest Neighbour, RNN.
+    \end{IEEEkeywords}
+
+% ====================================================================
+% I. TREŚĆ ZADANIA I HIPOTEZY BADACZE
+% ====================================================================
+
+    \section{Wstęp}
+        \subsection{Hipotezy badawcze}
+            Przed przystąpieniem do pomiarów sformułowano następujące hipotezy badawcze:
+        \begin{itemize}
+            \item \textbf{H1 (Skalowalność populacyjna):} Złożoność czasowa pojedynczego pokolenia algorytmu genetycznego wykazuje zależność wielomianową względem rozmiaru instancji $O(N^2)$, co pozwoli na przeszukiwanie instancji rzędu $N=2500$ w akceptowalnym czasie, niedostępnym dla metod dokładnych.
+            \item \textbf{H2 (Wpływ rozmiaru populacji na jakość rozwiązania):} Zwiększenie rozmiaru populacji prowadzi do poprawy jakości rozwiązań końcowych, jednak kosztem wydłużenia czasu obliczeń.
+            \item \textbf{H3 (Wpływ prawdopodobieństwa mutacji na zróżnicowanie populacji):} Wyższe prawdopodobieństwo mutacji zwiększa zróżnicowanie populacji, co może zapobiegać przedwczesnej zbieżności.
+            \item \textbf{H4 (Wpływ liczby pokoleń na jakość rozwiązania):} Zwiększenie liczby pokoleń pozwala na uzyskanie lepszych rozwiązań, jednak po pewnym progu dalsze zwiększanie liczby pokoleń nie przynosi istotnej poprawy.
+            \item \textbf{H5 (Przewaga operatora mutacji typu Invert nad pozostałymi metodami):} Operator mutacji Invert wykazuje znacznie wyższą efektywność w przeszukiwaniu przestrzeni rozwiązań niż operatory Swap oraz Insert.
+        \end{itemize}
+
+% ====================================================================
+% II. METODOLOGIA BADAŃ I SFORMUŁOWANIA MATEMATYCZNE
+% ====================================================================
+
+    \section{Metodologia Badań}
+        \subsection{Środowisko testowe i dane wejściowe}
+            Badania przeprowadzono na laptopie ASUS TUF Gaming F15 (procesor Intel Core i5-11400H 2.7-4.5 GHz, 16 GB RAM DDR4, dysk SSD NVMe 512 GB) pod kontrolą systemu Windows 11 Home (64-bit). Środowiskiem programistycznym był język C++ (kompilator MinGW GCC). 
+            W badaniach wykorzystano instancje z biblioteki TSPLIB, dzielące się na:
+            \begin{itemize}
+                \item \textbf{Grafy symetryczne (TSP) instancje:} \texttt{burma14}, \texttt{gr24}, \texttt{gr48}, \texttt{st70}, \texttt{kroA100}, \texttt{pr124}, \texttt{si175}, \texttt{gr229}, \texttt{lin318}, \texttt{pcb442}, \texttt{rat783}, \texttt{pr1002}, \texttt{rl1304}, \texttt{rl1889}, \texttt{u2319}.
+            \end{itemize}
+        \subsection{Opis zaimplementowanego algorytmu}
+            W celu optymalizacji i poszukiwania przybliżonych rozwiązań cykli Hamiltona w strukturach grafowych TSP zaimplementowano heurystykę populacyjną - Algorytm Genetyczny. Algorytm ten przeszukuje przestrzeń stanów wielopunktowo, operując jednocześnie na zbiorze zakodowanych rozwiązań dopuszczalnych (populacji chromosomów).
+
+            W każdym pokoleniu, w celu wyłonienia par rodzicielskich do reprodukcji, stosowana jest selekcja turniejowa. \linebreak Z populacji wybierana jest losowo podgrupa o stałym rozmiarze turnieju $k=5$, z której osobnik o najniższym koszcie trasy (najwyższym przystosowaniu) wygrywa prawo do reprodukcji. Zapobiega to przedwczesnemu zdominowaniu populacji przez super-osobniki i pozwala kontrolować presję selekcyjną.
+
+            Do generowania potomstwa wykorzystano operator krzyżowania dla problemów sekwencyjnych - Order Crossover (OX). Operator ten polega na wylosowaniu dwóch punktów podziału, skopiowaniu wyciętego bloku genów bezpośrednio z pierwszego rodzica do potmka, a następnie uzupełnieniu pozostałych pozycji miastami z drugiego rodzica z zachowaniem ich względnej kolejności, co gwarantuje zachowanie cechy dopuszczalności rozwiązania.
+        
+            Potomkowie poddawani są operacji mutacji z prawdopodobieństwem przy użyciu jednej z trzech metod (swap, insert, invert).
+            \begin{algorithm}
+                \caption{Genetic Algorithm}
+                \begin{algorithmic}[1]
+                \REQUIRE Graf $G$, $P_{size}$, $P_m$, $Gen_{max}$, $Tour_{rnn}$, $Cost_{rnn}$
+                \STATE $Populacja \leftarrow \text{Populacje}(P_{size}, Tour_{rnn}, Cost_{rnn})$
+                \STATE $Best \leftarrow \text{ZnajdzNajlepszego}(Populacja)$
+                \STATE $Stagnacja \leftarrow 0$
+                \WHILE{$g < Gen_{max}$ \AND $\text{!Timeout}$ \AND $Best.cost > OPT$}
+                    \IF{$Stagnacja \ge 0.2 \cdot Gen_{max}$} \STATE \textbf{break} \COMMENT{Kryterium stagnacji} \ENDIF
+                    \STATE $NPopulacja \leftarrow \{Best\}$ \COMMENT{Mechanizm elityzmu}
+                    \WHILE{$|NPopulacja| < P_{size}$}
+                        \STATE $R_1 \leftarrow \text{SelekcjaTurniejowa}(Populacja, 5)$
+                        \STATE $R_2 \leftarrow \text{SelekcjaTurniejowa}(Populacja, 5)$
+                        \STATE $Potomek \leftarrow \text{OrderCrossover}(R_1, R_2)$
+                        \STATE $\text{Mutuj}(Potomek, P_m, \text{Metoda})$
+                        \STATE $Potomek.cost \leftarrow \text{ObliczKoszt}(Potomek)$
+                        \STATE $NPopulacja \leftarrow NPopulacja \cup \{Potomek\}$
+                    \ENDWHILE
+                    \STATE $Populacja \leftarrow NPopulacja$
+                    \STATE $CurrentBest \leftarrow \text{ZnajdzNajlepszego}(Populacja)$
+                    \IF{$CurrentBest.cost < Best.cost$}
+                        \STATE $Best \leftarrow CurrentBest$; $Stagnacja \leftarrow 0$
+                    \ELSE
+                        \STATE $Stagnacja \leftarrow Stagnacja + 1$
+                    \ENDIF
+                    \STATE $g \leftarrow g + 1$
+                \ENDWHILE
+                \RETURN $Best$
+                \end{algorithmic}
+            \end{algorithm}
+        \subsection{Teoretyczna granica błędu względnego} 
+            Dopuszczalny błąd względny algorytmu skaluje się zgodnie z funkcją $O(24\ln(n))$ i w uproszczeniu wynosi:
+            \begin{equation}
+                \delta = 
+                \begin{cases} 
+                    0\% & \text{dla } n < 25 \\
+                    50\% & \text{dla } 24 < n < 74 \\
+                    100\% & \text{dla } 75 < n < 449 \\
+                    150\% & \text{dla } 450 < n < 2500 
+                \end{cases}
+            \end{equation}
+
+        \subsection{Konfiguracja eksperymentu}
+        Parametry sterujące procesem oraz ścieżki do plików \linebreak z danymi są definiowane w zewnętrznym pliku \texttt{config.txt}. Poniżej przedstawiono przykładową konfiguracja pliku:
+\begin{verbatim}
+GRAPH_PATH = data/tsplib/tsp/pcb442.tsp
+TIME_LIMIT_SECONDS = 60
+REPETITIONS = 5
+USE_INITIAL_UB = true
+SAVE_TO_CSV = true
+OPTIMAL_TOUR_COST = 50778
+POPULATION_SIZE = 150.0
+MUTATION_RATE = 0.05
+GENERATIONS = 2000
+CROSSOVER_METHOD = OX
+MUTATION_METHOD = invert
+\end{verbatim}
+        \subsection{Objaśnienie i rola parametrów sterujących algorytmu}
+            W dalszej części stosowane będą następujące skróty oraz definicje formalne:
+            \begin{itemize}
+                \item \bm{$P_{size}$} \textbf{(Rozmiar populacji):} Określa stałą liczbę osobników utrzymywanych jednocześnie w pamięci programu w trakcie trwania pojedynczego pokolenia. Parametr ten decyduje o szerokości frontu przeszukiwania przestrzeni stanów dopuszczalnych.
+                \item \bm{$P_m$} \textbf{(Współczynnik mutacji):} Prawdopodobieństwo poddania nowo wygenerowanego potomka modyfikacji genotypu. Współczynnik wyrażany jest w skali procentowej od 0.0 do 1.0. Jego głównym zadaniem jest wprowadzanie do populacji zupełnie nowych krawędzi (losowych zaburzeń), które mogły zostać bezpowrotnie utracone \linebreak w procesie selekcji turniejowej.
+                \item \textbf{\textit{Gen}} \textbf{(Maksymalna liczba pokoleń):} Parametr określający limit iteracji pętli głównej algorytmu. Definiuje on maksymalny czas życia układu ewolucyjnego, w którym populacja ma możliwość adaptacji i selektywnego filtrowania najlepszych mikro-ścieżek.
+            \end{itemize}
+        \subsection{Warunki zakończenia algorytmu}
+            Algorytm Genetyczny kończy pracę gdy spełniony zostanie co najmniej jeden z poniższych warunków:
+            \begin{itemize}
+                \item \textbf{Limit czasu:} Przekroczenie maksymalnego czasu obliczeń wyznaczonego parametrem (domyślnie 900 sekund).
+                \item \textbf{Osiągnięcie optimum:} Znalezienie rozwiązania o koszcie równym lub mniejszym od optimum globalnego.
+                \item \textbf{Stagnacja populacji:} Brak poprawy najlepszego rozwiązania przez 20\% całkowitej liczby pokoleń.
+            \end{itemize}
+        \subsection{Fazy badawcze}
+            W celu wyłonienia optymalnych parametrów i weryfikacji postawionych hipotez, zastosowano wielofazową procedurę testową. Każdy zestaw parametrów został zaprojektowany tak, aby izolować i badać wpływ konkretnych zmiennych konfiguracyjnych algorytmu.
+            \begin{itemize}
+                \item \textbf{Faza 1 (Identyfikacja operatora mutacji):} Przy parametrach bazowych ($P_{size}=100$, $P_m=0.10$, $Gen=2000$) poddano weryfikacji metody \textit{Swap}, \textit{Insert} i \textit{Invert}.
+                \item \textbf{Faza 2 (Strojenie rozmiaru populacji i współczynnika mutacji):} Przy ustalonym operatorze \textit{Swap} badano dynamikę algorytmu w funkcji rosnącej populacji ($P_{size} \in \{50, 100, 200\}$) oraz zmiennego prawdopodobieństwa mutacji ($P_m \in \{0.01, 0.05, 0.10\}$) zachowując stałą liczbę pokoleń ($Gen=2000$).
+                \item \textbf{Faza 3 (Wpływ głębokiej ewolucji - Invert):} Zastosowano progresywnie zwiększane ramy obliczeniowe dla metody \textit{Invert}. Uogólnianie populacji i zbieżność poprzez znaczny wzrost liczby pokoleń (do $Gen=10000$) przy jednoczesnym skalowaniu rozmiaru populacji (do $P_{size}=300$).
+                \item \textbf{Faza 4 (Pełna optymalizacja dla trudnych instancji - Insert):} Ekstremalne scenariusze obciążeniowe, podnosząc maksymalną liczbę pokoleń (do $Gen=20000$) przy populacji rzędu $P_{size}=500$ dla operatora \textit{Insert}.
+            \end{itemize}
+            
+            Szczegółowe zestawienia wykorzystanych kombinacji parametrów sterujących dla poszczególnych przebiegów optymalizacyjnych zaprezentowano w tabelach od \ref{tab:faza1_szczegolowa} do \ref{tab:faza4_szczegolowa}.
+            \begin{table}[H]
+                \centering
+                \caption{Faza 1: Identyfikacja operatora mutacji}
+                \label{tab:faza1_szczegolowa}
+                \resizebox{\columnwidth}{!}{%
+                \begin{tabular}{|l|r|r|r|c|c|}
+                    \hline
+                    \textbf{Lp.} & \textbf{$P_{size}$} & \textbf{$P_m$} & \textbf{$Gen$} & \textbf{Mutacja} & \textbf{Krzyżowanie} \\ \hline
+                    1 & 100 & 0.10 & 2000 & Swap & OX \\ \hline
+                    2 & 100 & 0.10 & 2000 & Invert & OX \\ \hline
+                    3 & 100 & 0.10 & 2000 & Insert & OX \\ \hline
+                \end{tabular}%
+                }
+            \end{table}
+            \begin{table}[H]
+                \centering
+                \caption{Faza 2: Strojenie rozmiaru populacji i współczynnika mutacji}
+                \label{tab:faza2_szczegolowa}
+                \resizebox{\columnwidth}{!}{%
+                \begin{tabular}{|l|r|r|r|c|c|}
+                    \hline
+                    \textbf{Lp.} & \textbf{$P_{size}$} & \textbf{$P_m$} & \textbf{$Gen$} & \textbf{Mutacja} & \textbf{Krzyżowanie} \\ \hline
+                    1 & 50  & 0.05  & 2000 & Swap & OX \\ \hline
+                    2 & 100 & 0.05  & 2000 & Swap & OX \\ \hline
+                    3 & 200 & 0.05  & 2000 & Swap & OX \\ \hline
+                    4 & 100 & 0.01  & 2000 & Swap & OX \\ \hline
+                    5 & 100 & 0.10  & 2000 & Swap & OX \\ \hline
+                \end{tabular}%
+                }
+            \end{table}
+            \begin{table}[H]
+                \centering
+                \caption{Faza 3: Wpływ głębokiej ewolucji (Invert)}
+                \label{tab:faza3_szczegolowa}
+                \resizebox{\columnwidth}{!}{%
+                \begin{tabular}{|l|r|r|r|c|c|}
+                    \hline
+                    \textbf{Lp.} & \textbf{$P_{size}$} & \textbf{$P_m$} & \textbf{$Gen$} & \textbf{Mutacja} & \textbf{Krzyżowanie} \\ \hline
+                    1 & 100 & 0.10 & 2000  & Invert & OX \\ \hline
+                    2 & 200 & 0.10 & 5000  & Invert & OX \\ \hline
+                    3 & 300 & 0.15 & 10000 & Invert & OX \\ \hline
+                \end{tabular}%
+                }
+            \end{table}
+            \begin{table}[H]
+                \centering
+                \caption{Faza 4: Pełna optymalizacja (Insert)}
+                \label{tab:faza4_szczegolowa}
+                \resizebox{\columnwidth}{!}{%
+                \begin{tabular}{|l|r|r|r|c|c|}
+                    \hline
+                    \textbf{Lp.} & \textbf{$P_{size}$} & \textbf{$P_m$} & \textbf{$Gen$} & \textbf{Mutacja} & \textbf{Krzyżowanie} \\ \hline
+                    1 & 200 & 0.10 & 5000  & Insert & OX \\ \hline
+                    2 & 300 & 0.15 & 10000 & Insert & OX \\ \hline
+                    3 & 500 & 0.15 & 20000 & Insert & OX \\ \hline
+                \end{tabular}%
+                }
+            \end{table}
+
+% ====================================================================
+% III. WYNIKI BADAŃ
+% ====================================================================
+
+    \section{Wyniki Badań}
+        \subsection{Wpływ operatora mutacji}
+            W tabeli \ref{tab:mutacje_wplyw} zestawiono błędy względne uzyskane przy stałych parametrach ($P_{size}=100$, $P_m=0.05$, $Gen=1000$) dla trzech zaimplementowanych operatorów mutacji.
+            \begin{table}[H]
+                \centering
+                \caption{Wpływ operatora mutacji na średni błąd względny $\delta$ [\%]}
+                \label{tab:mutacje_wplyw}
+                \resizebox{\columnwidth}{!}{%
+                \begin{tabular}{|l|r|r|r|}
+                \hline
+                \textbf{Instancja} & \textbf{Swap [\%]} & \textbf{Insert [\%]} & \textbf{Invert [\%]} \\ \hline
+                burma14 & 0.4 & 0.0 & 0.4 \\ \hline
+                gr24 & 11.9 & 4.7 & 3.5 \\ \hline
+                gr48 & 14.4 & 9.0 & 3.0 \\ \hline
+                st70 & 12.4 & 3.6 & 7.6 \\ \hline
+                kroA100 & 9.9 & 3.2 & 3.1 \\ \hline
+                pr124 & 11.7 & 10.0 & 8.5 \\ \hline
+                si175 & 2.8 & 2.2 & 1.2 \\ \hline
+                gr229 & 15.7 & 13.1 & 10.5 \\ \hline
+                lin318 & 17.1 & 14.9 & 12.4 \\ \hline
+                pcb442 & 16.0 & 16.0 & 12.2 \\ \hline
+                rat783 & 19.7 & 19.6 & 17.6 \\ \hline
+                pr1002 & 21.1 & 19.2 & 20.7 \\ \hline
+                rl1304 & 21.1 & 21.1 & 20.9 \\ \hline
+                rl1889 & 18.4 & 18.4 & 18.2 \\ \hline
+                u2319 & 14.8 & 14.8 & 14.3 \\ \hline
+                \end{tabular}%
+                }
+            \end{table}
+            \begin{figure}[H]
+                \centering
+                \begin{minipage}{0.48\columnwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{images/wykres1.png}
+                    \caption{Wpływ operatorów mutacji na średni błąd względny $\delta$ \linebreak w funkcji rozmiaru instancji $N$.}
+                    \label{fig:wykres1}
+                \end{minipage}
+                \hfill
+                \begin{minipage}{0.48\columnwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{images/wykres2.png}
+                    \caption{Zbliżenie charakterystyki z Rys. \ref{fig:wykres1} dla mniejszych instancji ($N \le 500$).}
+                    \label{fig:wykres2}
+                \end{minipage}
+            \end{figure}
+        \subsection{Wpływ rozmiaru populacji i współczynnika mutacji $P_m$}
+            Tabela \ref{tab:parametry_ga} pokazuje wyniki strojenia parametrów dla instancji referencyjnej \texttt{gr229}.
+            \begin{table}[H]
+                \centering
+                \caption{Analiza parametryczna błędu $\delta$ i czasu dla instancji referencyjnej}
+                \label{tab:parametry_ga}
+                \resizebox{\columnwidth}{!}{%
+                \begin{tabular}{|r|r|c|r|r|}
+                \hline
+                \textbf{$P_{size}$} & \textbf{$P_m$ [\%]} & \textbf{Mutacja} & \textbf{Czas [us]} & \textbf{Błąd [\%]} \\ \hline
+                50 & 5.0 & Swap & $2.7 \cdot 10^{5}$ & 16.6 \\ \hline
+                100 & 1.0 & Swap & $6.7 \cdot 10^{5}$ & 16.1 \\ \hline
+                100 & 5.0 & Swap & $5.9 \cdot 10^{5}$ & 15.7 \\ \hline
+                100 & 10.0 & Invert & $2.0 \cdot 10^{6}$ & 10.5 \\ \hline
+                200 & 10.0 & Invert & $1.0 \cdot 10^{7}$ & 4.3 \\ \hline
+                200 & 10.0 & Insert & $1.1 \cdot 10^{7}$ & 8.1 \\ \hline
+                \end{tabular}%
+                }
+            \end{table}
+        \subsection{Wpływ liczby pokoleń}
+            W tabeli \ref{tab:generacje_wplyw} pokazano zmianę jakości wraz ze wzrostem liczby pokoleń dla instancji \texttt{gr229}. W tej serii pomiarowej równolegle rosły także $P_{size}$ i $P_m$, zgodnie z procedurą strojenia parametrów.
+            \begin{table}[H]
+                \centering
+                \caption{Wpływ liczby pokoleń na błąd i czas (gr229, mutacja Invert)}
+                \label{tab:generacje_wplyw}
+                \resizebox{\columnwidth}{!}{%
+                \begin{tabular}{|r|r|r|r|r|}
+                \hline
+                \textbf{Pokolenia} & \textbf{$P_{size}$} & \textbf{$P_m$ [\%]} & \textbf{Czas [us]} & \textbf{Błąd [\%]} \\ \hline
+                2000 & 100 & 10.0 & $2.0 \cdot 10^{6}$ & 10.5 \\ \hline
+                5000 & 200 & 10.0 & $1.0 \cdot 10^{7}$ & 4.3 \\ \hline
+                10000 & 300 & 15.0 & $1.5 \cdot 10^{7}$ & 2.8 \\ \hline
+                \end{tabular}%
+                }
+            \end{table}
+        \subsection{Skalowalność, błąd względny i granica $O(24\ln(n))$}
+            Tabela \ref{tab:skalowanosc_max} przedstawia najlepsze wyniki dla każdej instancji, wraz z zestawem parametrów GA.
+            \begin{table}[H]
+                \centering
+                \caption{Najlepsze wyniki GA dla badanych przedziałów z parametrami}
+                \label{tab:skalowanosc_max}
+                \resizebox{\columnwidth}{!}{%
+                \begin{tabular}{|l|r|r|r|l|r|r|r|r|}
+                \hline
+                \textbf{Inst.} & \textbf{N} & \textbf{$P_{size}$} & \textbf{Gen} & \textbf{Mutacja} & \textbf{$P_m$ [\%]} & \textbf{Czas [us]} & \textbf{$\delta$ [\%]} & \textbf{Granica [\%]} \\ \hline
+                burma14 & 14 & 100 & 2000 & insert & 10 & $2.3 \cdot 10^{3}$ & 0.0 & 0.0 \\ \hline
+                gr24 & 24 & 200 & 5000 & insert & 10 & $3.5 \cdot 10^{5}$ & 2.5 & 0.0 \\ \hline
+                gr48 & 48 & 100 & 2000 & invert & 10 & $2.6 \cdot 10^{5}$ & 3.0 & 50.0 \\ \hline
+                st70 & 70 & 100 & 2000 & insert & 10 & $6.9 \cdot 10^{5}$ & 3.6 & 50.0 \\ \hline
+                kroA100 & 100 & 300 & 10000 & invert & 15 & $4.5 \cdot 10^{6}$ & 0.0 & 100.0 \\ \hline
+                pr124 & 124 & 200 & 5000 & invert & 10 & $2.8 \cdot 10^{6}$ & 3.4 & 100.0 \\ \hline
+                si175 & 175 & 300 & 10000 & invert & 15 & $1.1 \cdot 10^{7}$ & 1.1 & 100.0 \\ \hline
+                gr229 & 229 & 300 & 10000 & invert & 15 & $1.5 \cdot 10^{7}$ & 2.8 & 100.0 \\ \hline
+                lin318 & 318 & 300 & 10000 & invert & 15 & $3.2 \cdot 10^{7}$ & 7.8 & 100.0 \\ \hline
+                pcb442 & 442 & 300 & 10000 & invert & 15 & $5.5 \cdot 10^{7}$ & 5.2 & 100.0 \\ \hline
+                rat783 & 783 & 300 & 10000 & invert & 15 & $1.3 \cdot 10^{8}$ & 9.3 & 150.0 \\ \hline
+                pr1002 & 1002 & 300 & 10000 & invert & 15 & $1.5 \cdot 10^{8}$ & 11.0 & 150.0 \\ \hline
+                rl1304 & 1304 & 300 & 10000 & invert & 15 & $2.5 \cdot 10^{8}$ & 16.3 & 150.0 \\ \hline
+                rl1889 & 1889 & 300 & 10000 & invert & 15 & $3.8 \cdot 10^{8}$ & 15.2 & 150.0 \\ \hline
+                u2319 & 2319 & 300 & 10000 & invert & 15 & $3.9 \cdot 10^{8}$ & 11.1 & 150.0 \\ \hline
+                \end{tabular}%
+                }
+            \end{table}
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=\columnwidth]{images/wykres3.png}
+                \caption{Zależność czasu obliczeń od rozmiaru instancji wraz z wielomianową linią trendu $O(N^2)$.}
+                \label{fig:wykres3}
+            \end{figure}
+            \begin{figure}[H]
+                \centering
+                \begin{minipage}{0.48\columnwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{images/wykres4.png}
+                    \caption{Najlepszy uzyskany błąd względny $\delta$ w zestawieniu z dopuszczalną granicą teoretyczną.}
+                    \label{fig:wykres4}
+                \end{minipage}
+                \hfill
+                \begin{minipage}{0.48\columnwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{images/wykres5.png}
+                    \caption{Zbliżenie charakterystyki z Rys. \ref{fig:wykres4} uwidaczniające zachowanie dla początkowych wartości \linebreak $N \le 100$.}
+                    \label{fig:wykres5}
+                \end{minipage}
+            \end{figure}
+
+% ====================================================================
+% IV. DYSKUSJA I WNIOSKI
+% ====================================================================
+
+    \section{Wnioski}
+        \subsection{Weryfikacja hipotez badawczych}
+            Na podstawie przeprowadzonych eksperymentów i analizy danych zawartych w Sekcji III, sformułowano następujące wnioski dotyczące postawionych hipotez:
+            \begin{itemize}
+                \item \textbf{Weryfikacja H1 (Skalowalność):} Hipoteza została \textbf{potwierdzona częściowo}. Dane z tabeli \ref{tab:skalowanosc_max} pokazują wyraźny, ponadliniowy wzrost czasu wraz z rozmiarem instancji oraz możliwość rozwiązywania bardzo dużych problemów w akceptowalnym czasie (dla \texttt{u2319}: $3.9 \cdot 10^{8}$ us, tj. ok. 390 s $< 900$ s). Jednocześnie pomiary były wykonywane dla różnych konfiguracji parametrów ($P_{size}$, $P_m$, Gen), dlatego nie stanowią czystego eksperymentu do ścisłego dopasowania wykładnika złożoności asymptotycznej.
+                \item \textbf{Weryfikacja H2 (Wpływ rozmiaru populacji):} Hipoteza została \textbf{potwierdzona}. W tabeli \ref{tab:parametry_ga} zwiększanie rozmiaru populacji poprawia jakość rozwiązań, ale podnosi koszt obliczeń. Przykładowo dla mutacji Invert \linebreak i $P_m=10\%$ przejście z $P_{size}=100$ do $P_{size}=200$ obniża błąd z 10.5\% do 4.3\%, lecz wydłuża czas \linebreak z $2.0 \cdot 10^{6}$ us do $1.0 \cdot 10^{7}$ us.
+                \item \textbf{Weryfikacja H3 (Wpływ prawdopodobieństwa mutacji):} Hipoteza została \textbf{wstępnie potwierdzona}. Dla porównywalnych ustawień z tabeli \ref{tab:parametry_ga} wzrost $P_m$ z 1\% do 5\% (mutacja Swap, $P_{size}=100$) zmniejsza błąd z 16.1\% do 15.7\%. Kierunek zmian jest zgodny z oczekiwaniem, jednak dla pełnej izolacji wpływu $P_m$ potrzebna byłaby szersza seria pomiarów przy niezmienionym operatorze \linebreak i pozostałych parametrach.
+                \item \textbf{Weryfikacja H4 (Wpływ liczby pokoleń):} Hipoteza została \textbf{potwierdzona}. Z tabeli \ref{tab:generacje_wplyw} wynika, że zwiększanie liczby pokoleń poprawia jakość rozwiązania (10.5\% $\rightarrow$ 4.3\% $\rightarrow$ 2.8\%), ale kosztem wzrostu czasu ($2.0 \cdot 10^{6}$ us $\rightarrow$ $1.0 \cdot 10^{7}$ us $\rightarrow$ $1.5 \cdot 10^{7}$ us). Widoczny jest efekt malejących korzyści: poprawa między 5000 a 10000 pokoleń jest mniejsza niż między 2000 a 5000.
+                \item \textbf{Weryfikacja H5 (Skuteczność operatora Invert):} Hipoteza została \textbf{w dużej mierze potwierdzona}. W tabeli \ref{tab:mutacje_wplyw} operator \textit{Invert} osiąga najniższy błąd dla większości instancji (12 z 15). Wyjątki stanowią m.in. \texttt{burma14}, \texttt{st70} oraz \texttt{pr1002}, gdzie lepsze wyniki uzyskał operator \textit{Insert}. Oznacza to, że \textit{Invert} jest operatorem dominującym, lecz nie uniwersalnie najlepszym.
+            \end{itemize}
+        \subsection{Weryfikacja założenia o granicy błędu względnego}
+            Głównym celem projektowym postawionym przed algorytmem genetycznym było znalezienie optymalnych parametrów sterujących, aby błąd względny $\delta$ znalezionych rozwiązań nie przekroczył granic wyznaczonych przez uproszczoną funkcję $O(24\ln(n))$. Analiza Tabeli \ref{tab:skalowanosc_max} oraz wykresów (Rys. \ref{fig:wykres4} i Rys. \ref{fig:wykres5}) pozwala stwierdzić, że założenie to zostało zrealizowane dla niemal wszystkich przedziałów, z jednym odstępstwem \linebreak w najniższym zakresie:
+            \begin{itemize}
+                \item \textbf{Dla $N < 25$ (limit 0\%):} Kryterium to okazało się najbardziej rygorystyczne ze względu na swoją bezwzględność. O ile dla instancji \texttt{burma14} algorytm poprawnie znalazł globalne optimum (błąd 0,0\%), o tyle dla instancji \texttt{gr24} minimalny znaleziony błąd wyniósł 2,5\%.
+                \item \textbf{Dla $24 < N < 74$ (limit 50\%):} Uzyskane błędy dla instancji \texttt{gr48} (3,0\%) oraz \texttt{st70} (3,6\%) leżą poniżej dopuszczalnego progu 50\%.
+                \item \textbf{Dla $75 < N < 449$ (limit 100\%):} Algorytm utrzymał błąd na poziomie kilku procent (2,8\% dla \texttt{gr229}, 5,2\% dla \texttt{pcb442}), podczas gdy dopuszczalny limit wynosił 100\%.
+                \item \textbf{Dla $450 < N < 2500$ (limit 150\%):} Dla instancji \linebreak o gigantycznej przestrzeni poszukiwań (\texttt{u2319}) algorytm wygenerował trasę z błędem 11,1\%, co stanowi wynik kilkunastokrotnie lepszy od wyznaczonej granicy 150\%.
+            \end{itemize}
+            
+            Podsumowując, zestrojenie parametrów $P_{size}$, $P_m$ oraz $Gen$ pozwoliło na znaczne zdominowanie wymagań we wszystkich przedziałach powyżej 24 wierzchołków, udowadniając przydatność zaprojektowanej metaheurystyki.
+
+            Przypuszczalny brak zejścia do poziomu 0,0\% dla instancji \texttt{gr24} to skutek losowego elementu algorytmu genetycznego, który łatwo ulega przedwczesnej zbieżności i stabilizuje się w silnych minimach lokalnych, różniących się od globalnego optimum.
+        \subsection{Charakterystyka algorytmu}
+            Algorytm Genetyczny charakteryzuje się bardzo dobrą skalowalnością, co czyni go idealnym wyborem dla dużych instancji TSP, dla których metody dokładne stają się bezużyteczne z uwagi na wykładniczy wzrost czasu obliczeń. GA nadaje się do zastosowań inżynierskich i logistycznych, gdzie wymagane jest znalezienie bardzo dobrego rozwiązania w rozsądnym czasie.
+
+            Algorytm ten nie nadaje się jednak do systemów wymagających bezwzględnej gwarancji znalezienia matematycznego optimum globalnego. Ponadto, ze względu na dużą liczbę stochastycznych parametrów sterujących, wymaga on czasochłonnego strojenia do konkretnego typu instancji, co czyni go mało elastycznym.
+
+% ====================================================================
+% LITERATURA
+% ====================================================================
+
+    \begin{thebibliography}{00}
+        \bibitem{vlsi_data} \textit{VLSI TSP Data}, University of Waterloo. [Online]. Dostępne: \url{https://www.math.uwaterloo.ca/tsp/vlsi/index.html}
+        \bibitem{mecalux} Mecalux, \textit{Problem komiwojażera w logistyce}. [Online]. Dostępne: \url{https://www.mecalux.pl/blog/problem-komiwojazera}
+        \bibitem{pb_ea} W. Kwedlo, \textit{Algorytmy Ewolucyjne - Wykład}, Politechnika Białostocka. [Online]. Dostępne: \url{https://www.aragorn.wi.pb.edu.pl/~wkwedlo/EA5.pdf}
+        \bibitem{agh_ag} \textit{Algorytmy Genetyczne - Materiały dydaktyczne}, Akademia Górniczo-Hutnicza. [Online]. Dostępne: \url{http://www.pi.zarz.agh.edu.pl/swd/wyklady/AG%20razem.pdf}
+    \end{thebibliography}
+
+\end{document}

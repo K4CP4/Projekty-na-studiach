@@ -1,0 +1,27 @@
+# ===========================================================================
+# PLIK KONFIGURACYJNY DO ZADANIA 4 (Algorytm Genetyczny)
+# ===========================================================================
+
+# --- USTAWIENIA OGÓLNE ---
+GRAPH_PATH = data/tsplib/tsp/pcb442.tsp
+OPTIMAL_TOUR_COST = 50778
+TIME_LIMIT_SECONDS = 900
+REPETITIONS = 1
+USE_INITIAL_UB = true
+SAVE_TO_CSV = true
+
+# --- PARAMETRY ALGORYTMU GENETYCZNEGO ---
+# Wielkość populacji w jednym pokoleniu
+POPULATION_SIZE = 500
+
+# Prawdopodobieństwo zajścia mutacji u dziecka (np. 0.05 to 5%)
+MUTATION_RATE = 0.15
+
+# Maksymalna liczba pokoleń (epok)
+GENERATIONS = 20000
+
+# Metoda krzyżowania (obsługiwana tylko OX - Order Crossover)
+CROSSOVER_METHOD = OX
+
+# Metoda mutacji (swap, invert, insert)
+MUTATION_METHOD = insert
