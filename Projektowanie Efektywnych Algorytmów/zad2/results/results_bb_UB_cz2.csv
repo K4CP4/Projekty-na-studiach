@@ -1,0 +1,4 @@
+Instancja;Metoda;Rozmiar_Grafu;Czas[us];Najlepszy_Koszt;Uzyto_UB;Max_Wezlow_w_Pamieci;Sprawdzonych_Wezlow
+ulysses16;LC;16;9545300;6859;TAK;1311269;1562563
+gr17;LC;17;6648514;2085;TAK;439911;837513
+gr21;LC;21;864172;2707;TAK;110522;128101

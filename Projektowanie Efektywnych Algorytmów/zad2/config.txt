@@ -1,0 +1,26 @@
+# ====================================================================
+# PLIK KONFIGURACYJNY DO ZADANIA 2 (Branch and Bound)
+# ====================================================================
+
+# Scieżka do pliku z instancją (wszystkie testowane instancje znajdują 
+# się w katalogu data)
+GRAPH_PATH = data/tsplib/tsp/burma14.tsp
+
+# Wybór metody przegladania drzewa, dostępne opcje:
+# BFS - Breadth-First Search (Wszerz - kolejka)
+# DFS - Depth-First Search (W głąb - stos)
+# LC  - Lowest-Cost / Best-First Search (Najlepszy koszt - kolejka priorytetowa)
+# ALL - wszystkie 3 ww. metody po kolei
+METHOD = LC
+
+# Limit czasu wykonywania algorytmu w sekundach (zalecane: 900 = 15 minut)
+TIME_LIMIT_SECONDS = 900
+
+# Liczba powtórzeń testu dla danej instancji
+REPETITIONS = 5
+
+# Czy użyc algorytmu RNN do wyznaczenia poczatkowego Gornego Ograniczenia (UB)? true/false
+USE_INITIAL_UB = true
+
+# Czy zapisac wynik testu do pliku CSV? true/false
+SAVE_TO_CSV = true
